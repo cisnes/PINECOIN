@@ -284,7 +284,7 @@ public:
         consensus.fPowNoRetargeting = false;
         consensus.nPosTargetSpacing = 1 * 30; // PoS: 30 seconds for testnet
         consensus.nPosTargetTimespan = 60 * 40;
-        consensus.nStakeMinAge = 60 * 10; // 10 minutes
+        consensus.nStakeMinAge = 60 * 1; // 1 minute
         consensus.nStakeMaxAge = 60 * 60; // 1 hour
         consensus.nModifierInterval = 60; // Modifier interval: time to elapse before new modifier is computed (1 minute)
         consensus.nLastPoWBlock = 200;
@@ -364,7 +364,7 @@ public:
         fDefaultConsistencyChecks = false;
         fRequireStandard = false;
         m_is_test_chain = true;
-        fMiningRequiresPeers = true;
+        fMiningRequiresPeers = false;
         fAllowMultiplePorts = true;
         nFulfilledRequestExpireTime = 5 * 60; // fulfilled requests expire in 5 minutes
 
