@@ -296,7 +296,7 @@ public:
         consensus.nSuperblockCycle = 200; // Superblocks can be issued every 200 blocks on testnet
         consensus.nGovernanceMinQuorum = 1;
         consensus.nGovernanceFilterElements = 500;
-        consensus.nBudgetPaymentsStartBlock = 400;
+        consensus.nBudgetPaymentsStartBlock = 201;
         consensus.nBudgetPaymentsCycleBlocks = 50;
         consensus.nBudgetPaymentsWindowBlocks = 10;
         consensus.nSuperblockStartBlock = 600; // NOTE: Should satisfy nSuperblockStartBlock > nBudgetPaymentsStartBlock
