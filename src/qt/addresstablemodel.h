@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCORN_QT_ADDRESSTABLEMODEL_H
-#define BITCORN_QT_ADDRESSTABLEMODEL_H
+#ifndef PINECOIN_QT_ADDRESSTABLEMODEL_H
+#define PINECOIN_QT_ADDRESSTABLEMODEL_H
 
 #include <QAbstractTableModel>
 #include <QStringList>
@@ -30,7 +30,7 @@ public:
 
     enum ColumnIndex {
         Label = 0,   /**< User specified label */
-        Address = 1  /**< BitCorn address */
+        Address = 1  /**< PineCoin address */
     };
 
     enum RoleIndex {
@@ -102,4 +102,4 @@ public Q_SLOTS:
     friend class AddressTablePriv;
 };
 
-#endif // BITCORN_QT_ADDRESSTABLEMODEL_H
+#endif // PINECOIN_QT_ADDRESSTABLEMODEL_H

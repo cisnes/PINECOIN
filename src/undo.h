@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCORN_UNDO_H
-#define BITCORN_UNDO_H
+#ifndef PINECOIN_UNDO_H
+#define PINECOIN_UNDO_H
 
 #include <coins.h>
 #include <compressor.h>
@@ -112,4 +112,4 @@ public:
     }
 };
 
-#endif // BITCORN_UNDO_H
+#endif // PINECOIN_UNDO_H

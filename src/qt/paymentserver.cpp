@@ -3,7 +3,7 @@
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #if defined(HAVE_CONFIG_H)
-#include <config/bitcorn-config.h>
+#include <config/pinecoin-config.h>
 #endif
 
 #include <qt/paymentserver.h>
@@ -47,16 +47,16 @@
 #include <QTextDocument>
 #include <QUrlQuery>
 
-const int BITCORN_IPC_CONNECT_TIMEOUT = 1000; // milliseconds
-const QString BITCORN_IPC_PREFIX("bitcorn:");
+const int PINECOIN_IPC_CONNECT_TIMEOUT = 1000; // milliseconds
+const QString PINECOIN_IPC_PREFIX("pinecoin:");
 #ifdef ENABLE_BIP70
 // BIP70 payment protocol messages
 const char* BIP70_MESSAGE_PAYMENTACK = "PaymentACK";
 const char* BIP70_MESSAGE_PAYMENTREQUEST = "PaymentRequest";
 // BIP71 payment protocol media types
-const char* BIP71_MIMETYPE_PAYMENT = "application/bitcorn-payment";
-const char* BIP71_MIMETYPE_PAYMENTACK = "application/bitcorn-paymentack";
-const char* BIP71_MIMETYPE_PAYMENTREQUEST = "application/bitcorn-paymentrequest";
+const char* BIP71_MIMETYPE_PAYMENT = "application/pinecoin-payment";
+const char* BIP71_MIMETYPE_PAYMENTACK = "application/pinecoin-paymentack";
+const char* BIP71_MIMETYPE_PAYMENTREQUEST = "application/pinecoin-paymentrequest";
 #endif
 
 //
@@ -66,7 +66,7 @@ const char* BIP71_MIMETYPE_PAYMENTREQUEST = "application/bitcorn-paymentrequest"
 //
 static QString ipcServerName()
 {
-    QString name("BitCornQt");
+    QString name("PineCoinQt");
 
     // Append a simple hash of the datadir
     // Note that GetDataDir(true) returns a different path
@@ -101,16 +101,16 @@ void PaymentServer::ipcParseCommandLine(interfaces::Node& node, int argc, char* 
         if (arg.startsWith("-"))
             continue;
 
-        // If the bitcorn: URI contains a payment request, we are not able to detect the
+        // If the pinecoin: URI contains a payment request, we are not able to detect the
         // network as that would require fetching and parsing the payment request.
         // That means clicking such an URI which contains a testnet payment request
         // will start a mainnet instance and throw a "wrong network" error.
-        if (arg.startsWith(BITCORN_IPC_PREFIX, Qt::CaseInsensitive)) // bitcorn: URI
+        if (arg.startsWith(PINECOIN_IPC_PREFIX, Qt::CaseInsensitive)) // pinecoin: URI
         {
             savedPaymentRequests.append(arg);
 
             SendCoinsRecipient r;
-            if (GUIUtil::parseBitCornURI(arg, &r) && !r.address.isEmpty())
+            if (GUIUtil::parsePineCoinURI(arg, &r) && !r.address.isEmpty())
             {
                 auto tempChainParams = CreateChainParams(CBaseChainParams::MAIN);
 
@@ -165,7 +165,7 @@ bool PaymentServer::ipcSendCommandLine()
     {
         QLocalSocket* socket = new QLocalSocket();
         socket->connectToServer(ipcServerName(), QIODevice::WriteOnly);
-        if (!socket->waitForConnected(BITCORN_IPC_CONNECT_TIMEOUT))
+        if (!socket->waitForConnected(PINECOIN_IPC_CONNECT_TIMEOUT))
         {
             delete socket;
             socket = nullptr;
@@ -180,7 +180,7 @@ bool PaymentServer::ipcSendCommandLine()
 
         socket->write(block);
         socket->flush();
-        socket->waitForBytesWritten(BITCORN_IPC_CONNECT_TIMEOUT);
+        socket->waitForBytesWritten(PINECOIN_IPC_CONNECT_TIMEOUT);
         socket->disconnectFromServer();
 
         delete socket;
@@ -207,7 +207,7 @@ PaymentServer::PaymentServer(QObject* parent, bool startLocalServer) :
 #endif
 
     // Install global event filter to catch QFileOpenEvents
-    // on Mac: sent when you click bitcorn: links
+    // on Mac: sent when you click pinecoin: links
     // other OSes: helpful when dealing with payment request files
     if (parent)
         parent->installEventFilter(this);
@@ -224,7 +224,7 @@ PaymentServer::PaymentServer(QObject* parent, bool startLocalServer) :
         if (!uriServer->listen(name)) {
             // constructor is called early in init, so don't use "Q_EMIT message()" here
             QMessageBox::critical(nullptr, tr("Payment request error"),
-                tr("Cannot start bitcorn: click-to-pay handler"));
+                tr("Cannot start pinecoin: click-to-pay handler"));
         }
         else {
             connect(uriServer, &QLocalServer::newConnection, this, &PaymentServer::handleURIConnection);
@@ -243,7 +243,7 @@ PaymentServer::~PaymentServer()
 }
 
 //
-// OSX-specific way of handling bitcorn: URIs and PaymentRequest mime types.
+// OSX-specific way of handling pinecoin: URIs and PaymentRequest mime types.
 // Also used by paymentservertests.cpp and when opening a payment request file
 // via "Open URI..." menu entry.
 //
@@ -284,12 +284,12 @@ void PaymentServer::handleURIOrFile(const QString& s)
         return;
     }
 
-    if (s.startsWith("bitcorn://", Qt::CaseInsensitive))
+    if (s.startsWith("pinecoin://", Qt::CaseInsensitive))
     {
-        Q_EMIT message(tr("URI handling"), tr("'bitcorn://' is not a valid URI. Use 'bitcorn:' instead."),
+        Q_EMIT message(tr("URI handling"), tr("'pinecoin://' is not a valid URI. Use 'pinecoin:' instead."),
             CClientUIInterface::MSG_ERROR);
     }
-    else if (s.startsWith(BITCORN_IPC_PREFIX, Qt::CaseInsensitive)) // bitcorn: URI
+    else if (s.startsWith(PINECOIN_IPC_PREFIX, Qt::CaseInsensitive)) // pinecoin: URI
     {
         QUrlQuery uri((QUrl(s)));
 #ifdef ENABLE_BIP70
@@ -322,7 +322,7 @@ void PaymentServer::handleURIOrFile(const QString& s)
         // normal URI
         {
             SendCoinsRecipient recipient;
-            if (GUIUtil::parseBitCornURI(s, &recipient))
+            if (GUIUtil::parsePineCoinURI(s, &recipient))
             {
                 if (!IsValidDestinationString(recipient.address.toStdString())) {
 #ifndef ENABLE_BIP70
@@ -340,7 +340,7 @@ void PaymentServer::handleURIOrFile(const QString& s)
             }
             else
                 Q_EMIT message(tr("URI handling"),
-                    tr("URI cannot be parsed! This can be caused by an invalid BitCorn address or malformed URI parameters."),
+                    tr("URI cannot be parsed! This can be caused by an invalid PineCoin address or malformed URI parameters."),
                     CClientUIInterface::ICON_WARNING);
 
             return;
@@ -506,7 +506,7 @@ void PaymentServer::initNetManager()
         return;
     delete netManager;
 
-    // netManager is used to fetch paymentrequests given in bitcorn: URIs
+    // netManager is used to fetch paymentrequests given in pinecoin: URIs
     netManager = new QNetworkAccessManager(this);
 
     QNetworkProxy proxy;
@@ -591,7 +591,7 @@ bool PaymentServer::processPaymentRequest(const PaymentRequestPlus& request, Sen
             addresses.append(QString::fromStdString(EncodeDestination(dest)));
         }
         else if (!recipient.authenticatedMerchant.isEmpty()) {
-            // Unauthenticated payment requests to custom bitcorn addresses are not supported
+            // Unauthenticated payment requests to custom pinecoin addresses are not supported
             // (there is no good way to tell the user where they are paying in a way they'd
             // have a chance of understanding).
             Q_EMIT message(tr("Payment request rejected"),
@@ -600,7 +600,7 @@ bool PaymentServer::processPaymentRequest(const PaymentRequestPlus& request, Sen
             return false;
         }
 
-        // BitCorn amounts are stored as (optional) uint64 in the protobuf messages (see paymentrequest.proto),
+        // PineCoin amounts are stored as (optional) uint64 in the protobuf messages (see paymentrequest.proto),
         // but CAmount is defined as int64_t. Because of that we need to verify that amounts are in a valid range
         // and no overflow has happened.
         if (!verifyAmount(sendingTo.second)) {

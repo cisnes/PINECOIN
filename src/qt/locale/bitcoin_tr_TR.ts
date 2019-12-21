@@ -66,12 +66,12 @@
         <translation>Alınan Adresler</translation>
     </message>
     <message>
-        <source>These are your BitCorn addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Bunlar ödeme göndermek için gereken BitCorn adreslerinizdir. Para göndermeden önce her zaman miktarı ve alıcı adresi kontrol edin.</translation>
+        <source>These are your PineCoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Bunlar ödeme göndermek için gereken PineCoin adreslerinizdir. Para göndermeden önce her zaman miktarı ve alıcı adresi kontrol edin.</translation>
     </message>
     <message>
-        <source>These are your BitCorn addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Bunlar ödeme almak için kullanılacak BitCorn adreslerinizdir. Her işlem için yeni bir ödeme alma adresi kullanılması tavsiye edilir.</translation>
+        <source>These are your PineCoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Bunlar ödeme almak için kullanılacak PineCoin adreslerinizdir. Her işlem için yeni bir ödeme alma adresi kullanılması tavsiye edilir.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -188,8 +188,8 @@
         <translation>Cüzdan Şifrelendi</translation>
     </message>
     <message>
-        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitcorns from being stolen by malware infecting your computer.</source>
-        <translation>%1 Şifreleme işlemini bitirmek için kapatılacak. Şunu unutmayın ki şampiyon galatasaray ve şifrelemek, bitcornlerinizin bilgisayarınıza bulaşan malware yazılımları tarafından çalınmasını tamamen engelleyemez.</translation>
+        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your pinecoins from being stolen by malware infecting your computer.</source>
+        <translation>%1 Şifreleme işlemini bitirmek için kapatılacak. Şunu unutmayın ki şampiyon galatasaray ve şifrelemek, pinecoinlerinizin bilgisayarınıza bulaşan malware yazılımları tarafından çalınmasını tamamen engelleyemez.</translation>
     </message>
     <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
@@ -298,8 +298,8 @@
         <translation>Bloklar disk üzerinde yeniden indeksleniyor...</translation>
     </message>
     <message>
-        <source>Send coins to a BitCorn address</source>
-        <translation>BitCorn adresine madeni para gönderin</translation>
+        <source>Send coins to a PineCoin address</source>
+        <translation>PineCoin adresine madeni para gönderin</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -314,8 +314,8 @@
         <translation>Onay mesajı...</translation>
     </message>
     <message>
-        <source>BitCorn</source>
-        <translation>BitCorn
+        <source>PineCoin</source>
+        <translation>PineCoin
 </translation>
     </message>
     <message>
@@ -470,8 +470,8 @@
         <translation>Gönderim adresini düzenleyin</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid BitCorn address.</source>
-        <translation>Girilen adres "%1" BitCorn adresiyle eşleşmiyor.</translation>
+        <source>The entered address "%1" is not a valid PineCoin address.</source>
+        <translation>Girilen adres "%1" PineCoin adresiyle eşleşmiyor.</translation>
     </message>
     <message>
         <source>New key generation failed.</source>
@@ -507,8 +507,8 @@
         <translation>Hoş geldiniz</translation>
     </message>
     <message>
-        <source>BitCorn</source>
-        <translation>BitCorn
+        <source>PineCoin</source>
+        <translation>PineCoin
 </translation>
     </message>
     <message>
@@ -640,7 +640,7 @@
         <translation>Form</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the BitCorn network after a connection is established, but this process has not completed yet.</source>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the PineCoin network after a connection is established, but this process has not completed yet.</source>
         <translation>Gösterilen bilgi geçerli olmayabilir. Bağlantı tekrar sağlandıktan sonra cüzdanınız otomatik olarak senkronize olacaktır. Henüz senkronize olma işlemi tamamlanmadı.</translation>
     </message>
     <message>
@@ -721,8 +721,8 @@
 <context>
     <name>QObject</name>
     <message>
-        <source>Enter a BitCorn address (e.g. %1)</source>
-        <translation>BitCorn adresinizi girin (örneğin %1)</translation>
+        <source>Enter a PineCoin address (e.g. %1)</source>
+        <translation>PineCoin adresinizi girin (örneğin %1)</translation>
     </message>
     <message>
         <source>N/A</source>
@@ -1106,8 +1106,8 @@
         <translation>Coin gönderimini onaylayın</translation>
     </message>
     <message>
-        <source>Warning: Invalid BitCorn address</source>
-        <translation>Uyarı: Hatalı BitCorn adresi</translation>
+        <source>Warning: Invalid PineCoin address</source>
+        <translation>Uyarı: Hatalı PineCoin adresi</translation>
     </message>
     <message>
         <source>(no label)</source>
@@ -1397,10 +1397,10 @@
     </message>
     </context>
 <context>
-    <name>bitcorn-core</name>
+    <name>pinecoin-core</name>
     <message>
-        <source>BitCorn Core</source>
-        <translation>BitCorn Çekirdeği</translation>
+        <source>PineCoin Core</source>
+        <translation>PineCoin Çekirdeği</translation>
     </message>
     <message>
         <source>Copyright (C) %i-%i</source>

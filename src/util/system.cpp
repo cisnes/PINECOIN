@@ -1,7 +1,7 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2019 The Bitcoin Core developers
 // Copyright (c) 2019 The BitGreen Core developers
-// Copyright (c) 2019 The BitCorn Core developers
+// Copyright (c) 2019 The PineCoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -70,7 +70,7 @@
 // Application startup time (used for uptime calculation)
 const int64_t nStartupTime = GetTime();
 
-const char * const BITCORN_CONF_FILENAME = "bitcorn.conf";
+const char * const PINECOIN_CONF_FILENAME = "pinecoin.conf";
 
 ArgsManager gArgs;
 
@@ -220,7 +220,7 @@ public:
         std::pair<bool,std::string> found_result(false, std::string());
 
         // We pass "true" to GetArgHelper in order to return the last
-        // argument value seen from the command line (so "bitcornd -foo=bar
+        // argument value seen from the command line (so "pinecoind -foo=bar
         // -foo=baz" gives GetArg(am,"foo")=={true,"baz"}
         found_result = GetArgHelper(am.m_override_args, arg, true);
         if (found_result.first) {
@@ -665,7 +665,7 @@ static std::string FormatException(const std::exception* pex, const char* pszThr
     char pszModule[MAX_PATH] = "";
     GetModuleFileNameA(nullptr, pszModule, sizeof(pszModule));
 #else
-    const char* pszModule = "bitcorn";
+    const char* pszModule = "pinecoin";
 #endif
     if (pex)
         return strprintf(
@@ -684,13 +684,13 @@ void PrintExceptionContinue(const std::exception* pex, const char* pszThread)
 
 fs::path GetDefaultDataDir()
 {
-    // Windows < Vista: C:\Documents and Settings\Username\Application Data\BitCorn
-    // Windows >= Vista: C:\Users\Username\AppData\Roaming\BitCorn
-    // Mac: ~/Library/Application Support/BitCorn
-    // Unix: ~/.bitcorn
+    // Windows < Vista: C:\Documents and Settings\Username\Application Data\PineCoin
+    // Windows >= Vista: C:\Users\Username\AppData\Roaming\PineCoin
+    // Mac: ~/Library/Application Support/PineCoin
+    // Unix: ~/.pinecoin
 #ifdef WIN32
     // Windows
-    return GetSpecialFolderPath(CSIDL_APPDATA) / "BitCorn2";
+    return GetSpecialFolderPath(CSIDL_APPDATA) / "PineCoin2";
 #else
     fs::path pathRet;
     char* pszHome = getenv("HOME");
@@ -700,10 +700,10 @@ fs::path GetDefaultDataDir()
         pathRet = fs::path(pszHome);
 #ifdef MAC_OSX
     // Mac
-    return pathRet / "Library/Application Support/BitCorn2";
+    return pathRet / "Library/Application Support/PineCoin2";
 #else
     // Unix
-    return pathRet / ".bitcorn2";
+    return pathRet / ".pinecoin2";
 #endif
 #endif
 }
@@ -874,7 +874,7 @@ bool ArgsManager::ReadConfigFiles(std::string& error, bool ignore_invalid_keys)
         m_config_sections.clear();
     }
 
-    const std::string confPath = GetArg("-conf", BITCORN_CONF_FILENAME);
+    const std::string confPath = GetArg("-conf", PINECOIN_CONF_FILENAME);
     fsbridge::ifstream stream(GetConfigFile(confPath));
 
     // ok to not have a config file

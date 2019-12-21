@@ -1,11 +1,11 @@
 // Copyright (c) 2018 The Dash Core developers
 // Copyright (c) 2019 The BitGreen Core developers
-// Copyright (c) 2019 The BitCorn Core developers
+// Copyright (c) 2019 The PineCoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCORN_SPECIAL_SPECIALDB_H
-#define BITCORN_SPECIAL_SPECIALDB_H
+#ifndef PINECOIN_SPECIAL_SPECIALDB_H
+#define PINECOIN_SPECIAL_SPECIALDB_H
 
 #include <dbwrapper.h>
 #include <sync.h>
@@ -86,4 +86,4 @@ public:
 
 extern std::unique_ptr<CSpecialDB> pspecialdb;
 
-#endif //BITCORN_SPECIAL_SPECIALDB_H
+#endif //PINECOIN_SPECIAL_SPECIALDB_H

@@ -10,7 +10,7 @@ TRAVIS_COMMIT_LOG=$(git log --format=fuller -1)
 export TRAVIS_COMMIT_LOG
 
 OUTDIR=$BASE_OUTDIR/$TRAVIS_PULL_REQUEST/$TRAVIS_JOB_NUMBER-$HOST
-BITCORN_CONFIG_ALL="--disable-bench --disable-tests --disable-dependency-tracking --prefix=$TRAVIS_BUILD_DIR/depends/$HOST --bindir=$OUTDIR/bin --libdir=$OUTDIR/lib"
+PINECOIN_CONFIG_ALL="--disable-bench --disable-tests --disable-dependency-tracking --prefix=$TRAVIS_BUILD_DIR/depends/$HOST --bindir=$OUTDIR/bin --libdir=$OUTDIR/lib"
 if [ -z "$NO_DEPENDS" ]; then
   DOCKER_EXEC ccache --max-size=$CCACHE_SIZE
 fi
@@ -27,17 +27,17 @@ mkdir build
 cd build || (echo "could not enter build directory"; exit 1)
 
 BEGIN_FOLD configure
-DOCKER_EXEC ../configure --cache-file=config.cache $BITCORN_CONFIG_ALL $BITCORN_CONFIG || ( cat config.log && false)
+DOCKER_EXEC ../configure --cache-file=config.cache $PINECOIN_CONFIG_ALL $PINECOIN_CONFIG || ( cat config.log && false)
 END_FOLD
 
 BEGIN_FOLD distdir
 DOCKER_EXEC make distdir VERSION=$HOST
 END_FOLD
 
-cd "bitcorn-$HOST" || (echo "could not enter distdir bitcorn-$HOST"; exit 1)
+cd "pinecoin-$HOST" || (echo "could not enter distdir pinecoin-$HOST"; exit 1)
 
 BEGIN_FOLD configure
-DOCKER_EXEC ./configure --cache-file=../config.cache $BITCORN_CONFIG_ALL $BITCORN_CONFIG || ( cat config.log && false)
+DOCKER_EXEC ./configure --cache-file=../config.cache $PINECOIN_CONFIG_ALL $PINECOIN_CONFIG || ( cat config.log && false)
 END_FOLD
 
 set -o errtrace

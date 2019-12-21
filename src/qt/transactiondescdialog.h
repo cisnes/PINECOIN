@@ -1,11 +1,11 @@
 // Copyright (c) 2011-2014 The Bitcoin Core developers
 // Copyright (c) 2018-2019 The BitGreen Core developers
-// Copyright (c) 2019 The BitCorn Core developers
+// Copyright (c) 2019 The PineCoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCORN_QT_TRANSACTIONDESCDIALOG_H
-#define BITCORN_QT_TRANSACTIONDESCDIALOG_H
+#ifndef PINECOIN_QT_TRANSACTIONDESCDIALOG_H
+#define PINECOIN_QT_TRANSACTIONDESCDIALOG_H
 
 #include <QDialog>
 
@@ -30,4 +30,4 @@ private:
     Ui::TransactionDescDialog *ui;
 };
 
-#endif // BITCORN_QT_TRANSACTIONDESCDIALOG_H
+#endif // PINECOIN_QT_TRANSACTIONDESCDIALOG_H

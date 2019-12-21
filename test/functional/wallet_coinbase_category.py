@@ -7,12 +7,12 @@
 Tests listtransactions, listsinceblock, and gettransaction.
 """
 
-from test_framework.test_framework import BitCornTestFramework
+from test_framework.test_framework import PineCoinTestFramework
 from test_framework.util import (
     assert_array_result
 )
 
-class CoinbaseCategoryTest(BitCornTestFramework):
+class CoinbaseCategoryTest(PineCoinTestFramework):
     def set_test_params(self):
         self.num_nodes = 1
 

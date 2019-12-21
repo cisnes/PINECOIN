@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCORN_REVERSELOCK_H
-#define BITCORN_REVERSELOCK_H
+#ifndef PINECOIN_REVERSELOCK_H
+#define PINECOIN_REVERSELOCK_H
 
 /**
  * An RAII-style reverse lock. Unlocks on construction and locks on destruction.
@@ -31,4 +31,4 @@ private:
     Lock templock;
 };
 
-#endif // BITCORN_REVERSELOCK_H
+#endif // PINECOIN_REVERSELOCK_H

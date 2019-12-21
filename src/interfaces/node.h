@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCORN_INTERFACES_NODE_H
-#define BITCORN_INTERFACES_NODE_H
+#ifndef PINECOIN_INTERFACES_NODE_H
+#define PINECOIN_INTERFACES_NODE_H
 
 #include <addrdb.h>     // For banmap_t
 #include <amount.h>     // For CAmount
@@ -33,7 +33,7 @@ namespace interfaces {
 class Handler;
 class Wallet;
 
-//! Top-level interface for a bitcorn node (bitcornd process).
+//! Top-level interface for a pinecoin node (pinecoind process).
 class Node
 {
 public:
@@ -259,4 +259,4 @@ std::unique_ptr<Node> MakeNode();
 
 } // namespace interfaces
 
-#endif // BITCORN_INTERFACES_NODE_H
+#endif // PINECOIN_INTERFACES_NODE_H

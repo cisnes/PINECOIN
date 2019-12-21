@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCORN_SUPPORT_EVENTS_H
-#define BITCORN_SUPPORT_EVENTS_H
+#ifndef PINECOIN_SUPPORT_EVENTS_H
+#define PINECOIN_SUPPORT_EVENTS_H
 
 #include <ios>
 #include <memory>
@@ -53,4 +53,4 @@ inline raii_evhttp_connection obtain_evhttp_connection_base(struct event_base* b
     return result;
 }
 
-#endif // BITCORN_SUPPORT_EVENTS_H
+#endif // PINECOIN_SUPPORT_EVENTS_H

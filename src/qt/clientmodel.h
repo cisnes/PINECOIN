@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCORN_QT_CLIENTMODEL_H
-#define BITCORN_QT_CLIENTMODEL_H
+#ifndef PINECOIN_QT_CLIENTMODEL_H
+#define PINECOIN_QT_CLIENTMODEL_H
 
 #include <special/deterministicmns.h>
 #include <sync.h>
@@ -43,7 +43,7 @@ enum NumConnections {
     CONNECTIONS_ALL  = (CONNECTIONS_IN | CONNECTIONS_OUT),
 };
 
-/** Model for BitCorn network client. */
+/** Model for PineCoin network client. */
 class ClientModel : public QObject
 {
     Q_OBJECT
@@ -136,4 +136,4 @@ public Q_SLOTS:
     void updateBanlist();
 };
 
-#endif // BITCORN_QT_CLIENTMODEL_H
+#endif // PINECOIN_QT_CLIENTMODEL_H

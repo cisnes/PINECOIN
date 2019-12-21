@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCORN_QT_BITCOINADDRESSVALIDATOR_H
-#define BITCORN_QT_BITCOINADDRESSVALIDATOR_H
+#ifndef PINECOIN_QT_BITCOINADDRESSVALIDATOR_H
+#define PINECOIN_QT_BITCOINADDRESSVALIDATOR_H
 
 #include <QValidator>
 
@@ -20,7 +20,7 @@ public:
     State validate(QString &input, int &pos) const;
 };
 
-/** BitCorn address widget validator, checks for a valid bitcorn address.
+/** PineCoin address widget validator, checks for a valid pinecoin address.
  */
 class BitcoinAddressCheckValidator : public QValidator
 {
@@ -32,4 +32,4 @@ public:
     State validate(QString &input, int &pos) const;
 };
 
-#endif // BITCORN_QT_BITCOINADDRESSVALIDATOR_H
+#endif // PINECOIN_QT_BITCOINADDRESSVALIDATOR_H

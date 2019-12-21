@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCORN_SERIALIZE_H
-#define BITCORN_SERIALIZE_H
+#ifndef PINECOIN_SERIALIZE_H
+#define PINECOIN_SERIALIZE_H
 
 #include <compat/endian.h>
 
@@ -1248,4 +1248,4 @@ size_t GetSerializeSizeMany(int nVersion, const T&... t)
     return sc.size();
 }
 
-#endif // BITCORN_SERIALIZE_H
+#endif // PINECOIN_SERIALIZE_H

@@ -1,11 +1,11 @@
 // Copyright (c) 2018 The Dash Core developers
 // Copyright (c) 2019 The BitGreen Core developers
-// Copyright (c) 2019 The BitCorn Core developers
+// Copyright (c) 2019 The PineCoin Core developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCORN_LLMQ_QUORUMS_DKGSESSIONMGR_H
-#define BITCORN_LLMQ_QUORUMS_DKGSESSIONMGR_H
+#ifndef PINECOIN_LLMQ_QUORUMS_DKGSESSIONMGR_H
+#define PINECOIN_LLMQ_QUORUMS_DKGSESSIONMGR_H
 
 #include <llmq/quorums_dkgsessionhandler.h>
 
@@ -78,4 +78,4 @@ extern CDKGSessionManager* quorumDKGSessionManager;
 
 }
 
-#endif //BITCORN_LLMQ_QUORUMS_DKGSESSIONMGR_H
+#endif //PINECOIN_LLMQ_QUORUMS_DKGSESSIONMGR_H

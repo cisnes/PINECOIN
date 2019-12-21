@@ -1,11 +1,11 @@
 // Copyright (c) 2019 The Dash Core developers
 // Copyright (c) 2019 The BitGreen Core developers
-// Copyright (c) 2019 The BitCorn Core developers
+// Copyright (c) 2019 The PineCoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCORN_UNORDERED_LRU_CACHE_H
-#define BITCORN_UNORDERED_LRU_CACHE_H
+#ifndef PINECOIN_UNORDERED_LRU_CACHE_H
+#define PINECOIN_UNORDERED_LRU_CACHE_H
 
 #include <unordered_map>
 
@@ -109,4 +109,4 @@ private:
     }
 };
 
-#endif // BITCORN_UNORDERED_LRU_CACHE_H
+#endif // PINECOIN_UNORDERED_LRU_CACHE_H

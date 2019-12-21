@@ -150,8 +150,8 @@
         <translation>Дискдаги блоклар қайта индексланмоқда...</translation>
     </message>
     <message>
-        <source>Send coins to a BitCorn address</source>
-        <translation>Тангаларни BitCorn манзилига жўнатиш</translation>
+        <source>Send coins to a PineCoin address</source>
+        <translation>Тангаларни PineCoin манзилига жўнатиш</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -174,8 +174,8 @@
         <translation>Хабарни &amp;тасдиқлаш...</translation>
     </message>
     <message>
-        <source>BitCorn</source>
-        <translation>BitCorn</translation>
+        <source>PineCoin</source>
+        <translation>PineCoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -202,12 +202,12 @@
         <translation>Ҳамёнингизга тегишли махфий калитларни кодлаш</translation>
     </message>
     <message>
-        <source>Sign messages with your BitCorn addresses to prove you own them</source>
-        <translation>BitCorn манзилидан унинг эгаси эканлигингизни исботлаш учун хабарлар ёзинг</translation>
+        <source>Sign messages with your PineCoin addresses to prove you own them</source>
+        <translation>PineCoin манзилидан унинг эгаси эканлигингизни исботлаш учун хабарлар ёзинг</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified BitCorn addresses</source>
-        <translation>Хабарларни махсус BitCorn манзилларингиз билан ёзилганлигига ишонч ҳосил қилиш учун уларни тасдиқланг</translation>
+        <source>Verify messages to ensure they were signed with specified PineCoin addresses</source>
+        <translation>Хабарларни махсус PineCoin манзилларингиз билан ёзилганлигига ишонч ҳосил қилиш учун уларни тасдиқланг</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -226,8 +226,8 @@
         <translation>Ички ойналар асбоблар панели</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcorn: URIs)</source>
-        <translation>Тўловлар (QR кодлари ва bitcorn ёрдамида яратишлар: URI’лар) сўраш</translation>
+        <source>Request payments (generates QR codes and pinecoin: URIs)</source>
+        <translation>Тўловлар (QR кодлари ва pinecoin ёрдамида яратишлар: URI’лар) сўраш</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -238,16 +238,16 @@
         <translation>Фойдаланилган қабул қилинган манзиллар ва ёрлиқлар рўйхатини кўрсатиш</translation>
     </message>
     <message>
-        <source>Open a bitcorn: URI or payment request</source>
-        <translation>BitCorn’ни очиш: URI ёки тўлов сўрови</translation>
+        <source>Open a pinecoin: URI or payment request</source>
+        <translation>PineCoin’ни очиш: URI ёки тўлов сўрови</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
         <translation>&amp;Буйруқлар сатри мосламалари</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to BitCorn network</source>
-        <translation><numerusform>%n та BitCorn тармоғига фаол уланиш мавжуд</numerusform></translation>
+        <source>%n active connection(s) to PineCoin network</source>
+        <translation><numerusform>%n та PineCoin тармоғига фаол уланиш мавжуд</numerusform></translation>
     </message>
     <message>
         <source>%1 behind</source>
@@ -433,8 +433,8 @@
         <translation>Бошқа маълумотлар директориясида фойдаланинг:</translation>
     </message>
     <message>
-        <source>BitCorn</source>
-        <translation>BitCorn</translation>
+        <source>PineCoin</source>
+        <translation>PineCoin</translation>
     </message>
     <message>
         <source>Error: Specified data directory "%1" cannot be created.</source>
@@ -593,8 +593,8 @@
         <translation>Шакл</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the BitCorn network after a connection is established, but this process has not completed yet.</source>
-        <translation>Кўрсатилган маълумот эскирган бўлиши мумкин. Ҳамёнингиз алоқа ўрнатилгандан сўнг BitCorn тармоқ билан автоматик тарзда синхронланади, аммо жараён ҳалигача тугалланмади.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the PineCoin network after a connection is established, but this process has not completed yet.</source>
+        <translation>Кўрсатилган маълумот эскирган бўлиши мумкин. Ҳамёнингиз алоқа ўрнатилгандан сўнг PineCoin тармоқ билан автоматик тарзда синхронланади, аммо жараён ҳалигача тугалланмади.</translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -674,8 +674,8 @@
         <translation>Миқдори</translation>
     </message>
     <message>
-        <source>Enter a BitCorn address (e.g. %1)</source>
-        <translation>BitCorn манзилини киритинг (масалан.  %1)</translation>
+        <source>Enter a PineCoin address (e.g. %1)</source>
+        <translation>PineCoin манзилини киритинг (масалан.  %1)</translation>
     </message>
     <message>
         <source>%1 m</source>
@@ -1170,10 +1170,10 @@
     <name>WalletView</name>
     </context>
 <context>
-    <name>bitcorn-core</name>
+    <name>pinecoin-core</name>
     <message>
-        <source>BitCorn Core</source>
-        <translation>BitCorn Core</translation>
+        <source>PineCoin Core</source>
+        <translation>PineCoin Core</translation>
     </message>
     <message>
         <source>Information</source>

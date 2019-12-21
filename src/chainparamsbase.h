@@ -2,15 +2,15 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCORN_CHAINPARAMSBASE_H
-#define BITCORN_CHAINPARAMSBASE_H
+#ifndef PINECOIN_CHAINPARAMSBASE_H
+#define PINECOIN_CHAINPARAMSBASE_H
 
 #include <memory>
 #include <string>
 
 /**
- * CBaseChainParams defines the base parameters (shared between bitcorn-cli and bitcornd)
- * of a given instance of the BitCorn system.
+ * CBaseChainParams defines the base parameters (shared between pinecoin-cli and pinecoind)
+ * of a given instance of the PineCoin system.
  */
 class CBaseChainParams
 {
@@ -52,4 +52,4 @@ const CBaseChainParams& BaseParams();
 /** Sets the params returned by Params() to those for the given network. */
 void SelectBaseParams(const std::string& chain);
 
-#endif // BITCORN_CHAINPARAMSBASE_H
+#endif // PINECOIN_CHAINPARAMSBASE_H

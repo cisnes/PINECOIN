@@ -1,11 +1,11 @@
 // Copyright (c) 2018-2019 The Dash Core developers
 // Copyright (c) 2019 The BitGreen Core developers
-// Copyright (c) 2019 The BitCorn Core developers
+// Copyright (c) 2019 The PineCoin Core developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCORN_LLMQ_QUORUMS_DKGSESSION_H
-#define BITCORN_LLMQ_QUORUMS_DKGSESSION_H
+#ifndef PINECOIN_LLMQ_QUORUMS_DKGSESSION_H
+#define PINECOIN_LLMQ_QUORUMS_DKGSESSION_H
 
 #include <consensus/params.h>
 #include <net.h>
@@ -337,4 +337,4 @@ void SetSimulatedDKGErrorRate(const std::string& type, double rate);
 
 }
 
-#endif //BITCORN_LLMQ_QUORUMS_DKGSESSION_H
+#endif //PINECOIN_LLMQ_QUORUMS_DKGSESSION_H

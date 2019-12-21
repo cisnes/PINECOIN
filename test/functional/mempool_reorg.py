@@ -9,11 +9,11 @@ that spend (directly or indirectly) coinbase transactions.
 """
 
 from test_framework.blocktools import create_raw_transaction
-from test_framework.test_framework import BitCornTestFramework
+from test_framework.test_framework import PineCoinTestFramework
 from test_framework.util import assert_equal, assert_raises_rpc_error
 
 
-class MempoolCoinbaseTest(BitCornTestFramework):
+class MempoolCoinbaseTest(PineCoinTestFramework):
     def set_test_params(self):
         self.num_nodes = 2
 

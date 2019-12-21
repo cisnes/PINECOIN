@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCORN_VALIDATIONINTERFACE_H
-#define BITCORN_VALIDATIONINTERFACE_H
+#ifndef PINECOIN_VALIDATIONINTERFACE_H
+#define PINECOIN_VALIDATIONINTERFACE_H
 
 #include <primitives/transaction.h> // CTransaction(Ref)
 #include <sync.h>
@@ -226,4 +226,4 @@ public:
 
 CMainSignals& GetMainSignals();
 
-#endif // BITCORN_VALIDATIONINTERFACE_H
+#endif // PINECOIN_VALIDATIONINTERFACE_H

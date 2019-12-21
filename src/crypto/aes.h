@@ -4,8 +4,8 @@
 //
 // C++ wrapper around ctaes, a constant-time AES implementation
 
-#ifndef BITCORN_CRYPTO_AES_H
-#define BITCORN_CRYPTO_AES_H
+#ifndef PINECOIN_CRYPTO_AES_H
+#define PINECOIN_CRYPTO_AES_H
 
 extern "C" {
 #include <crypto/ctaes/ctaes.h>
@@ -64,4 +64,4 @@ private:
     unsigned char iv[AES_BLOCKSIZE];
 };
 
-#endif // BITCORN_CRYPTO_AES_H
+#endif // PINECOIN_CRYPTO_AES_H

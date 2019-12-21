@@ -1,11 +1,11 @@
 // Copyright (c) 2019 The Dash Core developers
 // Copyright (c) 2019 The BitGreen Core developers
-// Copyright (c) 2019 The BitCorn Core developers
+// Copyright (c) 2019 The PineCoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCORN_QUORUMS_INSTANTSEND_H
-#define BITCORN_QUORUMS_INSTANTSEND_H
+#ifndef PINECOIN_QUORUMS_INSTANTSEND_H
+#define PINECOIN_QUORUMS_INSTANTSEND_H
 
 #include <llmq/quorums_signing.h>
 
@@ -174,4 +174,4 @@ bool IsInstantSendEnabled();
 
 }
 
-#endif // BITCORN_QUORUMS_INSTANTSEND_H
+#endif // PINECOIN_QUORUMS_INSTANTSEND_H

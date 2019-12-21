@@ -16,7 +16,7 @@
 #include <validation.h>
 
 #if defined(HAVE_CONFIG_H)
-#include <config/bitcorn-config.h>
+#include <config/pinecoin-config.h>
 #endif
 
 #include <QAction>
@@ -47,7 +47,7 @@ void TestRpcCommand(RPCConsole* console)
 }
 } // namespace
 
-//! Entry point for BitCornApplication tests.
+//! Entry point for PineCoinApplication tests.
 void AppTests::appTests()
 {
 #ifdef Q_OS_MAC
@@ -57,7 +57,7 @@ void AppTests::appTests()
         // and fails to handle returned nulls
         // (https://bugreports.qt.io/browse/QTBUG-49686).
         QWARN("Skipping AppTests on mac build with 'minimal' platform set due to Qt bugs. To run AppTests, invoke "
-              "with 'test_bitcorn-qt -platform cocoa' on mac, or else use a linux or windows build.");
+              "with 'test_pinecoin-qt -platform cocoa' on mac, or else use a linux or windows build.");
         return;
     }
 #endif
@@ -72,7 +72,7 @@ void AppTests::appTests()
         NetworkStyle::instantiate(QString::fromStdString(Params().NetworkIDString())));
     m_app.setupPlatformStyle();
     m_app.createWindow(style.data());
-    connect(&m_app, &BitCornApplication::windowShown, this, &AppTests::guiTests);
+    connect(&m_app, &PineCoinApplication::windowShown, this, &AppTests::guiTests);
     expectCallback("guiTests");
     m_app.baseInitialize();
     m_app.requestInitialize();

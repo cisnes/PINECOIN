@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCORN_FLATFILE_H
-#define BITCORN_FLATFILE_H
+#ifndef PINECOIN_FLATFILE_H
+#define PINECOIN_FLATFILE_H
 
 #include <string>
 
@@ -93,4 +93,4 @@ public:
     bool Flush(const FlatFilePos& pos, bool finalize = false);
 };
 
-#endif // BITCORN_FLATFILE_H
+#endif // PINECOIN_FLATFILE_H

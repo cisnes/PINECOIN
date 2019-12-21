@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCORN_COINS_H
-#define BITCORN_COINS_H
+#ifndef PINECOIN_COINS_H
+#define PINECOIN_COINS_H
 
 #include <primitives/transaction.h>
 #include <compressor.h>
@@ -299,7 +299,7 @@ public:
     size_t DynamicMemoryUsage() const;
 
     /**
-     * Amount of bitcorns coming in to a transaction
+     * Amount of pinecoins coming in to a transaction
      * Note that lightweight clients may not know anything besides the hash of previous transactions,
      * so may not be able to calculate this.
      *
@@ -336,7 +336,7 @@ const Coin& AccessByTxid(const CCoinsViewCache& cache, const uint256& txid);
 /**
  * This is a minimally invasive approach to shutdown on LevelDB read errors from the
  * chainstate, while keeping user interface out of the common library, which is shared
- * between bitcornd, and bitcorn-qt and non-server tools.
+ * between pinecoind, and pinecoin-qt and non-server tools.
  *
  * Writes do not need similar protection, as failure to write is handled by the caller.
 */
@@ -357,4 +357,4 @@ private:
 
 };
 
-#endif // BITCORN_COINS_H
+#endif // PINECOIN_COINS_H

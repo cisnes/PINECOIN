@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCORN_MASTERNODES_NOTIFICATIONINTERFACE_H
-#define BITCORN_MASTERNODES_NOTIFICATIONINTERFACE_H
+#ifndef PINECOIN_MASTERNODES_NOTIFICATIONINTERFACE_H
+#define PINECOIN_MASTERNODES_NOTIFICATIONINTERFACE_H
 
 #include <validationinterface.h>
 
@@ -33,4 +33,4 @@ private:
 
 extern CMNNotificationInterface* g_mn_notification_interface;
 
-#endif // BITCORN_MASTERNODES_NOTIFICATIONINTERFACE_H
+#endif // PINECOIN_MASTERNODES_NOTIFICATIONINTERFACE_H

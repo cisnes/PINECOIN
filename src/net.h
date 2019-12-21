@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCORN_NET_H
-#define BITCORN_NET_H
+#ifndef PINECOIN_NET_H
+#define PINECOIN_NET_H
 
 #include <addrdb.h>
 #include <addrman.h>
@@ -933,4 +933,4 @@ public:
 /** Return a timestamp in the future (in microseconds) for exponentially distributed events. */
 int64_t PoissonNextSend(int64_t now, int average_interval_seconds);
 
-#endif // BITCORN_NET_H
+#endif // PINECOIN_NET_H

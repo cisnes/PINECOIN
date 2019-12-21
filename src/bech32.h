@@ -9,8 +9,8 @@
 //
 // For more information, see BIP 173.
 
-#ifndef BITCORN_BECH32_H
-#define BITCORN_BECH32_H
+#ifndef PINECOIN_BECH32_H
+#define PINECOIN_BECH32_H
 
 #include <stdint.h>
 #include <string>
@@ -27,4 +27,4 @@ std::pair<std::string, std::vector<uint8_t>> Decode(const std::string& str);
 
 } // namespace bech32
 
-#endif // BITCORN_BECH32_H
+#endif // PINECOIN_BECH32_H

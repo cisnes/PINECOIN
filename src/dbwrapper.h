@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCORN_DBWRAPPER_H
-#define BITCORN_DBWRAPPER_H
+#ifndef PINECOIN_DBWRAPPER_H
+#define PINECOIN_DBWRAPPER_H
 
 #include <clientversion.h>
 #include <fs.h>
@@ -747,4 +747,4 @@ public:
 };
 
 
-#endif // BITCORN_DBWRAPPER_H
+#endif // PINECOIN_DBWRAPPER_H

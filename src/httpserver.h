@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCORN_HTTPSERVER_H
-#define BITCORN_HTTPSERVER_H
+#ifndef PINECOIN_HTTPSERVER_H
+#define PINECOIN_HTTPSERVER_H
 
 #include <string>
 #include <stdint.h>
@@ -148,4 +148,4 @@ private:
     struct event* ev;
 };
 
-#endif // BITCORN_HTTPSERVER_H
+#endif // PINECOIN_HTTPSERVER_H

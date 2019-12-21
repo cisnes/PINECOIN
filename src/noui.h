@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCORN_NOUI_H
-#define BITCORN_NOUI_H
+#ifndef PINECOIN_NOUI_H
+#define PINECOIN_NOUI_H
 
 #include <string>
 
@@ -14,7 +14,7 @@ bool noui_ThreadSafeQuestion(const std::string& /* ignored interactive message *
 /** Non-GUI handler, which only logs a message. */
 void noui_InitMessage(const std::string& message);
 
-/** Connect all bitcornd signal handlers */
+/** Connect all pinecoind signal handlers */
 void noui_connect();
 
-#endif // BITCORN_NOUI_H
+#endif // PINECOIN_NOUI_H

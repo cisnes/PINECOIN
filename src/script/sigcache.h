@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCORN_SCRIPT_SIGCACHE_H
-#define BITCORN_SCRIPT_SIGCACHE_H
+#ifndef PINECOIN_SCRIPT_SIGCACHE_H
+#define PINECOIN_SCRIPT_SIGCACHE_H
 
 #include <script/interpreter.h>
 
@@ -53,4 +53,4 @@ public:
 
 void InitSignatureCache();
 
-#endif // BITCORN_SCRIPT_SIGCACHE_H
+#endif // PINECOIN_SCRIPT_SIGCACHE_H

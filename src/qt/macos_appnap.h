@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCORN_QT_MACOS_APPNAP_H
-#define BITCORN_QT_MACOS_APPNAP_H
+#ifndef PINECOIN_QT_MACOS_APPNAP_H
+#define PINECOIN_QT_MACOS_APPNAP_H
 
 #include <memory>
 
@@ -21,4 +21,4 @@ private:
     std::unique_ptr<CAppNapImpl> impl;
 };
 
-#endif // BITCORN_QT_MACOS_APPNAP_H
+#endif // PINECOIN_QT_MACOS_APPNAP_H

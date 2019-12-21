@@ -8,10 +8,10 @@
 import os
 import shutil
 
-from test_framework.test_framework import BitCornTestFramework, initialize_datadir
+from test_framework.test_framework import PineCoinTestFramework, initialize_datadir
 
 
-class BlocksdirTest(BitCornTestFramework):
+class BlocksdirTest(PineCoinTestFramework):
     def set_test_params(self):
         self.setup_clean_chain = True
         self.num_nodes = 1

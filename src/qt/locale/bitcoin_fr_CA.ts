@@ -178,6 +178,6 @@
     <name>WalletView</name>
     </context>
 <context>
-    <name>bitcorn-core</name>
+    <name>pinecoin-core</name>
     </context>
 </TS>

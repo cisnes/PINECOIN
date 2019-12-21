@@ -15,9 +15,9 @@ BitcoinUnits::BitcoinUnits(QObject *parent):
 QList<BitcoinUnits::Unit> BitcoinUnits::availableUnits()
 {
     QList<BitcoinUnits::Unit> unitlist;
-    unitlist.append(CORN);
-    unitlist.append(mCORN);
-    unitlist.append(uCORN);
+    unitlist.append(PINE);
+    unitlist.append(mPINE);
+    unitlist.append(uPINE);
     unitlist.append(SAT);
     return unitlist;
 }
@@ -26,9 +26,9 @@ bool BitcoinUnits::valid(int unit)
 {
     switch(unit)
     {
-    case CORN:
-    case mCORN:
-    case uCORN:
+    case PINE:
+    case mPINE:
+    case uPINE:
     case SAT:
         return true;
     default:
@@ -40,9 +40,9 @@ QString BitcoinUnits::longName(int unit)
 {
     switch(unit)
     {
-    case CORN: return QString("CORN");
-    case mCORN: return QString("mCORN");
-    case uCORN: return QString::fromUtf8("µCORN (bits)");
+    case PINE: return QString("PINE");
+    case mPINE: return QString("mPINE");
+    case uPINE: return QString::fromUtf8("µPINE (bits)");
     case SAT: return QString("Satoshi (sat)");
     default: return QString("???");
     }
@@ -52,7 +52,7 @@ QString BitcoinUnits::shortName(int unit)
 {
     switch(unit)
     {
-    case uCORN: return QString::fromUtf8("bits");
+    case uPINE: return QString::fromUtf8("bits");
     case SAT: return QString("sat");
     default: return longName(unit);
     }
@@ -62,9 +62,9 @@ QString BitcoinUnits::description(int unit)
 {
     switch(unit)
     {
-    case CORN: return QString("BitCorns");
-    case mCORN: return QString("Milli-BitCorns (1 / 1" THIN_SP_UTF8 "000)");
-    case uCORN: return QString("Micro-BitCorns (bits) (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+    case PINE: return QString("PineCoins");
+    case mPINE: return QString("Milli-PineCoins (1 / 1" THIN_SP_UTF8 "000)");
+    case uPINE: return QString("Micro-PineCoins (bits) (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
     case SAT: return QString("Satoshi (sat) (1 / 100" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
     default: return QString("???");
     }
@@ -74,9 +74,9 @@ qint64 BitcoinUnits::factor(int unit)
 {
     switch(unit)
     {
-    case CORN: return 100000000;
-    case mCORN: return 100000;
-    case uCORN: return 100;
+    case PINE: return 100000000;
+    case mPINE: return 100000;
+    case uPINE: return 100;
     case SAT: return 1;
     default: return 100000000;
     }
@@ -86,9 +86,9 @@ int BitcoinUnits::decimals(int unit)
 {
     switch(unit)
     {
-    case CORN: return 8;
-    case mCORN: return 5;
-    case uCORN: return 2;
+    case PINE: return 8;
+    case mPINE: return 5;
+    case uPINE: return 2;
     case SAT: return 0;
     default: return 0;
     }

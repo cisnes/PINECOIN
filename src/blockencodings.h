@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCORN_BLOCKENCODINGS_H
-#define BITCORN_BLOCKENCODINGS_H
+#ifndef PINECOIN_BLOCKENCODINGS_H
+#define PINECOIN_BLOCKENCODINGS_H
 
 #include <primitives/block.h>
 
@@ -212,4 +212,4 @@ public:
     ReadStatus FillBlock(CBlock& block, const std::vector<CTransactionRef>& vtx_missing);
 };
 
-#endif // BITCORN_BLOCKENCODINGS_H
+#endif // PINECOIN_BLOCKENCODINGS_H

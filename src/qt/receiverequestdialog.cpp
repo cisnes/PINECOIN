@@ -13,7 +13,7 @@
 #include <QPixmap>
 
 #if defined(HAVE_CONFIG_H)
-#include <config/bitcorn-config.h> /* for USE_QRCODE */
+#include <config/pinecoin-config.h> /* for USE_QRCODE */
 #endif
 
 ReceiveRequestDialog::ReceiveRequestDialog(QWidget *parent) :
@@ -62,7 +62,7 @@ void ReceiveRequestDialog::update()
         target = info.address;
     setWindowTitle(tr("Request payment to %1").arg(target));
 
-    QString uri = GUIUtil::formatBitCornURI(info);
+    QString uri = GUIUtil::formatPineCoinURI(info);
     ui->btnSaveAs->setEnabled(false);
     QString html;
     html += "<html><font face='verdana, arial, helvetica, sans-serif'>";
@@ -88,7 +88,7 @@ void ReceiveRequestDialog::update()
 
 void ReceiveRequestDialog::on_btnCopyURI_clicked()
 {
-    GUIUtil::setClipboard(GUIUtil::formatBitCornURI(info));
+    GUIUtil::setClipboard(GUIUtil::formatPineCoinURI(info));
 }
 
 void ReceiveRequestDialog::on_btnCopyAddress_clicked()

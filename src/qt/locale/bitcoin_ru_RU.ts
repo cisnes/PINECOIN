@@ -66,12 +66,12 @@
         <translation>Адреса получения</translation>
     </message>
     <message>
-        <source>These are your BitCorn addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Это ваши BitCorn адреса для отправки платежа. Всегда проверяйте сумму и адрес получателя перед отправкой платежа.</translation>
+        <source>These are your PineCoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Это ваши PineCoin адреса для отправки платежа. Всегда проверяйте сумму и адрес получателя перед отправкой платежа.</translation>
     </message>
     <message>
-        <source>These are your BitCorn addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Это ваши BitCorn адреса для получения платежей. Настоятельно рекомендуем использовать новые адреса для получения каждой транзакции.</translation>
+        <source>These are your PineCoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Это ваши PineCoin адреса для получения платежей. Настоятельно рекомендуем использовать новые адреса для получения каждой транзакции.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -184,7 +184,7 @@
         <translation>Кошелек зашифрован</translation>
     </message>
     <message>
-        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitcorns from being stolen by malware infecting your computer.</source>
+        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your pinecoins from being stolen by malware infecting your computer.</source>
         <translation>%1 закроется сейчас для завершения процесса шифрования. Запомните что шифрование вашего кошелька не сможет полностью защитить ваши биткойны от кражи при помощи вредоносного ПО, заразившего ваш компьютер.</translation>
     </message>
     <message>
@@ -354,7 +354,7 @@
         <translation>Прокси &lt;b&gt;включен&lt;/b&gt;: %1</translation>
     </message>
     <message>
-        <source>Send coins to a BitCorn address</source>
+        <source>Send coins to a PineCoin address</source>
         <translation>Послать средства на биткойн адрес</translation>
     </message>
     <message>
@@ -378,8 +378,8 @@
         <translation>&amp;Проверить сообщение...</translation>
     </message>
     <message>
-        <source>BitCorn</source>
-        <translation>BitCorn Core</translation>
+        <source>PineCoin</source>
+        <translation>PineCoin Core</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -406,12 +406,12 @@
         <translation>Зашифровать приватные ключи, принадлежащие вашему кошельку</translation>
     </message>
     <message>
-        <source>Sign messages with your BitCorn addresses to prove you own them</source>
-        <translation>Подписывайте сообщения BitCorn адресами чтобы подтвердить что это написали именно Вы</translation>
+        <source>Sign messages with your PineCoin addresses to prove you own them</source>
+        <translation>Подписывайте сообщения PineCoin адресами чтобы подтвердить что это написали именно Вы</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified BitCorn addresses</source>
-        <translation>Проверяйте сообщения чтобы убедиться что они подписаны конкретными BitCorn адресами</translation>
+        <source>Verify messages to ensure they were signed with specified PineCoin addresses</source>
+        <translation>Проверяйте сообщения чтобы убедиться что они подписаны конкретными PineCoin адресами</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -430,7 +430,7 @@
         <translation>Панель вкладок</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcorn: URIs)</source>
+        <source>Request payments (generates QR codes and pinecoin: URIs)</source>
         <translation>Запросить платеж</translation>
     </message>
     <message>
@@ -442,7 +442,7 @@
         <translation>Показать список использованных адресов и меток получателей</translation>
     </message>
     <message>
-        <source>Open a bitcorn: URI or payment request</source>
+        <source>Open a pinecoin: URI or payment request</source>
         <translation>Открыть биткойн: URI или запрос платежа</translation>
     </message>
     <message>
@@ -450,8 +450,8 @@
         <translation>Опции командной строки</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to BitCorn network</source>
-        <translation><numerusform>%n активное подключение к сети BitCorn</numerusform><numerusform>%n активных подключения к сети BitCorn</numerusform><numerusform>%n активных подключений к сети BitCorn</numerusform><numerusform>%n активных подключений к сети BitCorn</numerusform></translation>
+        <source>%n active connection(s) to PineCoin network</source>
+        <translation><numerusform>%n активное подключение к сети PineCoin</numerusform><numerusform>%n активных подключения к сети PineCoin</numerusform><numerusform>%n активных подключений к сети PineCoin</numerusform><numerusform>%n активных подключений к сети PineCoin</numerusform></translation>
     </message>
     <message>
         <source>Indexing blocks on disk...</source>
@@ -554,8 +554,8 @@
         <translation>Кошелек &lt;b&gt;зашифрован&lt;/b&gt; и сейчас &lt;b&gt;заблокирован&lt;/b&gt;</translation>
     </message>
     <message>
-        <source>A fatal error occurred. BitCorn can no longer continue safely and will quit.</source>
-        <translation>Произошла критическая ошибка. BitCorn больше не может продолжать безопасную работу и будет закрыт.</translation>
+        <source>A fatal error occurred. PineCoin can no longer continue safely and will quit.</source>
+        <translation>Произошла критическая ошибка. PineCoin больше не может продолжать безопасную работу и будет закрыт.</translation>
     </message>
 </context>
 <context>
@@ -797,8 +797,8 @@
         <translation>Использовать пользовательскую директорию данных</translation>
     </message>
     <message>
-        <source>BitCorn</source>
-        <translation>BitCorn Core</translation>
+        <source>PineCoin</source>
+        <translation>PineCoin Core</translation>
     </message>
     <message>
         <source>At least %1 GB of data will be stored in this directory, and it will grow over time.</source>
@@ -828,11 +828,11 @@
         <translation>Форма</translation>
     </message>
     <message>
-        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the bitcorn network, as detailed below.</source>
+        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the pinecoin network, as detailed below.</source>
         <translation>Последние транзакции пока могут быть не видны, поэтому вы можете видеть некорректный баланс ваших кошельков. Отображаемая информация будет верна после завершения синхронизации. Прогресс синхронизации вы можете видеть ниже.</translation>
     </message>
     <message>
-        <source>Attempting to spend bitcorns that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+        <source>Attempting to spend pinecoins that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
         <translation>Попытка потратить средства, использованные в транзакциях, которые ещё не синхронизированы, будет отклонена сетью.</translation>
     </message>
     <message>
@@ -982,8 +982,8 @@
         <translation>Разрешить входящие соединения</translation>
     </message>
     <message>
-        <source>Connect to the BitCorn network through a SOCKS5 proxy.</source>
-        <translation>Подключится к сети BitCorn через SOCKS5 прокси.</translation>
+        <source>Connect to the PineCoin network through a SOCKS5 proxy.</source>
+        <translation>Подключится к сети PineCoin через SOCKS5 прокси.</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -1018,7 +1018,7 @@
         <translation>Tor</translation>
     </message>
     <message>
-        <source>Connect to the BitCorn network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <source>Connect to the PineCoin network through a separate SOCKS5 proxy for Tor hidden services.</source>
         <translation>Соединяться к Биткоин-сети через отдельные SOCKS5 прокси через Tor hidden services:</translation>
     </message>
     <message>
@@ -1148,8 +1148,8 @@
         <translation>Ошибка запроса платежа</translation>
     </message>
     <message>
-        <source>'bitcorn://' is not a valid URI. Use 'bitcorn:' instead.</source>
-        <translation>'bitcorn://' не верный URI. Используйте 'bitcorn:' вместо этого.</translation>
+        <source>'pinecoin://' is not a valid URI. Use 'pinecoin:' instead.</source>
+        <translation>'pinecoin://' не верный URI. Используйте 'pinecoin:' вместо этого.</translation>
     </message>
     <message>
         <source>Invalid payment address %1</source>
@@ -1214,7 +1214,7 @@
         <translation>Количество</translation>
     </message>
     <message>
-        <source>Enter a BitCorn address (e.g. %1)</source>
+        <source>Enter a PineCoin address (e.g. %1)</source>
         <translation>Введите биткоин-адрес (напр. %1)</translation>
     </message>
     <message>
@@ -1815,8 +1815,8 @@
         <translation>Истекло время ожидания запроса платежа</translation>
     </message>
     <message>
-        <source>Warning: Invalid BitCorn address</source>
-        <translation>Предупреждение: Неверный BitCorn адрес</translation>
+        <source>Warning: Invalid PineCoin address</source>
+        <translation>Предупреждение: Неверный PineCoin адрес</translation>
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -2258,7 +2258,7 @@
     </message>
     </context>
 <context>
-    <name>bitcorn-core</name>
+    <name>pinecoin-core</name>
     <message>
         <source>Error: A fatal internal error occurred, see debug.log for details</source>
         <translation>Ошибка: произошла критическая внутренняя ошибка, для получения деталей см. debug.log</translation>
@@ -2268,8 +2268,8 @@
         <translation>Невозможно запустить HTTP-сервер. Для получения более детальной информации необходимо обратиться к журналу отладки.</translation>
     </message>
     <message>
-        <source>BitCorn Core</source>
-        <translation>BitCorn Core</translation>
+        <source>PineCoin Core</source>
+        <translation>PineCoin Core</translation>
     </message>
     <message>
         <source>The %s developers</source>

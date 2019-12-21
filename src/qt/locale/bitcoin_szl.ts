@@ -66,12 +66,12 @@
         <translation>Adresy ôdbiyraniŏ</translation>
     </message>
     <message>
-        <source>These are your BitCorn addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Tukej sōm adresy BitCorn na kere posyłŏsz płaty. Dycki wybaduj wielość i adresã ôdbiyrŏcza przed posłaniym mōnet.</translation>
+        <source>These are your PineCoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Tukej sōm adresy PineCoin na kere posyłŏsz płaty. Dycki wybaduj wielość i adresã ôdbiyrŏcza przed posłaniym mōnet.</translation>
     </message>
     <message>
-        <source>These are your BitCorn addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Tukej sōm adresy BitCorn do ôdbiyraniŏ płatōw. Zalycŏ sie używaniŏ nowych adres ôdbiorczych dlŏ kożdyj transakcyje.</translation>
+        <source>These are your PineCoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Tukej sōm adresy PineCoin do ôdbiyraniŏ płatōw. Zalycŏ sie używaniŏ nowych adres ôdbiorczych dlŏ kożdyj transakcyje.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -188,8 +188,8 @@
         <translation>Portmanyj zaszyfrowany</translation>
     </message>
     <message>
-        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitcorns from being stolen by malware infecting your computer.</source>
-        <translation>%1 zawrzi sie coby dokōńczyć proces szyfrowaniŏ. Pamiyntej, iże szyfrowanie portmanyja ganc niy zabezpieczŏ Twojich bitcornów przed chabiyniym bez wirusy abo trojany mogōnce zakażać Twōj kōmputer.</translation>
+        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your pinecoins from being stolen by malware infecting your computer.</source>
+        <translation>%1 zawrzi sie coby dokōńczyć proces szyfrowaniŏ. Pamiyntej, iże szyfrowanie portmanyja ganc niy zabezpieczŏ Twojich pinecoinów przed chabiyniym bez wirusy abo trojany mogōnce zakażać Twōj kōmputer.</translation>
     </message>
     <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
@@ -354,8 +354,8 @@
         <translation>Proxy je &lt;b&gt;zapuszczone&lt;/b&gt;: %1</translation>
     </message>
     <message>
-        <source>Send coins to a BitCorn address</source>
-        <translation>Poślij mōnety na adresã BitCorn</translation>
+        <source>Send coins to a PineCoin address</source>
+        <translation>Poślij mōnety na adresã PineCoin</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -378,8 +378,8 @@
         <translation>&amp;Weryfikuj wiadōmość...</translation>
     </message>
     <message>
-        <source>BitCorn</source>
-        <translation>BitCorn</translation>
+        <source>PineCoin</source>
+        <translation>PineCoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -406,12 +406,12 @@
         <translation>Szyfruj klucze prywatne, kere sōm we twojim portmanyju</translation>
     </message>
     <message>
-        <source>Sign messages with your BitCorn addresses to prove you own them</source>
+        <source>Sign messages with your PineCoin addresses to prove you own them</source>
         <translation>Podpisz wiadōmości swojōm adresōm coby dowiyść jejich posiadanie</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified BitCorn addresses</source>
-        <translation>Zweryfikuj wiadōmość, coby wejzdrzeć sie, iże ôstała podpisanŏ podanōm adresōm BitCorn.</translation>
+        <source>Verify messages to ensure they were signed with specified PineCoin addresses</source>
+        <translation>Zweryfikuj wiadōmość, coby wejzdrzeć sie, iże ôstała podpisanŏ podanōm adresōm PineCoin.</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -430,8 +430,8 @@
         <translation>Lajsta szkart</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcorn: URIs)</source>
-        <translation>Żōndej płatu (gyneruje kod QR jak tyż URI bitcorn:)</translation>
+        <source>Request payments (generates QR codes and pinecoin: URIs)</source>
+        <translation>Żōndej płatu (gyneruje kod QR jak tyż URI pinecoin:)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -442,16 +442,16 @@
         <translation>Pokŏż wykŏz adres i etyket użytych do ôdbiyraniŏ</translation>
     </message>
     <message>
-        <source>Open a bitcorn: URI or payment request</source>
-        <translation>Ôdewrzij URI bitcorn: abo żōndanie płatu</translation>
+        <source>Open a pinecoin: URI or payment request</source>
+        <translation>Ôdewrzij URI pinecoin: abo żōndanie płatu</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
         <translation>Ôp&amp;cyje piski kōmynd</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to BitCorn network</source>
-        <translation><numerusform>%n aktywne połōnczynie do necu BitCorn</numerusform><numerusform>%n aktywnych połōnczyń do necu BitCorn</numerusform><numerusform>%n aktywnych skuplowań do necu BitCorn</numerusform></translation>
+        <source>%n active connection(s) to PineCoin network</source>
+        <translation><numerusform>%n aktywne połōnczynie do necu PineCoin</numerusform><numerusform>%n aktywnych połōnczyń do necu PineCoin</numerusform><numerusform>%n aktywnych skuplowań do necu PineCoin</numerusform></translation>
     </message>
     <message>
         <source>Indexing blocks on disk...</source>
@@ -494,7 +494,7 @@
         <translation>Terŏźny</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible BitCorn command-line options</source>
+        <source>Show the %1 help message to get a list with possible PineCoin command-line options</source>
         <translation>Pokŏż pōmoc %1 coby zobŏczyć wykŏz wszyjskich ôpcyji piski nakŏzań.</translation>
     </message>
     <message>
@@ -566,8 +566,8 @@
         <translation>Portmanyj je &lt;b&gt;zaszyfrowany&lt;/b&gt; i terŏźnie &lt;b&gt;zaszperowany&lt;/b&gt;</translation>
     </message>
     <message>
-        <source>A fatal error occurred. BitCorn can no longer continue safely and will quit.</source>
-        <translation>Przitrefiōł sie krytyczny feler. BitCorn niy poradzi kōntynuować bezpiycznie i ôstanie zawrzity.</translation>
+        <source>A fatal error occurred. PineCoin can no longer continue safely and will quit.</source>
+        <translation>Przitrefiōł sie krytyczny feler. PineCoin niy poradzi kōntynuować bezpiycznie i ôstanie zawrzity.</translation>
     </message>
 </context>
 <context>
@@ -756,8 +756,8 @@
         <translation>Edytuj adresã posyłaniŏ</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid BitCorn address.</source>
-        <translation>Wkludzōnŏ adresa "%1" niyma nŏleżnōm adresōm BitCorn.</translation>
+        <source>The entered address "%1" is not a valid PineCoin address.</source>
+        <translation>Wkludzōnŏ adresa "%1" niyma nŏleżnōm adresōm PineCoin.</translation>
     </message>
     <message>
         <source>Address "%1" already exists as a receiving address with label "%2" and so cannot be added as a sending address.</source>
@@ -849,8 +849,8 @@
         <translation>Użyj ôbranego folderu datōw</translation>
     </message>
     <message>
-        <source>BitCorn</source>
-        <translation>BitCorn</translation>
+        <source>PineCoin</source>
+        <translation>PineCoin</translation>
     </message>
     <message>
         <source>At least %1 GB of data will be stored in this directory, and it will grow over time.</source>
@@ -861,8 +861,8 @@
         <translation>Kole %1 GB datōw ôstanie spamiyntane w tym katalogu.</translation>
     </message>
     <message>
-        <source>%1 will download and store a copy of the BitCorn block chain.</source>
-        <translation>%1 sebiere i spamiyntŏ kopijõ kety blokōw BitCorn.</translation>
+        <source>%1 will download and store a copy of the PineCoin block chain.</source>
+        <translation>%1 sebiere i spamiyntŏ kopijõ kety blokōw PineCoin.</translation>
     </message>
     <message>
         <source>The wallet will also be stored in this directory.</source>
@@ -892,12 +892,12 @@
         <translation>Formular</translation>
     </message>
     <message>
-        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the bitcorn network, as detailed below.</source>
-        <translation>Świyże transakcyje mogōm niy być jeszcze widzialne, a tedyć saldo portmanyja może być niynŏleżne. Te detale bydōm nŏleżne, kej portmanyj zakōńczy synchrōnizacyjõ z necym bitcorn, zgodnie z miyniōnym ôpisym.</translation>
+        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the pinecoin network, as detailed below.</source>
+        <translation>Świyże transakcyje mogōm niy być jeszcze widzialne, a tedyć saldo portmanyja może być niynŏleżne. Te detale bydōm nŏleżne, kej portmanyj zakōńczy synchrōnizacyjõ z necym pinecoin, zgodnie z miyniōnym ôpisym.</translation>
     </message>
     <message>
-        <source>Attempting to spend bitcorns that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
-        <translation>Prōba wydaniŏ bitcornōw kere niy sōm jeszcze wyświytlōne za transakcyjŏ ôstanie ôdciepniyntŏ bez nec.</translation>
+        <source>Attempting to spend pinecoins that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+        <translation>Prōba wydaniŏ pinecoinōw kere niy sōm jeszcze wyświytlōne za transakcyjŏ ôstanie ôdciepniyntŏ bez nec.</translation>
     </message>
     <message>
         <source>Number of blocks left</source>
@@ -1062,8 +1062,8 @@
         <translation>&amp;Wydej niyprzituplowanõ wydŏwkã</translation>
     </message>
     <message>
-        <source>Automatically open the BitCorn client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Autōmatycznie ôdewrzij port klijynta BitCorn na routerze. Ta ôpcyjŏ funguje ino jeźli twōj router podpiyrŏ UPnP i je ôno zapuszczone.</translation>
+        <source>Automatically open the PineCoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Autōmatycznie ôdewrzij port klijynta PineCoin na routerze. Ta ôpcyjŏ funguje ino jeźli twōj router podpiyrŏ UPnP i je ôno zapuszczone.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -1078,8 +1078,8 @@
         <translation>Zwōl na skuplowania przichodzōnce</translation>
     </message>
     <message>
-        <source>Connect to the BitCorn network through a SOCKS5 proxy.</source>
-        <translation>Skupluj sie z necym BitCorn bez SOCKS5 proxy.</translation>
+        <source>Connect to the PineCoin network through a SOCKS5 proxy.</source>
+        <translation>Skupluj sie z necym PineCoin bez SOCKS5 proxy.</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -1110,8 +1110,8 @@
         <translation>Tor</translation>
     </message>
     <message>
-        <source>Connect to the BitCorn network through a separate SOCKS5 proxy for Tor hidden services.</source>
-        <translation>Skupluj sie z necym BitCorn ze pōmocōm ôsobnego proxy SOCKS5 dlŏ necu TOR</translation>
+        <source>Connect to the PineCoin network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <translation>Skupluj sie z necym PineCoin ze pōmocōm ôsobnego proxy SOCKS5 dlŏ necu TOR</translation>
     </message>
     <message>
         <source>&amp;Window</source>
@@ -1157,8 +1157,8 @@
         <translation>Formular</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the BitCorn network after a connection is established, but this process has not completed yet.</source>
-        <translation>Wyświytlanŏ informacyjŏ może być niyterŏźnŏ. Twōj portmanyj synchrōnizuje sie autōmatycznie z necym bitcorn zarŏz po tym, jak zrychtowane je skuplowanie, ale proces tyn niy ôstoł jeszcze skōńczōny.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the PineCoin network after a connection is established, but this process has not completed yet.</source>
+        <translation>Wyświytlanŏ informacyjŏ może być niyterŏźnŏ. Twōj portmanyj synchrōnizuje sie autōmatycznie z necym pinecoin zarŏz po tym, jak zrychtowane je skuplowanie, ale proces tyn niy ôstoł jeszcze skōńczōny.</translation>
     </message>
     <message>
         <source>Available:</source>
@@ -1188,8 +1188,8 @@
         <translation>Bedynōng URI</translation>
     </message>
     <message>
-        <source>'bitcorn://' is not a valid URI. Use 'bitcorn:' instead.</source>
-        <translation>'bitcorn://' to niyma nŏleżne URI. Użyj 'bitcorn:'.</translation>
+        <source>'pinecoin://' is not a valid URI. Use 'pinecoin:' instead.</source>
+        <translation>'pinecoin://' to niyma nŏleżne URI. Użyj 'pinecoin:'.</translation>
     </message>
     <message>
         <source>Payment request network doesn't match client network.</source>
@@ -1230,8 +1230,8 @@
         <translation>Kwota</translation>
     </message>
     <message>
-        <source>Enter a BitCorn address (e.g. %1)</source>
-        <translation>Wkludź adresã BitCorn (bp. %1)</translation>
+        <source>Enter a PineCoin address (e.g. %1)</source>
+        <translation>Wkludź adresã PineCoin (bp. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1454,8 +1454,8 @@
         <translation>&amp;Etyketa:</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the BitCorn network.</source>
-        <translation>Ôpcyjōnalnŏ wiadōmość do prziwstōniŏ do żōndaniŏ płatu, kerŏ bydzie wyświytlanŏ, kej żōndanie ôstanie ôdewrzōne. Napōmniynie: wiadōmość ta niy ôstanie wysłanŏ z płatym w nec BitCorn.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the PineCoin network.</source>
+        <translation>Ôpcyjōnalnŏ wiadōmość do prziwstōniŏ do żōndaniŏ płatu, kerŏ bydzie wyświytlanŏ, kej żōndanie ôstanie ôdewrzōne. Napōmniynie: wiadōmość ta niy ôstanie wysłanŏ z płatym w nec PineCoin.</translation>
     </message>
     <message>
         <source>Clear</source>
@@ -1659,8 +1659,8 @@
         <translation>Utworzynie transakcyje niy podarziło sie!</translation>
     </message>
     <message>
-        <source>Warning: Invalid BitCorn address</source>
-        <translation>Pozōr: niynŏleżnŏ adresa BitCorn</translation>
+        <source>Warning: Invalid PineCoin address</source>
+        <translation>Pozōr: niynŏleżnŏ adresa PineCoin</translation>
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -1698,8 +1698,8 @@
         <translation>Wiadōmość:</translation>
     </message>
     <message>
-        <source>A message that was attached to the bitcorn: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the BitCorn network.</source>
-        <translation>Wiadōmość, kerŏ ôstała prziwstōnŏ do URI bitcorn:, kerŏ bydzie przechowowanŏ z transakcyjōm w cylach informacyjnych. Napōmniynie: Ta wiadōmość niy bydzie rozszyrzowanŏ w necu BitCorn.</translation>
+        <source>A message that was attached to the pinecoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the PineCoin network.</source>
+        <translation>Wiadōmość, kerŏ ôstała prziwstōnŏ do URI pinecoin:, kerŏ bydzie przechowowanŏ z transakcyjōm w cylach informacyjnych. Napōmniynie: Ta wiadōmość niy bydzie rozszyrzowanŏ w necu PineCoin.</translation>
     </message>
     </context>
 <context>
@@ -1958,10 +1958,10 @@
     </message>
 </context>
 <context>
-    <name>bitcorn-core</name>
+    <name>pinecoin-core</name>
     <message>
-        <source>BitCorn Core</source>
-        <translation>BitCorn Core</translation>
+        <source>PineCoin Core</source>
+        <translation>PineCoin Core</translation>
     </message>
     <message>
         <source>The %s developers</source>

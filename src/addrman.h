@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCORN_ADDRMAN_H
-#define BITCORN_ADDRMAN_H
+#ifndef PINECOIN_ADDRMAN_H
+#define PINECOIN_ADDRMAN_H
 
 #include <netaddress.h>
 #include <protocol.h>
@@ -637,4 +637,4 @@ public:
     }
 };
 
-#endif // BITCORN_ADDRMAN_H
+#endif // PINECOIN_ADDRMAN_H

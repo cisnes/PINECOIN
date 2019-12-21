@@ -11,7 +11,7 @@
 #include <mutex>
 
 #if defined(HAVE_CONFIG_H)
-#include <config/bitcorn-config.h>
+#include <config/pinecoin-config.h>
 #endif
 
 #include <boost/test/unit_test.hpp>

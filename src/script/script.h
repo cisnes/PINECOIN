@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCORN_SCRIPT_SCRIPT_H
-#define BITCORN_SCRIPT_SCRIPT_H
+#ifndef PINECOIN_SCRIPT_SCRIPT_H
+#define PINECOIN_SCRIPT_SCRIPT_H
 
 #include <crypto/common.h>
 #include <prevector.h>
@@ -584,4 +584,4 @@ struct CScriptWitness
     std::string ToString() const;
 };
 
-#endif // BITCORN_SCRIPT_SCRIPT_H
+#endif // PINECOIN_SCRIPT_SCRIPT_H

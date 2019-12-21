@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCORN_QT_WALLETCONTROLLER_H
-#define BITCORN_QT_WALLETCONTROLLER_H
+#ifndef PINECOIN_QT_WALLETCONTROLLER_H
+#define PINECOIN_QT_WALLETCONTROLLER_H
 
 #include <qt/walletmodel.h>
 #include <sync.h>
@@ -91,4 +91,4 @@ private:
     std::string const m_name;
 };
 
-#endif // BITCORN_QT_WALLETCONTROLLER_H
+#endif // PINECOIN_QT_WALLETCONTROLLER_H

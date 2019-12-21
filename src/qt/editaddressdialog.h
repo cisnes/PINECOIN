@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCORN_QT_EDITADDRESSDIALOG_H
-#define BITCORN_QT_EDITADDRESSDIALOG_H
+#ifndef PINECOIN_QT_EDITADDRESSDIALOG_H
+#define PINECOIN_QT_EDITADDRESSDIALOG_H
 
 #include <QDialog>
 
@@ -56,4 +56,4 @@ private:
     QString address;
 };
 
-#endif // BITCORN_QT_EDITADDRESSDIALOG_H
+#endif // PINECOIN_QT_EDITADDRESSDIALOG_H

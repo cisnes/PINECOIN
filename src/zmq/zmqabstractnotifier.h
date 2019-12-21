@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCORN_ZMQ_ZMQABSTRACTNOTIFIER_H
-#define BITCORN_ZMQ_ZMQABSTRACTNOTIFIER_H
+#ifndef PINECOIN_ZMQ_ZMQABSTRACTNOTIFIER_H
+#define PINECOIN_ZMQ_ZMQABSTRACTNOTIFIER_H
 
 #include <zmq/zmqconfig.h>
 
@@ -52,4 +52,4 @@ protected:
     int outbound_message_high_water_mark; // aka SNDHWM
 };
 
-#endif // BITCORN_ZMQ_ZMQABSTRACTNOTIFIER_H
+#endif // PINECOIN_ZMQ_ZMQABSTRACTNOTIFIER_H

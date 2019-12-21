@@ -1,17 +1,17 @@
-# Bitcorn's Next Generation Working Repository
+# Pinecoin's Next Generation Working Repository
 
-[![Build Status](https://travis-ci.org/BITCORNProject/Bitcorn-Test.svg?branch=master)](https://travis-ci.org/BITCORNProject/Bitcorn-Test) ![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)
+[![Build Status](https://travis-ci.org/PINECOINProject/Pinecoin-Test.svg?branch=master)](https://travis-ci.org/PINECOINProject/Pinecoin-Test) ![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)
 
 ## License
 
-Bitcorn Core is released under the terms of the MIT license. See [COPYING](COPYING) for more
+Pinecoin Core is released under the terms of the MIT license. See [COPYING](COPYING) for more
 information or see https://opensource.org/licenses/MIT.
 
 ## Development Process
 
 The `master` branch is regularly built and tested, but is not guaranteed to be
-completely stable. [Tags](https://github.com/BITCORNProject/Bitcorn-Test/tags) are created
-regularly to indicate new official, stable release versions of Bitcorn Core.
+completely stable. [Tags](https://github.com/PINECOINProject/Pinecoin-Test/tags) are created
+regularly to indicate new official, stable release versions of Pinecoin Core.
 
 The contribution workflow is described in [CONTRIBUTING.md](CONTRIBUTING.md)
 and useful hints for developers can be found in [doc/developer-notes.md](doc/developer-notes.md).

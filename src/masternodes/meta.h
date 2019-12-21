@@ -2,8 +2,8 @@
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCORN_MASTERNODE_META_H
-#define BITCORN_MASTERNODE_META_H
+#ifndef PINECOIN_MASTERNODE_META_H
+#define PINECOIN_MASTERNODE_META_H
 
 #include <serialize.h>
 #include <special/deterministicmns.h>
@@ -144,4 +144,4 @@ public:
 
 extern CMasternodeMetaMan mmetaman;
 
-#endif//BITCORN_MASTERNODE_META_H
+#endif//PINECOIN_MASTERNODE_META_H

@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCORN_MINER_H
-#define BITCORN_MINER_H
+#ifndef PINECOIN_MINER_H
+#define PINECOIN_MINER_H
 
 #include <optional.h>
 #include <primitives/block.h>
@@ -211,4 +211,4 @@ int64_t UpdateTime(CBlockHeader* pblock, const Consensus::Params& consensusParam
 // void ThreadStakeMinter(CWallet *pwallet);
 void PoSMiner(std::shared_ptr<CWallet> pwallet);
 
-#endif // BITCORN_MINER_H
+#endif // PINECOIN_MINER_H

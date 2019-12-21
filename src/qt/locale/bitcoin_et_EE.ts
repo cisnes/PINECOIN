@@ -130,8 +130,8 @@
         <translation>Kõvakettal olevate plokkide reindekseerimine...</translation>
     </message>
     <message>
-        <source>BitCorn</source>
-        <translation>BitCorn</translation>
+        <source>PineCoin</source>
+        <translation>PineCoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -265,8 +265,8 @@
         <translation>Tere tulemast</translation>
     </message>
     <message>
-        <source>BitCorn</source>
-        <translation>BitCorn</translation>
+        <source>PineCoin</source>
+        <translation>PineCoin</translation>
     </message>
     <message>
         <source>Error</source>
@@ -758,10 +758,10 @@
     </message>
     </context>
 <context>
-    <name>bitcorn-core</name>
+    <name>pinecoin-core</name>
     <message>
-        <source>BitCorn Core</source>
-        <translation>BitCorn Core</translation>
+        <source>PineCoin Core</source>
+        <translation>PineCoin Core</translation>
     </message>
     <message>
         <source>Information</source>

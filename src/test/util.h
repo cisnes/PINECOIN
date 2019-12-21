@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCORN_TEST_UTIL_H
-#define BITCORN_TEST_UTIL_H
+#ifndef PINECOIN_TEST_UTIL_H
+#define PINECOIN_TEST_UTIL_H
 
 #include <memory>
 #include <string>
@@ -67,4 +67,4 @@ void ForEachNoDup(CharType (&string)[StringLength], CharType min_char, CharType 
     }
 }
 
-#endif // BITCORN_TEST_UTIL_H
+#endif // PINECOIN_TEST_UTIL_H

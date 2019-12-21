@@ -1,11 +1,11 @@
 // Copyright (c) 2011-2018 The Bitcoin Core developers
 // Copyright (c) 2018-2019 The BitGreen Core developers
-// Copyright (c) 2019 The BitCorn Core developers
+// Copyright (c) 2019 The PineCoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCORN_QT_GUIUTIL_H
-#define BITCORN_QT_GUIUTIL_H
+#ifndef PINECOIN_QT_GUIUTIL_H
+#define PINECOIN_QT_GUIUTIL_H
 
 #include <amount.h>
 #include <fs.h>
@@ -38,7 +38,7 @@ class QUrl;
 class QWidget;
 QT_END_NAMESPACE
 
-/** Utility functions used by the BitCorn Qt UI.
+/** Utility functions used by the PineCoin Qt UI.
  */
 namespace GUIUtil
 {
@@ -52,10 +52,10 @@ namespace GUIUtil
     // Set up widget for address
     void setupAddressWidget(QValidatedLineEdit *widget, QWidget *parent);
 
-    // Parse "bitcorn:" URI into recipient object, return true on successful parsing
-    bool parseBitCornURI(const QUrl &uri, SendCoinsRecipient *out);
-    bool parseBitCornURI(QString uri, SendCoinsRecipient *out);
-    QString formatBitCornURI(const SendCoinsRecipient &info);
+    // Parse "pinecoin:" URI into recipient object, return true on successful parsing
+    bool parsePineCoinURI(const QUrl &uri, SendCoinsRecipient *out);
+    bool parsePineCoinURI(QString uri, SendCoinsRecipient *out);
+    QString formatPineCoinURI(const SendCoinsRecipient &info);
 
     // Returns true if given address+amount meets "dust" definition
     bool isDust(interfaces::Node& node, const QString& address, const CAmount& amount);
@@ -130,7 +130,7 @@ namespace GUIUtil
     void openDebugLogfile();
 
     // Open the config file
-    bool openBitCornConf();
+    bool openPineCoinConf();
 
     /** Qt event filter that intercepts ToolTipChange events, and replaces the tooltip with a rich text
       representation if needed. This assures that Qt can word-wrap long tooltip messages.
@@ -264,4 +264,4 @@ namespace GUIUtil
     void PolishProgressDialog(QProgressDialog* dialog);
 } // namespace GUIUtil
 
-#endif // BITCORN_QT_GUIUTIL_H
+#endif // PINECOIN_QT_GUIUTIL_H

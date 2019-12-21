@@ -1,30 +1,30 @@
-BitCorn Core
+PineCoin Core
 =============
 
 Setup
 ---------------------
-BitCorn Core is the original BitCorn client and it builds the backbone of the network. It downloads and, by default, stores the entire history of BitCorn transactions.
+PineCoin Core is the original PineCoin client and it builds the backbone of the network. It downloads and, by default, stores the entire history of PineCoin transactions.
 
-To download BitCorn Core, visit [bitg.org](https://bitg.org/).
+To download PineCoin Core, visit [bitg.org](https://bitg.org/).
 
 Running
 ---------------------
-The following are some helpful notes on how to run BitCorn Core on your native platform.
+The following are some helpful notes on how to run PineCoin Core on your native platform.
 
 ### Unix
 
 Unpack the files into a directory and run:
 
-- `bin/bitcorn-qt` (GUI) or
-- `bin/bitcornd` (headless)
+- `bin/pinecoin-qt` (GUI) or
+- `bin/pinecoind` (headless)
 
 ### Windows
 
-Unpack the files into a directory, and then run bitcorn-qt.exe.
+Unpack the files into a directory, and then run pinecoin-qt.exe.
 
 ### macOS
 
-Drag BitCorn Core to your applications folder, and then run BitCorn Core.
+Drag PineCoin Core to your applications folder, and then run PineCoin Core.
 
 ### Need Help?
 
@@ -33,7 +33,7 @@ for help and more information.
 
 Building
 ---------------------
-The following are developer notes on how to build BitCorn Core on your native platform. They are not complete guides, but include notes on the necessary libraries, compile flags, etc.
+The following are developer notes on how to build PineCoin Core on your native platform. They are not complete guides, but include notes on the necessary libraries, compile flags, etc.
 
 - [Dependencies](dependencies.md)
 - [macOS Build Notes](build-osx.md)
@@ -46,7 +46,7 @@ The following are developer notes on how to build BitCorn Core on your native pl
 
 Development
 ---------------------
-The BitCorn repo's [root README](/README.md) contains relevant information on the development process and automated testing.
+The PineCoin repo's [root README](/README.md) contains relevant information on the development process and automated testing.
 
 - [Developer Notes](developer-notes.md)
 - [Productivity Notes](productivity.md)
@@ -65,7 +65,7 @@ The BitCorn repo's [root README](/README.md) contains relevant information on th
 
 ### Miscellaneous
 - [Assets Attribution](assets-attribution.md)
-- [bitcorn.conf Configuration File](bitcorn-conf.md)
+- [pinecoin.conf Configuration File](pinecoin-conf.md)
 - [Files](files.md)
 - [Fuzz-testing](fuzzing.md)
 - [Reduce Memory](reduce-memory.md)

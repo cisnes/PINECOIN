@@ -6,8 +6,8 @@
 /**
  * Utilities for converting data from/to strings.
  */
-#ifndef BITCORN_UTIL_STRENCODINGS_H
-#define BITCORN_UTIL_STRENCODINGS_H
+#ifndef PINECOIN_UTIL_STRENCODINGS_H
+#define PINECOIN_UTIL_STRENCODINGS_H
 
 #include <attributes.h>
 
@@ -239,4 +239,4 @@ constexpr char ToUpper(char c)
  */
 std::string Capitalize(std::string str);
 
-#endif // BITCORN_UTIL_STRENCODINGS_H
+#endif // PINECOIN_UTIL_STRENCODINGS_H

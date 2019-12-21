@@ -62,12 +62,12 @@
         <translation>Ontvanger adresse</translation>
     </message>
     <message>
-        <source>These are your BitCorn addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Hierdie is die adresse vanwaar u BitCorn betalings stuur. U moet altyd die bedrag en die adres van die ontvanger nagaan voordat u enige munte stuur.</translation>
+        <source>These are your PineCoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Hierdie is die adresse vanwaar u PineCoin betalings stuur. U moet altyd die bedrag en die adres van die ontvanger nagaan voordat u enige munte stuur.</translation>
     </message>
     <message>
-        <source>These are your BitCorn addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Hierdie is die adresse waar u BitCorns sal ontvang. Ons beveel aan dat u 'n nuwe adres kies vir elke transaksie</translation>
+        <source>These are your PineCoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Hierdie is die adresse waar u PineCoins sal ontvang. Ons beveel aan dat u 'n nuwe adres kies vir elke transaksie</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -334,8 +334,8 @@
         <translation>Besig met herindeksering van blokke op hardeskyf...</translation>
     </message>
     <message>
-        <source>Send coins to a BitCorn address</source>
-        <translation>Stuur munte na 'n BitCorn adres</translation>
+        <source>Send coins to a PineCoin address</source>
+        <translation>Stuur munte na 'n PineCoin adres</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -358,8 +358,8 @@
         <translation>&amp;Verifieer boodskap...</translation>
     </message>
     <message>
-        <source>BitCorn</source>
-        <translation>BitCorn</translation>
+        <source>PineCoin</source>
+        <translation>PineCoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -386,12 +386,12 @@
         <translation>Kodifiseer die private sleutes wat aan jou beursie gekoppel is.</translation>
     </message>
     <message>
-        <source>Sign messages with your BitCorn addresses to prove you own them</source>
-        <translation>Onderteken boodskappe met u BitCorn adresse om u eienaarskap te bewys</translation>
+        <source>Sign messages with your PineCoin addresses to prove you own them</source>
+        <translation>Onderteken boodskappe met u PineCoin adresse om u eienaarskap te bewys</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified BitCorn addresses</source>
-        <translation>Verifieër boodskappe om seker te maak dat dit met die gespesifiseerde BitCorn adresse</translation>
+        <source>Verify messages to ensure they were signed with specified PineCoin addresses</source>
+        <translation>Verifieër boodskappe om seker te maak dat dit met die gespesifiseerde PineCoin adresse</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -410,8 +410,8 @@
         <translation>Orebalk</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcorn: URIs)</source>
-        <translation>Versoek betalings (genereer QR-kodes en bitcorn: URI's)</translation>
+        <source>Request payments (generates QR codes and pinecoin: URIs)</source>
+        <translation>Versoek betalings (genereer QR-kodes en pinecoin: URI's)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -422,8 +422,8 @@
         <translation>Vertoon die lys van gebruikte ontvangers-adresse en etikette</translation>
     </message>
     <message>
-        <source>Open a bitcorn: URI or payment request</source>
-        <translation>Skep 'n bitcorn: URI of betalingsversoek</translation>
+        <source>Open a pinecoin: URI or payment request</source>
+        <translation>Skep 'n pinecoin: URI of betalingsversoek</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -516,8 +516,8 @@
         <translation>Inkomende transaksie</translation>
     </message>
     <message>
-        <source>A fatal error occurred. BitCorn can no longer continue safely and will quit.</source>
-        <translation>'N fatale fout het voorgekom. BitCorn kan nie meer veilig voortgaan nie en sal nou toemaak.</translation>
+        <source>A fatal error occurred. PineCoin can no longer continue safely and will quit.</source>
+        <translation>'N fatale fout het voorgekom. PineCoin kan nie meer veilig voortgaan nie en sal nou toemaak.</translation>
     </message>
 </context>
 <context>
@@ -706,8 +706,8 @@
         <translation>Wysig stuur adres</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid BitCorn address.</source>
-        <translation>Die ingevoerde adres "%1" is nie 'n geldige BitCorn adres nie.</translation>
+        <source>The entered address "%1" is not a valid PineCoin address.</source>
+        <translation>Die ingevoerde adres "%1" is nie 'n geldige PineCoin adres nie.</translation>
     </message>
     <message>
         <source>Could not unlock wallet.</source>
@@ -779,8 +779,8 @@
         <translation>Gebruik 'n persoonlike data gids:</translation>
     </message>
     <message>
-        <source>BitCorn</source>
-        <translation>BitCorn</translation>
+        <source>PineCoin</source>
+        <translation>PineCoin</translation>
     </message>
     <message>
         <source>The wallet will also be stored in this directory.</source>
@@ -1144,8 +1144,8 @@
         <translation>Bedrag</translation>
     </message>
     <message>
-        <source>Enter a BitCorn address (e.g. %1)</source>
-        <translation>Voer in 'n BitCorn adres (bv. %1)</translation>
+        <source>Enter a PineCoin address (e.g. %1)</source>
+        <translation>Voer in 'n PineCoin adres (bv. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1567,10 +1567,10 @@ etlike ure of dae (of nooit) sal neem om te bevestig. Oorweeg om
         <translation>Versteek</translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for bitcorn transactions than the network can process.</source>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for pinecoin transactions than the network can process.</source>
         <translation>Om die minimumfooi te betaal is in die haak, mits daar minder transaksievolume
 as ruimte in die blok is. Wees bewus dat de gevolg kan wees dat 'n transaksie nooit
-bevestig nie indien daar meer aanvraag vir bitcorn transaksies is as wat die netwerk kan
+bevestig nie indien daar meer aanvraag vir pinecoin transaksies is as wat die netwerk kan
 verwerk.</translation>
     </message>
     <message>
@@ -1732,8 +1732,8 @@ transaksievertragingsrisiko.</translation>
         <translation>Betaal slegs die verlangde fooi van %1</translation>
     </message>
     <message>
-        <source>Warning: Invalid BitCorn address</source>
-        <translation>Waarskuwing: Ongeldige BitCornadres</translation>
+        <source>Warning: Invalid PineCoin address</source>
+        <translation>Waarskuwing: Ongeldige PineCoinadres</translation>
     </message>
     <message>
         <source>The address you selected for change is not part of this wallet. Any or all funds in your wallet may be sent to this address. Are you sure?</source>
@@ -1765,8 +1765,8 @@ Is u seker?</translation>
         <translation>Hierdie is 'n gewone betaling</translation>
     </message>
     <message>
-        <source>The BitCorn address to send the payment to</source>
-        <translation>Die BitCornadres waarheen die betaling gestuur word</translation>
+        <source>The PineCoin address to send the payment to</source>
+        <translation>Die PineCoinadres waarheen die betaling gestuur word</translation>
     </message>
     <message>
         <source>Alt+A</source>
@@ -1781,7 +1781,7 @@ Is u seker?</translation>
         <translation>Verwyder hierdie inskrywing</translation>
     </message>
     <message>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive less bitcorns than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less pinecoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
         <translation>De fooi word afgetrek van die gestuurde bedrag.
 Die ontvanger sal minder ontvang as wat u in die
 bedrag opgee. As daar meer as een ontvanger is,
@@ -2068,10 +2068,10 @@ word die fooi eweredig verdeel.</translation>
     </message>
     </context>
 <context>
-    <name>bitcorn-core</name>
+    <name>pinecoin-core</name>
     <message>
-        <source>BitCorn Core</source>
-        <translation>BitCorn Kern</translation>
+        <source>PineCoin Core</source>
+        <translation>PineCoin Kern</translation>
     </message>
     <message>
         <source>Error loading %s</source>

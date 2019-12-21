@@ -1,6 +1,6 @@
 // Copyright (c) 2018-2019 The Dash Core developers
 // Copyright (c) 2019 The BitGreen Core developers
-// Copyright (c) 2019 The BitCorn Core developers
+// Copyright (c) 2019 The PineCoin Core developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -42,7 +42,7 @@ void CDKGSessionManager::StartMessageHandlerPool()
     }
 
     messageHandlerPool.resize(2);
-    RenameThreadPool(messageHandlerPool, "bitcorn-q-msg");
+    RenameThreadPool(messageHandlerPool, "pinecoin-q-msg");
 }
 
 void CDKGSessionManager::StopMessageHandlerPool()

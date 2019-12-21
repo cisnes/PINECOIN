@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCORN_TEST_SCRIPTNUM10_H
-#define BITCORN_TEST_SCRIPTNUM10_H
+#ifndef PINECOIN_TEST_SCRIPTNUM10_H
+#define PINECOIN_TEST_SCRIPTNUM10_H
 
 #include <limits>
 #include <stdexcept>
@@ -179,4 +179,4 @@ private:
 };
 
 
-#endif // BITCORN_TEST_BIGNUM_H
+#endif // PINECOIN_TEST_BIGNUM_H

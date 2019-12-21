@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCORN_RPC_CLIENT_H
-#define BITCORN_RPC_CLIENT_H
+#ifndef PINECOIN_RPC_CLIENT_H
+#define PINECOIN_RPC_CLIENT_H
 
 #include <univalue.h>
 
@@ -19,4 +19,4 @@ UniValue RPCConvertNamedValues(const std::string& strMethod, const std::vector<s
  */
 UniValue ParseNonRFCJSONValue(const std::string& strVal);
 
-#endif // BITCORN_RPC_CLIENT_H
+#endif // PINECOIN_RPC_CLIENT_H

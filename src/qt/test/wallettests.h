@@ -1,5 +1,5 @@
-#ifndef BITCORN_QT_TEST_WALLETTESTS_H
-#define BITCORN_QT_TEST_WALLETTESTS_H
+#ifndef PINECOIN_QT_TEST_WALLETTESTS_H
+#define PINECOIN_QT_TEST_WALLETTESTS_H
 
 #include <QObject>
 #include <QTest>
@@ -12,4 +12,4 @@ private Q_SLOTS:
     void walletTests();
 };
 
-#endif // BITCORN_QT_TEST_WALLETTESTS_H
+#endif // PINECOIN_QT_TEST_WALLETTESTS_H

@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCORN_QT_RPCCONSOLE_H
-#define BITCORN_QT_RPCCONSOLE_H
+#ifndef PINECOIN_QT_RPCCONSOLE_H
+#define PINECOIN_QT_RPCCONSOLE_H
 
 #include <qt/guiutil.h>
 #include <qt/peertablemodel.h>
@@ -32,7 +32,7 @@ class QMenu;
 class QItemSelection;
 QT_END_NAMESPACE
 
-/** Local BitCorn RPC console. */
+/** Local PineCoin RPC console. */
 class RPCConsole: public QWidget
 {
     Q_OBJECT
@@ -172,4 +172,4 @@ private:
     void updateNetworkState();
 };
 
-#endif // BITCORN_QT_RPCCONSOLE_H
+#endif // PINECOIN_QT_RPCCONSOLE_H

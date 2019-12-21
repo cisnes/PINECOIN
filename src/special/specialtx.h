@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCORN_SPECIAL_TRANSACTION
-#define BITCORN_SPECIAL_TRANSACTION
+#ifndef PINECOIN_SPECIAL_TRANSACTION
+#define PINECOIN_SPECIAL_TRANSACTION
 
 #include <primitives/transaction.h>
 #include <streams.h>
@@ -50,4 +50,4 @@ void SetTxPayload(CMutableTransaction& tx, const T& payload)
 
 uint256 CalcTxInputsHash(const CTransaction& tx);
 
-#endif // BITCORN_SPECIAL_TRANSACTION
+#endif // PINECOIN_SPECIAL_TRANSACTION

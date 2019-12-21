@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCORN_QT_SIGNVERIFYMESSAGEDIALOG_H
-#define BITCORN_QT_SIGNVERIFYMESSAGEDIALOG_H
+#ifndef PINECOIN_QT_SIGNVERIFYMESSAGEDIALOG_H
+#define PINECOIN_QT_SIGNVERIFYMESSAGEDIALOG_H
 
 #include <QDialog>
 
@@ -50,4 +50,4 @@ private Q_SLOTS:
     void on_clearButton_VM_clicked();
 };
 
-#endif // BITCORN_QT_SIGNVERIFYMESSAGEDIALOG_H
+#endif // PINECOIN_QT_SIGNVERIFYMESSAGEDIALOG_H

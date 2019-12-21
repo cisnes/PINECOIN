@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCORN_TXDB_H
-#define BITCORN_TXDB_H
+#ifndef PINECOIN_TXDB_H
+#define PINECOIN_TXDB_H
 
 #include <coins.h>
 #include <dbwrapper.h>
@@ -100,4 +100,4 @@ public:
     bool LoadBlockIndexGuts(const Consensus::Params& consensusParams, std::function<CBlockIndex*(const uint256&)> insertBlockIndex);
 };
 
-#endif // BITCORN_TXDB_H
+#endif // PINECOIN_TXDB_H

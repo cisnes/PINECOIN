@@ -1,7 +1,7 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2019 The Bitcoin Core developers
 // Copyright (c) 2018-2019 The BitGreen Core developers
-// Copyright (c) 2019 The BitCorn Core developers
+// Copyright (c) 2019 The PineCoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -9,11 +9,11 @@
  * Server/client environment: argument handling, config file parsing,
  * thread wrappers, startup time
  */
-#ifndef BITCORN_UTIL_SYSTEM_H
-#define BITCORN_UTIL_SYSTEM_H
+#ifndef PINECOIN_UTIL_SYSTEM_H
+#define PINECOIN_UTIL_SYSTEM_H
 
 #if defined(HAVE_CONFIG_H)
-#include <config/bitcorn-config.h>
+#include <config/pinecoin-config.h>
 #endif
 
 #include <attributes.h>
@@ -40,7 +40,7 @@
 // Application startup time (used for uptime calculation)
 int64_t GetStartupTime();
 
-extern const char * const BITCORN_CONF_FILENAME;
+extern const char * const PINECOIN_CONF_FILENAME;
 
 void SetupEnvironment();
 bool SetupNetworking();
@@ -386,4 +386,4 @@ private:
 
 } // namespace util
 
-#endif // BITCORN_UTIL_SYSTEM_H
+#endif // PINECOIN_UTIL_SYSTEM_H

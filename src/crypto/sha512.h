@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCORN_CRYPTO_SHA512_H
-#define BITCORN_CRYPTO_SHA512_H
+#ifndef PINECOIN_CRYPTO_SHA512_H
+#define PINECOIN_CRYPTO_SHA512_H
 
 #include <stdint.h>
 #include <stdlib.h>
@@ -25,4 +25,4 @@ public:
     CSHA512& Reset();
 };
 
-#endif // BITCORN_CRYPTO_SHA512_H
+#endif // PINECOIN_CRYPTO_SHA512_H

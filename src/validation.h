@@ -3,11 +3,11 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCORN_VALIDATION_H
-#define BITCORN_VALIDATION_H
+#ifndef PINECOIN_VALIDATION_H
+#define PINECOIN_VALIDATION_H
 
 #if defined(HAVE_CONFIG_H)
-#include <config/bitcorn-config.h>
+#include <config/pinecoin-config.h>
 #endif
 
 #include <amount.h>
@@ -722,4 +722,4 @@ inline bool IsBlockPruned(const CBlockIndex* pblockindex)
  */
 bool GetBlockHash(uint256& hashRet, int nBlockHeight = -1);
 
-#endif // BITCORN_VALIDATION_H
+#endif // PINECOIN_VALIDATION_H

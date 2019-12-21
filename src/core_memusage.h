@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCORN_CORE_MEMUSAGE_H
-#define BITCORN_CORE_MEMUSAGE_H
+#ifndef PINECOIN_CORE_MEMUSAGE_H
+#define PINECOIN_CORE_MEMUSAGE_H
 
 #include <primitives/transaction.h>
 #include <primitives/block.h>
@@ -68,4 +68,4 @@ static inline size_t RecursiveDynamicUsage(const std::shared_ptr<X>& p) {
     return p ? memusage::DynamicUsage(p) + RecursiveDynamicUsage(*p) : 0;
 }
 
-#endif // BITCORN_CORE_MEMUSAGE_H
+#endif // PINECOIN_CORE_MEMUSAGE_H

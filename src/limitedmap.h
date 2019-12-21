@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCORN_LIMITEDMAP_H
-#define BITCORN_LIMITEDMAP_H
+#ifndef PINECOIN_LIMITEDMAP_H
+#define PINECOIN_LIMITEDMAP_H
 
 #include <assert.h>
 #include <map>
@@ -97,4 +97,4 @@ public:
     }
 };
 
-#endif // BITCORN_LIMITEDMAP_H
+#endif // PINECOIN_LIMITEDMAP_H

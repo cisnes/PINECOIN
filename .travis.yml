@@ -96,7 +96,7 @@ jobs:
         GOAL="install"
         # -Wno-psabi is to disable ABI warnings: "note: parameter passing for argument of type ... changed in GCC 7.1"
         # This could be removed once the ABI change warning does not show up by default
-        BITCORN_CONFIG="--enable-glibc-back-compat --enable-reduce-exports CXXFLAGS=-Wno-psabi"
+        PINECOIN_CONFIG="--enable-glibc-back-compat --enable-reduce-exports CXXFLAGS=-Wno-psabi"
 
     - stage: test
       name: '32-bit + dash  [GOAL: install]  [GUI: no BIP70]'
@@ -106,7 +106,7 @@ jobs:
         RUN_UNIT_TESTS=false
         RUN_FUNCTIONAL_TESTS=false
         GOAL="install"
-        BITCORN_CONFIG="--enable-zmq --with-gui=qt5 --disable-bip70 --enable-glibc-back-compat --enable-reduce-exports LDFLAGS=-static-libstdc++"
+        PINECOIN_CONFIG="--enable-zmq --with-gui=qt5 --disable-bip70 --enable-glibc-back-compat --enable-reduce-exports LDFLAGS=-static-libstdc++"
         CONFIG_SHELL="/bin/dash"
 
     - stage: test
@@ -118,7 +118,7 @@ jobs:
         RUN_UNIT_TESTS=false
         RUN_FUNCTIONAL_TESTS=false
         GOAL="install"
-        BITCORN_CONFIG="--enable-zmq --with-gui=qt5 --enable-glibc-back-compat --enable-reduce-exports --enable-debug CXXFLAGS=\"-g0 -O2\""
+        PINECOIN_CONFIG="--enable-zmq --with-gui=qt5 --enable-glibc-back-compat --enable-reduce-exports --enable-debug CXXFLAGS=\"-g0 -O2\""
 
     - stage: test
       name: 'x86_64 Linux  [GOAL: install]  [bionic] '
@@ -128,7 +128,7 @@ jobs:
         RUN_UNIT_TESTS=false
         RUN_FUNCTIONAL_TESTS=false
         GOAL="install"
-        BITCORN_CONFIG="--enable-glibc-back-compat --enable-reduce-exports"
+        PINECOIN_CONFIG="--enable-glibc-back-compat --enable-reduce-exports"
 
     - stage: test
       name: 'macOS 10.10  [GOAL: deploy] [no functional tests]'
@@ -139,7 +139,7 @@ jobs:
         RUN_UNIT_TESTS=false
         RUN_FUNCTIONAL_TESTS=false
         GOAL="deploy"
-        BITCORN_CONFIG="--enable-gui --enable-reduce-exports --enable-werror"
+        PINECOIN_CONFIG="--enable-gui --enable-reduce-exports --enable-werror"
 
     - stage: test
       name: 'Win64  [GOAL: deploy]  [no gui or functional tests]'
@@ -148,4 +148,4 @@ jobs:
         PACKAGES="python3 nsis g++-mingw-w64-x86-64 wine-stable wine64 bc"
         RUN_FUNCTIONAL_TESTS=false
         GOAL="deploy"
-        BITCORN_CONFIG="--enable-reduce-exports --disable-gui-tests"
+        PINECOIN_CONFIG="--enable-reduce-exports --disable-gui-tests"

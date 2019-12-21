@@ -2,15 +2,15 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCORN_QT_TEST_APPTESTS_H
-#define BITCORN_QT_TEST_APPTESTS_H
+#ifndef PINECOIN_QT_TEST_APPTESTS_H
+#define PINECOIN_QT_TEST_APPTESTS_H
 
 #include <QObject>
 #include <set>
 #include <string>
 #include <utility>
 
-class BitCornApplication;
+class PineCoinApplication;
 class BitcoinGUI;
 class RPCConsole;
 
@@ -18,7 +18,7 @@ class AppTests : public QObject
 {
     Q_OBJECT
 public:
-    explicit AppTests(BitCornApplication& app) : m_app(app) {}
+    explicit AppTests(PineCoinApplication& app) : m_app(app) {}
 
 private Q_SLOTS:
     void appTests();
@@ -37,8 +37,8 @@ private:
         ~HandleCallback();
     };
 
-    //! BitCorn application.
-    BitCornApplication& m_app;
+    //! PineCoin application.
+    PineCoinApplication& m_app;
 
     //! Set of pending callback names. Used to track expected callbacks and shut
     //! down the app after the last callback has been handled and all tests have
@@ -47,4 +47,4 @@ private:
     std::multiset<std::string> m_callbacks;
 };
 
-#endif // BITCORN_QT_TEST_APPTESTS_H
+#endif // PINECOIN_QT_TEST_APPTESTS_H

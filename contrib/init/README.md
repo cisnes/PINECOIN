@@ -1,11 +1,11 @@
 Sample configuration files for:
 ```
-SystemD: bitcornd.service
-Upstart: bitcornd.conf
-OpenRC:  bitcornd.openrc
-         bitcornd.openrcconf
-CentOS:  bitcornd.init
-macOS:   org.bitg.bitcornd.plist
+SystemD: pinecoind.service
+Upstart: pinecoind.conf
+OpenRC:  pinecoind.openrc
+         pinecoind.openrcconf
+CentOS:  pinecoind.init
+macOS:   org.bitg.pinecoind.plist
 ```
 have been made available to assist packagers in creating node packages here.
 

@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCORN_MEMUSAGE_H
-#define BITCORN_MEMUSAGE_H
+#ifndef PINECOIN_MEMUSAGE_H
+#define PINECOIN_MEMUSAGE_H
 
 #include <indirectmap.h>
 
@@ -167,4 +167,4 @@ static inline size_t DynamicUsage(const std::unordered_map<X, Y, Z>& m)
 
 }
 
-#endif // BITCORN_MEMUSAGE_H
+#endif // PINECOIN_MEMUSAGE_H

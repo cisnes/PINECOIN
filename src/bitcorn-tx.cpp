@@ -3,7 +3,7 @@
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #if defined(HAVE_CONFIG_H)
-#include <config/bitcorn-config.h>
+#include <config/pinecoin-config.h>
 #endif
 
 #include <clientversion.h>
@@ -36,7 +36,7 @@ static const int CONTINUE_EXECUTION=-1;
 
 const std::function<std::string(const char*)> G_TRANSLATION_FUN = nullptr;
 
-static void SetupBitCornTxArgs()
+static void SetupPineCoinTxArgs()
 {
     SetupHelpOptions(gArgs);
 
@@ -81,7 +81,7 @@ static int AppInitRawTx(int argc, char* argv[])
     //
     // Parameters
     //
-    SetupBitCornTxArgs();
+    SetupPineCoinTxArgs();
     std::string error;
     if (!gArgs.ParseParameters(argc, argv, error)) {
         tfm::format(std::cerr, "Error parsing command line arguments: %s\n", error.c_str());
@@ -100,9 +100,9 @@ static int AppInitRawTx(int argc, char* argv[])
 
     if (argc < 2 || HelpRequested(gArgs)) {
         // First part of help message is specific to this utility
-        std::string strUsage = PACKAGE_NAME " bitcorn-tx utility version " + FormatFullVersion() + "\n\n" +
-            "Usage:  bitcorn-tx [options] <hex-tx> [commands]  Update hex-encoded bitcorn transaction\n" +
-            "or:     bitcorn-tx [options] -create [commands]   Create hex-encoded bitcorn transaction\n" +
+        std::string strUsage = PACKAGE_NAME " pinecoin-tx utility version " + FormatFullVersion() + "\n\n" +
+            "Usage:  pinecoin-tx [options] <hex-tx> [commands]  Update hex-encoded pinecoin transaction\n" +
+            "or:     pinecoin-tx [options] -create [commands]   Create hex-encoded pinecoin transaction\n" +
             "\n";
         strUsage += gArgs.GetHelpMessage();
 
@@ -792,7 +792,7 @@ static int CommandLineRawTx(int argc, char* argv[])
             if (argc < 2)
                 throw std::runtime_error("too few parameters");
 
-            // param: hex-encoded bitcorn transaction
+            // param: hex-encoded pinecoin transaction
             std::string strHexTx(argv[1]);
             if (strHexTx == "-")                 // "-" implies standard input
                 strHexTx = readStdin();

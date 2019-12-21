@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCORN_WALLET_COINCONTROL_H
-#define BITCORN_WALLET_COINCONTROL_H
+#ifndef PINECOIN_WALLET_COINCONTROL_H
+#define PINECOIN_WALLET_COINCONTROL_H
 
 #include <policy/feerate.h>
 #include <policy/fees.h>
@@ -82,4 +82,4 @@ private:
     std::set<COutPoint> setSelected;
 };
 
-#endif // BITCORN_WALLET_COINCONTROL_H
+#endif // PINECOIN_WALLET_COINCONTROL_H

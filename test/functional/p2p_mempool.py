@@ -10,10 +10,10 @@ filters are not enabled.
 
 from test_framework.messages import msg_mempool
 from test_framework.mininode import P2PInterface
-from test_framework.test_framework import BitCornTestFramework
+from test_framework.test_framework import PineCoinTestFramework
 from test_framework.util import assert_equal
 
-class P2PMempoolTests(BitCornTestFramework):
+class P2PMempoolTests(PineCoinTestFramework):
     def set_test_params(self):
         self.setup_clean_chain = True
         self.num_nodes = 1

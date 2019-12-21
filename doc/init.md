@@ -1,36 +1,36 @@
-Sample init scripts and service configuration for bitcornd
+Sample init scripts and service configuration for pinecoind
 ==========================================================
 
 Sample scripts and configuration files for systemd, Upstart and OpenRC
 can be found in the contrib/init folder.
 
-    contrib/init/bitcornd.service:    systemd service unit configuration
-    contrib/init/bitcornd.openrc:     OpenRC compatible SysV style init script
-    contrib/init/bitcornd.openrcconf: OpenRC conf.d file
-    contrib/init/bitcornd.conf:       Upstart service configuration file
-    contrib/init/bitcornd.init:       CentOS compatible SysV style init script
+    contrib/init/pinecoind.service:    systemd service unit configuration
+    contrib/init/pinecoind.openrc:     OpenRC compatible SysV style init script
+    contrib/init/pinecoind.openrcconf: OpenRC conf.d file
+    contrib/init/pinecoind.conf:       Upstart service configuration file
+    contrib/init/pinecoind.init:       CentOS compatible SysV style init script
 
 Service User
 ---------------------------------
 
-All three Linux startup configurations assume the existence of a "bitcorn" user
+All three Linux startup configurations assume the existence of a "pinecoin" user
 and group.  They must be created before attempting to use these scripts.
-The macOS configuration assumes bitcornd will be set up for the current user.
+The macOS configuration assumes pinecoind will be set up for the current user.
 
 Configuration
 ---------------------------------
 
-At a bare minimum, bitcornd requires that the rpcpassword setting be set
+At a bare minimum, pinecoind requires that the rpcpassword setting be set
 when running as a daemon.  If the configuration file does not exist or this
-setting is not set, bitcornd will shut down promptly after startup.
+setting is not set, pinecoind will shut down promptly after startup.
 
 This password does not have to be remembered or typed as it is mostly used
-as a fixed token that bitcornd and client programs read from the configuration
+as a fixed token that pinecoind and client programs read from the configuration
 file, however it is recommended that a strong and secure password be used
 as this password is security critical to securing the wallet should the
 wallet be enabled.
 
-If bitcornd is run with the "-server" flag (set by default), and no rpcpassword is set,
+If pinecoind is run with the "-server" flag (set by default), and no rpcpassword is set,
 it will use a special cookie file for authentication. The cookie is generated with random
 content when the daemon starts, and deleted when it exits. Read access to this file
 controls who can access it through RPC.
@@ -38,13 +38,13 @@ controls who can access it through RPC.
 By default the cookie is stored in the data directory, but it's location can be overridden
 with the option '-rpccookiefile'.
 
-This allows for running bitcornd without having to do any manual configuration.
+This allows for running pinecoind without having to do any manual configuration.
 
 `conf`, `pid`, and `wallet` accept relative paths which are interpreted as
 relative to the data directory. `wallet` *only* supports relative paths.
 
 For an example configuration file that describes the configuration settings,
-see `share/examples/bitcorn.conf`.
+see `share/examples/pinecoin.conf`.
 
 Paths
 ---------------------------------
@@ -53,40 +53,40 @@ Paths
 
 All three configurations assume several paths that might need to be adjusted.
 
-Binary:              `/usr/bin/bitcornd`
-Configuration file:  `/etc/bitcorn/bitcorn.conf`
-Data directory:      `/var/lib/bitcornd`
-PID file:            `/var/run/bitcornd/bitcornd.pid` (OpenRC and Upstart) or `/run/bitcornd/bitcornd.pid` (systemd)
-Lock file:           `/var/lock/subsys/bitcornd` (CentOS)
+Binary:              `/usr/bin/pinecoind`
+Configuration file:  `/etc/pinecoin/pinecoin.conf`
+Data directory:      `/var/lib/pinecoind`
+PID file:            `/var/run/pinecoind/pinecoind.pid` (OpenRC and Upstart) or `/run/pinecoind/pinecoind.pid` (systemd)
+Lock file:           `/var/lock/subsys/pinecoind` (CentOS)
 
 The configuration file, PID directory (if applicable) and data directory
-should all be owned by the bitcorn user and group.  It is advised for security
+should all be owned by the pinecoin user and group.  It is advised for security
 reasons to make the configuration file and data directory only readable by the
-bitcorn user and group.  Access to bitcorn-cli and other bitcornd rpc clients
+pinecoin user and group.  Access to pinecoin-cli and other pinecoind rpc clients
 can then be controlled by group membership.
 
 NOTE: When using the systemd .service file, the creation of the aforementioned
 directories and the setting of their permissions is automatically handled by
-systemd. Directories are given a permission of 710, giving the bitcorn group
+systemd. Directories are given a permission of 710, giving the pinecoin group
 access to files under it _if_ the files themselves give permission to the
-bitcorn group to do so (e.g. when `-sysperms` is specified). This does not allow
+pinecoin group to do so (e.g. when `-sysperms` is specified). This does not allow
 for the listing of files under the directory.
 
 NOTE: It is not currently possible to override `datadir` in
-`/etc/bitcorn/bitcorn.conf` with the current systemd, OpenRC, and Upstart init
+`/etc/pinecoin/pinecoin.conf` with the current systemd, OpenRC, and Upstart init
 files out-of-the-box. This is because the command line options specified in the
 init files take precedence over the configurations in
-`/etc/bitcorn/bitcorn.conf`. However, some init systems have their own
+`/etc/pinecoin/pinecoin.conf`. However, some init systems have their own
 configuration mechanisms that would allow for overriding the command line
-options specified in the init files (e.g. setting `BITCORND_DATADIR` for
+options specified in the init files (e.g. setting `PINECOIND_DATADIR` for
 OpenRC).
 
 ### macOS
 
-Binary:              `/usr/local/bin/bitcornd`
-Configuration file:  `~/Library/Application Support/BitCorn/bitcorn.conf`
-Data directory:      `~/Library/Application Support/BitCorn`
-Lock file:           `~/Library/Application Support/BitCorn/.lock`
+Binary:              `/usr/local/bin/pinecoind`
+Configuration file:  `~/Library/Application Support/PineCoin/pinecoin.conf`
+Data directory:      `~/Library/Application Support/PineCoin`
+Lock file:           `~/Library/Application Support/PineCoin/.lock`
 
 Installing Service Configuration
 -----------------------------------
@@ -97,23 +97,23 @@ Installing this .service file consists of just copying it to
 /usr/lib/systemd/system directory, followed by the command
 `systemctl daemon-reload` in order to update running systemd configuration.
 
-To test, run `systemctl start bitcornd` and to enable for system startup run
-`systemctl enable bitcornd`
+To test, run `systemctl start pinecoind` and to enable for system startup run
+`systemctl enable pinecoind`
 
 NOTE: When installing for systemd in Debian/Ubuntu the .service file needs to be copied to the /lib/systemd/system directory instead.
 
 ### OpenRC
 
-Rename bitcornd.openrc to bitcornd and drop it in /etc/init.d.  Double
+Rename pinecoind.openrc to pinecoind and drop it in /etc/init.d.  Double
 check ownership and permissions and make it executable.  Test it with
-`/etc/init.d/bitcornd start` and configure it to run on startup with
-`rc-update add bitcornd`
+`/etc/init.d/pinecoind start` and configure it to run on startup with
+`rc-update add pinecoind`
 
 ### Upstart (for Debian/Ubuntu based distributions)
 
 Upstart is the default init system for Debian/Ubuntu versions older than 15.04. If you are using version 15.04 or newer and haven't manually configured upstart you should follow the systemd instructions instead.
 
-Drop bitcornd.conf in /etc/init.  Test by running `service bitcornd start`
+Drop pinecoind.conf in /etc/init.  Test by running `service pinecoind start`
 it will automatically start on reboot.
 
 NOTE: This script is incompatible with CentOS 5 and Amazon Linux 2014 as they
@@ -121,22 +121,22 @@ use old versions of Upstart and do not supply the start-stop-daemon utility.
 
 ### CentOS
 
-Copy bitcornd.init to /etc/init.d/bitcornd. Test by running `service bitcornd start`.
+Copy pinecoind.init to /etc/init.d/pinecoind. Test by running `service pinecoind start`.
 
-Using this script, you can adjust the path and flags to the bitcornd program by
-setting the BITCORND and FLAGS environment variables in the file
-/etc/sysconfig/bitcornd. You can also use the DAEMONOPTS environment variable here.
+Using this script, you can adjust the path and flags to the pinecoind program by
+setting the PINECOIND and FLAGS environment variables in the file
+/etc/sysconfig/pinecoind. You can also use the DAEMONOPTS environment variable here.
 
 ### macOS
 
-Copy org.bitg.bitcornd.plist into ~/Library/LaunchAgents. Load the launch agent by
-running `launchctl load ~/Library/LaunchAgents/org.bitg.bitcornd.plist`.
+Copy org.bitg.pinecoind.plist into ~/Library/LaunchAgents. Load the launch agent by
+running `launchctl load ~/Library/LaunchAgents/org.bitg.pinecoind.plist`.
 
-This Launch Agent will cause bitcornd to start whenever the user logs in.
+This Launch Agent will cause pinecoind to start whenever the user logs in.
 
-NOTE: This approach is intended for those wanting to run bitcornd as the current user.
-You will need to modify org.bitg.bitcornd.plist if you intend to use it as a
-Launch Daemon with a dedicated bitcorn user.
+NOTE: This approach is intended for those wanting to run pinecoind as the current user.
+You will need to modify org.bitg.pinecoind.plist if you intend to use it as a
+Launch Daemon with a dedicated pinecoin user.
 
 Auto-respawn
 -----------------------------------

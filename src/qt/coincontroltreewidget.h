@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCORN_QT_COINCONTROLTREEWIDGET_H
-#define BITCORN_QT_COINCONTROLTREEWIDGET_H
+#ifndef PINECOIN_QT_COINCONTROLTREEWIDGET_H
+#define PINECOIN_QT_COINCONTROLTREEWIDGET_H
 
 #include <QKeyEvent>
 #include <QTreeWidget>
@@ -19,4 +19,4 @@ protected:
     virtual void keyPressEvent(QKeyEvent *event);
 };
 
-#endif // BITCORN_QT_COINCONTROLTREEWIDGET_H
+#endif // PINECOIN_QT_COINCONTROLTREEWIDGET_H

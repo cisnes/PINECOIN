@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCORN_WALLET_FEEBUMPER_H
-#define BITCORN_WALLET_FEEBUMPER_H
+#ifndef PINECOIN_WALLET_FEEBUMPER_H
+#define PINECOIN_WALLET_FEEBUMPER_H
 
 #include <primitives/transaction.h>
 
@@ -64,4 +64,4 @@ Result CommitTransaction(CWallet* wallet,
 
 } // namespace feebumper
 
-#endif // BITCORN_WALLET_FEEBUMPER_H
+#endif // PINECOIN_WALLET_FEEBUMPER_H

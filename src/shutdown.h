@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCORN_SHUTDOWN_H
-#define BITCORN_SHUTDOWN_H
+#ifndef PINECOIN_SHUTDOWN_H
+#define PINECOIN_SHUTDOWN_H
 
 void StartShutdown();
 void AbortShutdown();

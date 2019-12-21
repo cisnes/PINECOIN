@@ -2,11 +2,11 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCORN_QT_BITCOIN_H
-#define BITCORN_QT_BITCOIN_H
+#ifndef PINECOIN_QT_BITCOIN_H
+#define PINECOIN_QT_BITCOIN_H
 
 #if defined(HAVE_CONFIG_H)
-#include <config/bitcorn-config.h>
+#include <config/pinecoin-config.h>
 #endif
 
 #include <QApplication>
@@ -26,14 +26,14 @@ class Handler;
 class Node;
 } // namespace interfaces
 
-/** Class encapsulating BitCorn Core startup and shutdown.
+/** Class encapsulating PineCoin Core startup and shutdown.
  * Allows running startup and shutdown in a different thread from the UI thread.
  */
-class BitCornCore: public QObject
+class PineCoinCore: public QObject
 {
     Q_OBJECT
 public:
-    explicit BitCornCore(interfaces::Node& node);
+    explicit PineCoinCore(interfaces::Node& node);
 
 public Q_SLOTS:
     void initialize();
@@ -51,13 +51,13 @@ private:
     interfaces::Node& m_node;
 };
 
-/** Main BitCorn application object */
-class BitCornApplication: public QApplication
+/** Main PineCoin application object */
+class PineCoinApplication: public QApplication
 {
     Q_OBJECT
 public:
-    explicit BitCornApplication(interfaces::Node& node, int &argc, char **argv);
-    ~BitCornApplication();
+    explicit PineCoinApplication(interfaces::Node& node, int &argc, char **argv);
+    ~PineCoinApplication();
 
 #ifdef ENABLE_WALLET
     /// Create payment server
@@ -120,4 +120,4 @@ private:
 
 int GuiMain(int argc, char* argv[]);
 
-#endif // BITCORN_QT_BITCOIN_H
+#endif // PINECOIN_QT_BITCOIN_H

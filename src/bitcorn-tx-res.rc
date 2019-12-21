@@ -16,14 +16,14 @@ BEGIN
     BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
-            VALUE "CompanyName",        "BitCorn"
-            VALUE "FileDescription",    "bitcorn-tx (CLI BitCorn transaction editor utility)"
+            VALUE "CompanyName",        "PineCoin"
+            VALUE "FileDescription",    "pinecoin-tx (CLI PineCoin transaction editor utility)"
             VALUE "FileVersion",        VER_FILEVERSION_STR
-            VALUE "InternalName",       "bitcorn-tx"
+            VALUE "InternalName",       "pinecoin-tx"
             VALUE "LegalCopyright",     COPYRIGHT_STR
             VALUE "LegalTrademarks1",   "Distributed under the MIT software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php."
-            VALUE "OriginalFilename",   "bitcorn-tx.exe"
-            VALUE "ProductName",        "bitcorn-tx"
+            VALUE "OriginalFilename",   "pinecoin-tx.exe"
+            VALUE "ProductName",        "pinecoin-tx"
             VALUE "ProductVersion",     VER_PRODUCTVERSION_STR
         END
     END

@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCORN_NET_PROCESSING_H
-#define BITCORN_NET_PROCESSING_H
+#ifndef PINECOIN_NET_PROCESSING_H
+#define PINECOIN_NET_PROCESSING_H
 
 #include <net.h>
 #include <validationinterface.h>
@@ -95,4 +95,4 @@ void Misbehaving(NodeId nodeid, int howmuch, const std::string& message="") EXCL
 void RequestData(const NodeId id, const CInv& inv) EXCLUSIVE_LOCKS_REQUIRED(cs_main);
 bool RequestDataAvailable(const NodeId id, size_t nNewDataSize);
 extern void RemoveDataRequest(const NodeId id, const CInv& inv) EXCLUSIVE_LOCKS_REQUIRED(cs_main);
-#endif // BITCORN_NET_PROCESSING_H
+#endif // PINECOIN_NET_PROCESSING_H

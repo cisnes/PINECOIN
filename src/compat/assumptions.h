@@ -5,8 +5,8 @@
 
 // Compile-time verification of assumptions we make.
 
-#ifndef BITCORN_COMPAT_ASSUMPTIONS_H
-#define BITCORN_COMPAT_ASSUMPTIONS_H
+#ifndef PINECOIN_COMPAT_ASSUMPTIONS_H
+#define PINECOIN_COMPAT_ASSUMPTIONS_H
 
 #include <limits>
 
@@ -14,7 +14,7 @@
 // Example(s): We use assert(...) extensively with the assumption of it never
 //             being a noop at runtime.
 #if defined(NDEBUG)
-# error "BitCorn cannot be compiled without assertions."
+# error "PineCoin cannot be compiled without assertions."
 #endif
 
 // Assumption: We assume a C++11 (ISO/IEC 14882:2011) compiler (minimum requirement).
@@ -62,4 +62,4 @@ static_assert(sizeof(size_t) == sizeof(void*), "Sizes of size_t and void* assume
 // * We are NOT assuming a specific value for std::locale("").name().
 // * We are NOT assuming a specific value for std::numeric_limits<char>::is_signed.
 
-#endif // BITCORN_COMPAT_ASSUMPTIONS_H
+#endif // PINECOIN_COMPAT_ASSUMPTIONS_H

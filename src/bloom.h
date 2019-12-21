@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCORN_BLOOM_H
-#define BITCORN_BLOOM_H
+#ifndef PINECOIN_BLOOM_H
+#define PINECOIN_BLOOM_H
 
 #include <serialize.h>
 
@@ -136,4 +136,4 @@ private:
     int nHashFuncs;
 };
 
-#endif // BITCORN_BLOOM_H
+#endif // PINECOIN_BLOOM_H

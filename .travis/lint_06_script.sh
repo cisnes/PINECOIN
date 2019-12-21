@@ -16,7 +16,7 @@ test/lint/git-subtree-check.sh src/leveldb
 # test/lint/check-rpc-mappings.py . # TODO: add new rpc mappings (sporks etc)
 # test/lint/lint-all.sh # TODO: re-work lint-all scripts
 
-if [ "$TRAVIS_REPO_SLUG" = "BITCORNProject/Bitcorn-Test" ] && [ "$TRAVIS_EVENT_TYPE" = "cron" ]; then
+if [ "$TRAVIS_REPO_SLUG" = "PINECOINProject/Pinecoin-Test" ] && [ "$TRAVIS_EVENT_TYPE" = "cron" ]; then
     git log --merges --before="2 days ago" -1 --format='%H' > ./contrib/verify-commits/trusted-sha512-root-commit
     travis_retry gpg --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys $(<contrib/verify-commits/trusted-keys) &&
     ./contrib/verify-commits/verify-commits.py --clean-merge=2;

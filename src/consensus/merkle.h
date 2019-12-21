@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCORN_CONSENSUS_MERKLE_H
-#define BITCORN_CONSENSUS_MERKLE_H
+#ifndef PINECOIN_CONSENSUS_MERKLE_H
+#define PINECOIN_CONSENSUS_MERKLE_H
 
 #include <stdint.h>
 #include <vector>
@@ -26,4 +26,4 @@ uint256 BlockMerkleRoot(const CBlock& block, bool* mutated = nullptr);
  */
 uint256 BlockWitnessMerkleRoot(const CBlock& block, bool* mutated = nullptr);
 
-#endif // BITCORN_CONSENSUS_MERKLE_H
+#endif // PINECOIN_CONSENSUS_MERKLE_H

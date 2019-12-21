@@ -1,12 +1,12 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2018 The Bitcoin Core developers
 // Copyright (c) 2019 The BitGreen Core developers
-// Copyright (c) 2019 The BitCorn Core developers
+// Copyright (c) 2019 The PineCoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCORN_CONSENSUS_PARAMS_H
-#define BITCORN_CONSENSUS_PARAMS_H
+#ifndef PINECOIN_CONSENSUS_PARAMS_H
+#define PINECOIN_CONSENSUS_PARAMS_H
 
 #include <uint256.h>
 #include <limits>
@@ -178,4 +178,4 @@ struct Params {
 };
 } // namespace Consensus
 
-#endif // BITCORN_CONSENSUS_PARAMS_H
+#endif // PINECOIN_CONSENSUS_PARAMS_H

@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCORN_RANDOM_H
-#define BITCORN_RANDOM_H
+#ifndef PINECOIN_RANDOM_H
+#define PINECOIN_RANDOM_H
 
 #include <crypto/chacha20.h>
 #include <crypto/common.h>
@@ -245,4 +245,4 @@ bool Random_SanityCheck();
  */
 void RandomInit();
 
-#endif // BITCORN_RANDOM_H
+#endif // PINECOIN_RANDOM_H

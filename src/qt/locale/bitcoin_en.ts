@@ -85,12 +85,12 @@
     </message>
     <message>
         <location line="+7"/>
-        <source>These are your BitCorn addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your PineCoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+5"/>
-        <source>These are your BitCorn addresses for receiving payments. Use the &apos;Create new receiving address&apos; button in the receive tab to create new addresses.</source>
+        <source>These are your PineCoin addresses for receiving payments. Use the &apos;Create new receiving address&apos; button in the receive tab to create new addresses.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -237,7 +237,7 @@
     </message>
     <message>
         <location line="-56"/>
-        <source>Your wallet is now encrypted. Remember that encrypting your wallet cannot fully protect your bitcorns from being stolen by malware infecting your computer.</source>
+        <source>Your wallet is now encrypted. Remember that encrypting your wallet cannot fully protect your pinecoins from being stolen by malware infecting your computer.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -436,8 +436,8 @@
     </message>
     <message>
         <location line="-1036"/>
-        <source>Send coins to a BitCorn address</source>
-        <translation>Send coins to a BitCorn address</translation>
+        <source>Send coins to a PineCoin address</source>
+        <translation>Send coins to a PineCoin address</translation>
     </message>
     <message>
         <location line="+67"/>
@@ -491,13 +491,13 @@
     </message>
     <message>
         <location line="+7"/>
-        <source>Sign messages with your BitCorn addresses to prove you own them</source>
-        <translation>Sign messages with your BitCorn addresses to prove you own them</translation>
+        <source>Sign messages with your PineCoin addresses to prove you own them</source>
+        <translation>Sign messages with your PineCoin addresses to prove you own them</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Verify messages to ensure they were signed with specified BitCorn addresses</source>
-        <translation>Verify messages to ensure they were signed with specified BitCorn addresses</translation>
+        <source>Verify messages to ensure they were signed with specified PineCoin addresses</source>
+        <translation>Verify messages to ensure they were signed with specified PineCoin addresses</translation>
     </message>
     <message>
         <location line="+118"/>
@@ -521,7 +521,7 @@
     </message>
     <message>
         <location line="-271"/>
-        <source>Request payments (generates QR codes and bitcorn: URIs)</source>
+        <source>Request payments (generates QR codes and pinecoin: URIs)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -536,7 +536,7 @@
     </message>
     <message>
         <location line="+3"/>
-        <source>Open a bitcorn: URI or payment request</source>
+        <source>Open a pinecoin: URI or payment request</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -546,10 +546,10 @@
     </message>
     <message numerus="yes">
         <location line="+540"/>
-        <source>%n active connection(s) to BitCorn network</source>
+        <source>%n active connection(s) to PineCoin network</source>
         <translation>
-            <numerusform>%n active connection to BitCorn network</numerusform>
-            <numerusform>%n active connections to BitCorn network</numerusform>
+            <numerusform>%n active connection to PineCoin network</numerusform>
+            <numerusform>%n active connections to PineCoin network</numerusform>
         </translation>
     </message>
     <message>
@@ -637,7 +637,7 @@
     </message>
     <message>
         <location line="+4"/>
-        <source>Show the %1 help message to get a list with possible BitCorn command-line options</source>
+        <source>Show the %1 help message to get a list with possible PineCoin command-line options</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -783,7 +783,7 @@
     </message>
     <message>
         <location filename="../bitcoin.cpp" line="+390"/>
-        <source>A fatal error occurred. BitCorn can no longer continue safely and will quit.</source>
+        <source>A fatal error occurred. PineCoin can no longer continue safely and will quit.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1021,7 +1021,7 @@
     </message>
     <message>
         <location line="+75"/>
-        <source>The entered address &quot;%1&quot; is not a valid BitCorn address.</source>
+        <source>The entered address &quot;%1&quot; is not a valid PineCoin address.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1141,8 +1141,8 @@
     </message>
     <message>
         <location filename="../intro.cpp" line="+22"/>
-        <source>BitCorn</source>
-        <translation type="unfinished">BitCorn</translation>
+        <source>PineCoin</source>
+        <translation type="unfinished">PineCoin</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -1156,7 +1156,7 @@
     </message>
     <message>
         <location line="+8"/>
-        <source>%1 will download and store a copy of the BitCorn block chain.</source>
+        <source>%1 will download and store a copy of the PineCoin block chain.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1200,12 +1200,12 @@
     </message>
     <message>
         <location line="+119"/>
-        <source>Recent transactions may not yet be visible, and therefore your wallet&apos;s balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the bitcorn network, as detailed below.</source>
+        <source>Recent transactions may not yet be visible, and therefore your wallet&apos;s balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the pinecoin network, as detailed below.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+19"/>
-        <source>Attempting to spend bitcorns that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+        <source>Attempting to spend pinecoins that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1438,8 +1438,8 @@
     </message>
     <message>
         <location line="+30"/>
-        <source>Automatically open the BitCorn client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Automatically open the BitCorn client port on the router. This only works when your router supports UPnP and it is enabled.</translation>
+        <source>Automatically open the PineCoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Automatically open the PineCoin client port on the router. This only works when your router supports UPnP and it is enabled.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1458,7 +1458,7 @@
     </message>
     <message>
         <location line="+7"/>
-        <source>Connect to the BitCorn network through a SOCKS5 proxy.</source>
+        <source>Connect to the PineCoin network through a SOCKS5 proxy.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1506,7 +1506,7 @@
     </message>
     <message>
         <location line="+25"/>
-        <source>Connect to the BitCorn network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <source>Connect to the PineCoin network through a separate SOCKS5 proxy for Tor hidden services.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1646,8 +1646,8 @@
     <message>
         <location line="+62"/>
         <location line="+386"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the BitCorn network after a connection is established, but this process has not completed yet.</source>
-        <translation>The displayed information may be out of date. Your wallet automatically synchronizes with the BitCorn network after a connection is established, but this process has not completed yet.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the PineCoin network after a connection is established, but this process has not completed yet.</source>
+        <translation>The displayed information may be out of date. Your wallet automatically synchronizes with the PineCoin network after a connection is established, but this process has not completed yet.</translation>
     </message>
     <message>
         <location line="-139"/>
@@ -1744,7 +1744,7 @@
     </message>
     <message>
         <location line="-529"/>
-        <source>Cannot start bitcorn: click-to-pay handler</source>
+        <source>Cannot start pinecoin: click-to-pay handler</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1759,7 +1759,7 @@
     </message>
     <message>
         <location line="-53"/>
-        <source>&apos;bitcorn://&apos; is not a valid URI. Use &apos;bitcorn:&apos; instead.</source>
+        <source>&apos;pinecoin://&apos; is not a valid URI. Use &apos;pinecoin:&apos; instead.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1785,7 +1785,7 @@
     </message>
     <message>
         <location line="+8"/>
-        <source>URI cannot be parsed! This can be caused by an invalid BitCorn address or malformed URI parameters.</source>
+        <source>URI cannot be parsed! This can be caused by an invalid PineCoin address or malformed URI parameters.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1918,7 +1918,7 @@
     </message>
     <message>
         <location filename="../guiutil.cpp" line="+108"/>
-        <source>Enter a BitCorn address (e.g. %1)</source>
+        <source>Enter a PineCoin address (e.g. %1)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2557,7 +2557,7 @@
     <message>
         <location line="-3"/>
         <location line="+46"/>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the BitCorn network.</source>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the PineCoin network.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2896,7 +2896,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of &quot;100 satos
     </message>
     <message>
         <location line="+543"/>
-        <source>When there is less transaction volume than space in the blocks, miners as well as relaying nodes may enforce a minimum fee. Paying only this minimum fee is just fine, but be aware that this can result in a never confirming transaction once there is more demand for bitcorn transactions than the network can process.</source>
+        <source>When there is less transaction volume than space in the blocks, miners as well as relaying nodes may enforce a minimum fee. Paying only this minimum fee is just fine, but be aware that this can result in a never confirming transaction once there is more demand for pinecoin transactions than the network can process.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3096,7 +3096,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of &quot;100 satos
     </message>
     <message>
         <location line="+101"/>
-        <source>Warning: Invalid BitCorn address</source>
+        <source>Warning: Invalid PineCoin address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3151,7 +3151,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of &quot;100 satos
     </message>
     <message>
         <location line="+39"/>
-        <source>The BitCorn address to send the payment to</source>
+        <source>The PineCoin address to send the payment to</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3178,7 +3178,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of &quot;100 satos
     </message>
     <message>
         <location line="-1028"/>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive less bitcorns than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less pinecoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3213,7 +3213,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of &quot;100 satos
     </message>
     <message>
         <location line="+54"/>
-        <source>A message that was attached to the bitcorn: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the BitCorn network.</source>
+        <source>A message that was attached to the pinecoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the PineCoin network.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3270,12 +3270,12 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of &quot;100 satos
     </message>
     <message>
         <location line="+6"/>
-        <source>You can sign messages/agreements with your addresses to prove you can receive bitcorns sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <source>You can sign messages/agreements with your addresses to prove you can receive pinecoins sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+18"/>
-        <source>The BitCorn address to sign the message with</source>
+        <source>The PineCoin address to sign the message with</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3317,8 +3317,8 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of &quot;100 satos
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this BitCorn address</source>
-        <translation>Sign the message to prove you own this BitCorn address</translation>
+        <source>Sign the message to prove you own this PineCoin address</source>
+        <translation>Sign the message to prove you own this PineCoin address</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -3348,13 +3348,13 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of &quot;100 satos
     </message>
     <message>
         <location line="+21"/>
-        <source>The BitCorn address the message was signed with</source>
+        <source>The PineCoin address the message was signed with</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+37"/>
-        <source>Verify the message to ensure it was signed with the specified BitCorn address</source>
-        <translation>Verify the message to ensure it was signed with the specified BitCorn address</translation>
+        <source>Verify the message to ensure it was signed with the specified PineCoin address</source>
+        <translation>Verify the message to ensure it was signed with the specified PineCoin address</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -4173,9 +4173,9 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of &quot;100 satos
     </message>
 </context>
 <context>
-    <name>bitcorn-core</name>
+    <name>pinecoin-core</name>
     <message>
-        <location filename="../bitcornstrings.cpp" line="+28"/>
+        <location filename="../pinecoinstrings.cpp" line="+28"/>
         <source>Distributed under the MIT software license, see the accompanying file %s or %s</source>
         <translation type="unfinished"></translation>
     </message>

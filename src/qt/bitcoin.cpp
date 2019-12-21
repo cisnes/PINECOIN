@@ -3,7 +3,7 @@
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #if defined(HAVE_CONFIG_H)
-#include <config/bitcorn-config.h>
+#include <config/pinecoin-config.h>
 #endif
 
 #include <qt/bitcoin.h>
@@ -107,11 +107,11 @@ static void initTranslations(QTranslator &qtTranslatorBase, QTranslator &qtTrans
     if (qtTranslator.load("qt_" + lang_territory, QLibraryInfo::location(QLibraryInfo::TranslationsPath)))
         QApplication::installTranslator(&qtTranslator);
 
-    // Load e.g. bitcoin_de.qm (shortcut "de" needs to be defined in bitcorn.qrc)
+    // Load e.g. bitcoin_de.qm (shortcut "de" needs to be defined in pinecoin.qrc)
     if (translatorBase.load(lang, ":/translations/"))
         QApplication::installTranslator(&translatorBase);
 
-    // Load e.g. bitcoin_de_DE.qm (shortcut "de_DE" needs to be defined in bitcorn.qrc)
+    // Load e.g. bitcoin_de_DE.qm (shortcut "de_DE" needs to be defined in pinecoin.qrc)
     if (translator.load(lang_territory, ":/translations/"))
         QApplication::installTranslator(&translator);
 }
@@ -127,18 +127,18 @@ void DebugMessageHandler(QtMsgType type, const QMessageLogContext& context, cons
     }
 }
 
-BitCornCore::BitCornCore(interfaces::Node& node) :
+PineCoinCore::PineCoinCore(interfaces::Node& node) :
     QObject(), m_node(node)
 {
 }
 
-void BitCornCore::handleRunawayException(const std::exception *e)
+void PineCoinCore::handleRunawayException(const std::exception *e)
 {
     PrintExceptionContinue(e, "Runaway exception");
     Q_EMIT runawayException(QString::fromStdString(m_node.getWarnings("gui")));
 }
 
-void BitCornCore::initialize()
+void PineCoinCore::initialize()
 {
     try
     {
@@ -153,7 +153,7 @@ void BitCornCore::initialize()
     }
 }
 
-void BitCornCore::shutdown()
+void PineCoinCore::shutdown()
 {
     try
     {
@@ -168,7 +168,7 @@ void BitCornCore::shutdown()
     }
 }
 
-BitCornApplication::BitCornApplication(interfaces::Node& node, int &argc, char **argv):
+PineCoinApplication::PineCoinApplication(interfaces::Node& node, int &argc, char **argv):
     QApplication(argc, argv),
     coreThread(nullptr),
     m_node(node),
@@ -182,10 +182,10 @@ BitCornApplication::BitCornApplication(interfaces::Node& node, int &argc, char *
     setQuitOnLastWindowClosed(false);
 }
 
-void BitCornApplication::setupPlatformStyle()
+void PineCoinApplication::setupPlatformStyle()
 {
     // UI per-platform customization
-    // This must be done inside the BitCornApplication constructor, or after it, because
+    // This must be done inside the PineCoinApplication constructor, or after it, because
     // PlatformStyle::instantiate requires a QApplication
     std::string platformName;
     platformName = gArgs.GetArg("-uiplatform", BitcoinGUI::DEFAULT_UIPLATFORM);
@@ -195,7 +195,7 @@ void BitCornApplication::setupPlatformStyle()
     assert(platformStyle);
 }
 
-BitCornApplication::~BitCornApplication()
+PineCoinApplication::~PineCoinApplication()
 {
     if(coreThread)
     {
@@ -220,18 +220,18 @@ BitCornApplication::~BitCornApplication()
 }
 
 #ifdef ENABLE_WALLET
-void BitCornApplication::createPaymentServer()
+void PineCoinApplication::createPaymentServer()
 {
     paymentServer = new PaymentServer(this);
 }
 #endif
 
-void BitCornApplication::createOptionsModel(bool resetSettings)
+void PineCoinApplication::createOptionsModel(bool resetSettings)
 {
     optionsModel = new OptionsModel(m_node, nullptr, resetSettings);
 }
 
-void BitCornApplication::createWindow(const NetworkStyle *networkStyle)
+void PineCoinApplication::createWindow(const NetworkStyle *networkStyle)
 {
     window = new BitcoinGUI(m_node, platformStyle, networkStyle, nullptr);
 
@@ -239,42 +239,42 @@ void BitCornApplication::createWindow(const NetworkStyle *networkStyle)
     connect(pollShutdownTimer, &QTimer::timeout, window, &BitcoinGUI::detectShutdown);
 }
 
-void BitCornApplication::createSplashScreen(const NetworkStyle *networkStyle)
+void PineCoinApplication::createSplashScreen(const NetworkStyle *networkStyle)
 {
     SplashScreen *splash = new SplashScreen(m_node, nullptr, networkStyle);
     // We don't hold a direct pointer to the splash screen after creation, but the splash
     // screen will take care of deleting itself when finish() happens.
     splash->show();
-    connect(this, &BitCornApplication::splashFinished, splash, &SplashScreen::finish);
-    connect(this, &BitCornApplication::requestedShutdown, splash, &QWidget::close);
+    connect(this, &PineCoinApplication::splashFinished, splash, &SplashScreen::finish);
+    connect(this, &PineCoinApplication::requestedShutdown, splash, &QWidget::close);
 }
 
-bool BitCornApplication::baseInitialize()
+bool PineCoinApplication::baseInitialize()
 {
     return m_node.baseInitialize();
 }
 
-void BitCornApplication::startThread()
+void PineCoinApplication::startThread()
 {
     if(coreThread)
         return;
     coreThread = new QThread(this);
-    BitCornCore *executor = new BitCornCore(m_node);
+    PineCoinCore *executor = new PineCoinCore(m_node);
     executor->moveToThread(coreThread);
 
     /*  communication to and from thread */
-    connect(executor, &BitCornCore::initializeResult, this, &BitCornApplication::initializeResult);
-    connect(executor, &BitCornCore::shutdownResult, this, &BitCornApplication::shutdownResult);
-    connect(executor, &BitCornCore::runawayException, this, &BitCornApplication::handleRunawayException);
-    connect(this, &BitCornApplication::requestedInitialize, executor, &BitCornCore::initialize);
-    connect(this, &BitCornApplication::requestedShutdown, executor, &BitCornCore::shutdown);
+    connect(executor, &PineCoinCore::initializeResult, this, &PineCoinApplication::initializeResult);
+    connect(executor, &PineCoinCore::shutdownResult, this, &PineCoinApplication::shutdownResult);
+    connect(executor, &PineCoinCore::runawayException, this, &PineCoinApplication::handleRunawayException);
+    connect(this, &PineCoinApplication::requestedInitialize, executor, &PineCoinCore::initialize);
+    connect(this, &PineCoinApplication::requestedShutdown, executor, &PineCoinCore::shutdown);
     /*  make sure executor object is deleted in its own thread */
     connect(coreThread, &QThread::finished, executor, &QObject::deleteLater);
 
     coreThread->start();
 }
 
-void BitCornApplication::parameterSetup()
+void PineCoinApplication::parameterSetup()
 {
     // Default printtoconsole to false for the GUI. GUI programs should not
     // print to the console unnecessarily.
@@ -284,14 +284,14 @@ void BitCornApplication::parameterSetup()
     m_node.initParameterInteraction();
 }
 
-void BitCornApplication::requestInitialize()
+void PineCoinApplication::requestInitialize()
 {
     qDebug() << __func__ << ": Requesting initialize";
     startThread();
     Q_EMIT requestedInitialize();
 }
 
-void BitCornApplication::requestShutdown()
+void PineCoinApplication::requestShutdown()
 {
     // Show a simple window indicating shutdown status
     // Do this first as some of the steps may take some time below,
@@ -319,7 +319,7 @@ void BitCornApplication::requestShutdown()
     Q_EMIT requestedShutdown();
 }
 
-void BitCornApplication::initializeResult(bool success)
+void PineCoinApplication::initializeResult(bool success)
 {
     qDebug() << __func__ << ": Initialization result: " << success;
     // Set exit result.
@@ -360,7 +360,7 @@ void BitCornApplication::initializeResult(bool success)
 
 #ifdef ENABLE_WALLET
         // Now that initialization/startup is done, process any command-line
-        // bitcorn: URIs or payment requests:
+        // pinecoin: URIs or payment requests:
         if (paymentServer) {
             connect(paymentServer, &PaymentServer::receivedPaymentRequest, window, &BitcoinGUI::handlePaymentRequest);
             connect(window, &BitcoinGUI::receivedURI, paymentServer, &PaymentServer::handleURIOrFile);
@@ -377,18 +377,18 @@ void BitCornApplication::initializeResult(bool success)
     }
 }
 
-void BitCornApplication::shutdownResult()
+void PineCoinApplication::shutdownResult()
 {
     quit(); // Exit second main loop invocation after shutdown finished
 }
 
-void BitCornApplication::handleRunawayException(const QString &message)
+void PineCoinApplication::handleRunawayException(const QString &message)
 {
-    QMessageBox::critical(nullptr, "Runaway exception", BitcoinGUI::tr("A fatal error occurred. BitCorn can no longer continue safely and will quit.") + QString("\n\n") + message);
+    QMessageBox::critical(nullptr, "Runaway exception", BitcoinGUI::tr("A fatal error occurred. PineCoin can no longer continue safely and will quit.") + QString("\n\n") + message);
     ::exit(EXIT_FAILURE);
 }
 
-WId BitCornApplication::getMainWinId() const
+WId PineCoinApplication::getMainWinId() const
 {
     if (!window)
         return 0;
@@ -429,8 +429,8 @@ int GuiMain(int argc, char* argv[])
     // Do not refer to data directory yet, this can be overridden by Intro::pickDataDirectory
 
     /// 1. Basic Qt initialization (not dependent on parameters or configuration)
-    Q_INIT_RESOURCE(bitcorn);
-    Q_INIT_RESOURCE(bitcorn_locale);
+    Q_INIT_RESOURCE(pinecoin);
+    Q_INIT_RESOURCE(pinecoin_locale);
 
     // Generate high-dpi pixmaps
     QApplication::setAttribute(Qt::AA_UseHighDpiPixmaps);
@@ -441,7 +441,7 @@ int GuiMain(int argc, char* argv[])
     QApplication::setAttribute(Qt::AA_DontShowIconsInMenus);
 #endif
 
-    BitCornApplication app(*node, argc, argv);
+    PineCoinApplication app(*node, argc, argv);
 
     // Register meta types used for QMetaObject::invokeMethod
     qRegisterMetaType< bool* >();
@@ -495,7 +495,7 @@ int GuiMain(int argc, char* argv[])
     if (!Intro::pickDataDirectory(*node))
         return EXIT_SUCCESS;
 
-    /// 6. Determine availability of data and blocks directory and parse bitcorn.conf
+    /// 6. Determine availability of data and blocks directory and parse pinecoin.conf
     /// - Do not call GetDataDir(true) before this step finishes
     if (!fs::is_directory(GetDataDir(false)))
     {
@@ -548,7 +548,7 @@ int GuiMain(int argc, char* argv[])
         exit(EXIT_SUCCESS);
 
     // Start up the payment server early, too, so impatient users that click on
-    // bitcorn: links repeatedly have their payment requests routed to this process:
+    // pinecoin: links repeatedly have their payment requests routed to this process:
     app.createPaymentServer();
 #endif
 

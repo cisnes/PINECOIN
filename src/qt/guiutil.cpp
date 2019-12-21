@@ -1,6 +1,6 @@
 // Copyright (c) 2011-2019 The Bitcoin Core developers
 // Copyright (c) 2018-2019 The BitGreen Core developers
-// Copyright (c) 2019 The BitCorn Core developers
+// Copyright (c) 2019 The PineCoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -107,16 +107,16 @@ void setupAddressWidget(QValidatedLineEdit *widget, QWidget *parent)
     widget->setFont(fixedPitchFont());
     // We don't want translators to use own addresses in translations
     // and this is the only place, where this address is supplied.
-    widget->setPlaceholderText(QObject::tr("Enter a BitCorn address (e.g. %1)").arg(
+    widget->setPlaceholderText(QObject::tr("Enter a PineCoin address (e.g. %1)").arg(
         QString::fromStdString(DummyAddress(Params()))));
     widget->setValidator(new BitcoinAddressEntryValidator(parent));
     widget->setCheckValidator(new BitcoinAddressCheckValidator(parent));
 }
 
-bool parseBitCornURI(const QUrl &uri, SendCoinsRecipient *out)
+bool parsePineCoinURI(const QUrl &uri, SendCoinsRecipient *out)
 {
-    // return if URI is not valid or is no bitcorn: URI
-    if(!uri.isValid() || uri.scheme() != QString("bitcorn"))
+    // return if URI is not valid or is no pinecoin: URI
+    if(!uri.isValid() || uri.scheme() != QString("pinecoin"))
         return false;
 
     SendCoinsRecipient rv;
@@ -152,7 +152,7 @@ bool parseBitCornURI(const QUrl &uri, SendCoinsRecipient *out)
         {
             if(!i->second.isEmpty())
             {
-                if(!BitcoinUnits::parse(BitcoinUnits::CORN, i->second, &rv.amount))
+                if(!BitcoinUnits::parse(BitcoinUnits::PINE, i->second, &rv.amount))
                 {
                     return false;
                 }
@@ -170,22 +170,22 @@ bool parseBitCornURI(const QUrl &uri, SendCoinsRecipient *out)
     return true;
 }
 
-bool parseBitCornURI(QString uri, SendCoinsRecipient *out)
+bool parsePineCoinURI(QString uri, SendCoinsRecipient *out)
 {
     QUrl uriInstance(uri);
-    return parseBitCornURI(uriInstance, out);
+    return parsePineCoinURI(uriInstance, out);
 }
 
-QString formatBitCornURI(const SendCoinsRecipient &info)
+QString formatPineCoinURI(const SendCoinsRecipient &info)
 {
     bool bech_32 = info.address.startsWith(QString::fromStdString(Params().Bech32HRP() + "1"));
 
-    QString ret = QString("bitcorn:%1").arg(bech_32 ? info.address.toUpper() : info.address);
+    QString ret = QString("pinecoin:%1").arg(bech_32 ? info.address.toUpper() : info.address);
     int paramCount = 0;
 
     if (info.amount)
     {
-        ret += QString("?amount=%1").arg(BitcoinUnits::format(BitcoinUnits::CORN, info.amount, false, BitcoinUnits::separatorNever));
+        ret += QString("?amount=%1").arg(BitcoinUnits::format(BitcoinUnits::PINE, info.amount, false, BitcoinUnits::separatorNever));
         paramCount++;
     }
 
@@ -389,9 +389,9 @@ void openDebugLogfile()
         QDesktopServices::openUrl(QUrl::fromLocalFile(boostPathToQString(pathDebug)));
 }
 
-bool openBitCornConf()
+bool openPineCoinConf()
 {
-    fs::path pathConfig = GetConfigFile(gArgs.GetArg("-conf", BITCORN_CONF_FILENAME));
+    fs::path pathConfig = GetConfigFile(gArgs.GetArg("-conf", PINECOIN_CONF_FILENAME));
 
     /* Create the file */
     fsbridge::ofstream configFile(pathConfig, std::ios_base::app);
@@ -401,7 +401,7 @@ bool openBitCornConf()
 
     configFile.close();
 
-    /* Open bitcorn.conf with the associated application */
+    /* Open pinecoin.conf with the associated application */
     bool res = QDesktopServices::openUrl(QUrl::fromLocalFile(boostPathToQString(pathConfig)));
 #ifdef Q_OS_MAC
     // Workaround for macOS-specific behavior; see #15409.
@@ -557,15 +557,15 @@ fs::path static StartupShortcutPath()
 {
     std::string chain = gArgs.GetChainName();
     if (chain == CBaseChainParams::MAIN)
-        return GetSpecialFolderPath(CSIDL_STARTUP) / "BitCorn.lnk";
+        return GetSpecialFolderPath(CSIDL_STARTUP) / "PineCoin.lnk";
     if (chain == CBaseChainParams::TESTNET) // Remove this special case when CBaseChainParams::TESTNET = "testnet4"
-        return GetSpecialFolderPath(CSIDL_STARTUP) / "BitCorn (testnet).lnk";
-    return GetSpecialFolderPath(CSIDL_STARTUP) / strprintf("BitCorn (%s).lnk", chain);
+        return GetSpecialFolderPath(CSIDL_STARTUP) / "PineCoin (testnet).lnk";
+    return GetSpecialFolderPath(CSIDL_STARTUP) / strprintf("PineCoin (%s).lnk", chain);
 }
 
 bool GetStartOnSystemStartup()
 {
-    // check for BitCorn*.lnk
+    // check for PineCoin*.lnk
     return fs::exists(StartupShortcutPath());
 }
 
@@ -640,8 +640,8 @@ fs::path static GetAutostartFilePath()
 {
     std::string chain = gArgs.GetChainName();
     if (chain == CBaseChainParams::MAIN)
-        return GetAutostartDir() / "bitcorn.desktop";
-    return GetAutostartDir() / strprintf("bitcorn-%s.desktop", chain);
+        return GetAutostartDir() / "pinecoin.desktop";
+    return GetAutostartDir() / strprintf("pinecoin-%s.desktop", chain);
 }
 
 bool GetStartOnSystemStartup()
@@ -681,13 +681,13 @@ bool SetStartOnSystemStartup(bool fAutoStart)
         if (!optionFile.good())
             return false;
         std::string chain = gArgs.GetChainName();
-        // Write a bitcorn.desktop file to the autostart directory:
+        // Write a pinecoin.desktop file to the autostart directory:
         optionFile << "[Desktop Entry]\n";
         optionFile << "Type=Application\n";
         if (chain == CBaseChainParams::MAIN)
-            optionFile << "Name=BitCorn\n";
+            optionFile << "Name=PineCoin\n";
         else
-            optionFile << strprintf("Name=BitCorn (%s)\n", chain);
+            optionFile << strprintf("Name=PineCoin (%s)\n", chain);
         optionFile << "Exec=" << pszExePath << strprintf(" -min -testnet=%d -regtest=%d\n", gArgs.GetBoolArg("-testnet", false), gArgs.GetBoolArg("-regtest", false));
         optionFile << "Terminal=false\n";
         optionFile << "Hidden=false\n";
@@ -706,7 +706,7 @@ LSSharedFileListItemRef findStartupItemInList(CFArrayRef listSnapshot, LSSharedF
         return nullptr;
     }
 
-    // loop through the list of startup items and try to find the bitcorn app
+    // loop through the list of startup items and try to find the pinecoin app
     for(int i = 0; i < CFArrayGetCount(listSnapshot); i++) {
         LSSharedFileListItemRef item = (LSSharedFileListItemRef)CFArrayGetValueAtIndex(listSnapshot, i);
         UInt32 resolutionFlags = kLSSharedFileListNoUserInteraction | kLSSharedFileListDoNotMountVolumes;
@@ -737,15 +737,15 @@ LSSharedFileListItemRef findStartupItemInList(CFArrayRef listSnapshot, LSSharedF
 
 bool GetStartOnSystemStartup()
 {
-    CFURLRef bitcornAppUrl = CFBundleCopyBundleURL(CFBundleGetMainBundle());
-    if (bitcornAppUrl == nullptr) {
+    CFURLRef pinecoinAppUrl = CFBundleCopyBundleURL(CFBundleGetMainBundle());
+    if (pinecoinAppUrl == nullptr) {
         return false;
     }
 
     LSSharedFileListRef loginItems = LSSharedFileListCreate(nullptr, kLSSharedFileListSessionLoginItems, nullptr);
     CFArrayRef listSnapshot = LSSharedFileListCopySnapshot(loginItems, nullptr);
-    bool res = (findStartupItemInList(listSnapshot, loginItems, bitcornAppUrl) != nullptr);
-    CFRelease(bitcornAppUrl);
+    bool res = (findStartupItemInList(listSnapshot, loginItems, pinecoinAppUrl) != nullptr);
+    CFRelease(pinecoinAppUrl);
     CFRelease(loginItems);
     CFRelease(listSnapshot);
     return res;
@@ -753,25 +753,25 @@ bool GetStartOnSystemStartup()
 
 bool SetStartOnSystemStartup(bool fAutoStart)
 {
-    CFURLRef bitcornAppUrl = CFBundleCopyBundleURL(CFBundleGetMainBundle());
-    if (bitcornAppUrl == nullptr) {
+    CFURLRef pinecoinAppUrl = CFBundleCopyBundleURL(CFBundleGetMainBundle());
+    if (pinecoinAppUrl == nullptr) {
         return false;
     }
 
     LSSharedFileListRef loginItems = LSSharedFileListCreate(nullptr, kLSSharedFileListSessionLoginItems, nullptr);
     CFArrayRef listSnapshot = LSSharedFileListCopySnapshot(loginItems, nullptr);
-    LSSharedFileListItemRef foundItem = findStartupItemInList(listSnapshot, loginItems, bitcornAppUrl);
+    LSSharedFileListItemRef foundItem = findStartupItemInList(listSnapshot, loginItems, pinecoinAppUrl);
 
     if(fAutoStart && !foundItem) {
-        // add bitcorn app to startup item list
-        LSSharedFileListInsertItemURL(loginItems, kLSSharedFileListItemBeforeFirst, nullptr, nullptr, bitcornAppUrl, nullptr, nullptr);
+        // add pinecoin app to startup item list
+        LSSharedFileListInsertItemURL(loginItems, kLSSharedFileListItemBeforeFirst, nullptr, nullptr, pinecoinAppUrl, nullptr, nullptr);
     }
     else if(!fAutoStart && foundItem) {
         // remove item
         LSSharedFileListItemRemove(loginItems, foundItem);
     }
 
-    CFRelease(bitcornAppUrl);
+    CFRelease(pinecoinAppUrl);
     CFRelease(loginItems);
     CFRelease(listSnapshot);
     return true;

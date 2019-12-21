@@ -4,13 +4,13 @@
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Test multiwallet.
 
-Verify that a bitcornd node can load multiple wallet files
+Verify that a pinecoind node can load multiple wallet files
 """
 import os
 import shutil
 import time
 
-from test_framework.test_framework import BitCornTestFramework
+from test_framework.test_framework import PineCoinTestFramework
 from test_framework.test_node import ErrorMatch
 from test_framework.util import (
     assert_equal,
@@ -18,7 +18,7 @@ from test_framework.util import (
 )
 
 
-class MultiWalletTest(BitCornTestFramework):
+class MultiWalletTest(PineCoinTestFramework):
     def set_test_params(self):
         self.setup_clean_chain = True
         self.num_nodes = 2

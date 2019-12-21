@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCORN_RPC_REQUEST_H
-#define BITCORN_RPC_REQUEST_H
+#ifndef PINECOIN_RPC_REQUEST_H
+#define PINECOIN_RPC_REQUEST_H
 
 #include <string>
 
@@ -39,4 +39,4 @@ public:
     void parse(const UniValue& valRequest);
 };
 
-#endif // BITCORN_RPC_REQUEST_H
+#endif // PINECOIN_RPC_REQUEST_H

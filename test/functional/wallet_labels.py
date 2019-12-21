@@ -11,10 +11,10 @@ RPCs tested are:
 """
 from collections import defaultdict
 
-from test_framework.test_framework import BitCornTestFramework
+from test_framework.test_framework import PineCoinTestFramework
 from test_framework.util import assert_equal, assert_raises_rpc_error
 
-class WalletLabelsTest(BitCornTestFramework):
+class WalletLabelsTest(PineCoinTestFramework):
     def set_test_params(self):
         self.setup_clean_chain = True
         self.num_nodes = 1
@@ -34,7 +34,7 @@ class WalletLabelsTest(BitCornTestFramework):
         assert_equal(node.getbalance(), 100)
 
         # there should be 2 address groups
-        # each with 1 address with a balance of 50 Bitcorns
+        # each with 1 address with a balance of 50 Pinecoins
         address_groups = node.listaddressgroupings()
         assert_equal(len(address_groups), 2)
         # the addresses aren't linked now, but will be after we send to the

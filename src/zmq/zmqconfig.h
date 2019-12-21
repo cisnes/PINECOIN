@@ -2,11 +2,11 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCORN_ZMQ_ZMQCONFIG_H
-#define BITCORN_ZMQ_ZMQCONFIG_H
+#ifndef PINECOIN_ZMQ_ZMQCONFIG_H
+#define PINECOIN_ZMQ_ZMQCONFIG_H
 
 #if defined(HAVE_CONFIG_H)
-#include <config/bitcorn-config.h>
+#include <config/pinecoin-config.h>
 #endif
 
 #include <stdarg.h>
@@ -21,4 +21,4 @@
 
 void zmqError(const char *str);
 
-#endif // BITCORN_ZMQ_ZMQCONFIG_H
+#endif // PINECOIN_ZMQ_ZMQCONFIG_H

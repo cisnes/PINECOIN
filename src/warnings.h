@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCORN_WARNINGS_H
-#define BITCORN_WARNINGS_H
+#ifndef PINECOIN_WARNINGS_H
+#define PINECOIN_WARNINGS_H
 
 #include <stdlib.h>
 #include <string>
@@ -21,4 +21,4 @@ void SetfLargeWorkInvalidChainFound(bool flag);
  */
 std::string GetWarnings(const std::string& strFor);
 
-#endif //  BITCORN_WARNINGS_H
+#endif //  PINECOIN_WARNINGS_H

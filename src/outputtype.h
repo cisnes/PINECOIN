@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCORN_OUTPUTTYPE_H
-#define BITCORN_OUTPUTTYPE_H
+#ifndef PINECOIN_OUTPUTTYPE_H
+#define PINECOIN_OUTPUTTYPE_H
 
 #include <attributes.h>
 #include <script/signingprovider.h>
@@ -46,5 +46,5 @@ std::vector<CTxDestination> GetAllDestinationsForKey(const CPubKey& key);
  */
 CTxDestination AddAndGetDestinationForScript(FillableSigningProvider& keystore, const CScript& script, OutputType);
 
-#endif // BITCORN_OUTPUTTYPE_H
+#endif // PINECOIN_OUTPUTTYPE_H
 

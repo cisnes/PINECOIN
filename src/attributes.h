@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCORN_ATTRIBUTES_H
-#define BITCORN_ATTRIBUTES_H
+#ifndef PINECOIN_ATTRIBUTES_H
+#define PINECOIN_ATTRIBUTES_H
 
 #if defined(__has_cpp_attribute)
 #  if __has_cpp_attribute(nodiscard)
@@ -19,4 +19,4 @@
 #  endif
 #endif
 
-#endif // BITCORN_ATTRIBUTES_H
+#endif // PINECOIN_ATTRIBUTES_H

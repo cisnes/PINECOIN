@@ -9,10 +9,10 @@
 
 /**
  * Name of client reported in the 'version' message. Report the same name
- * for both bitcornd and bitcorn-qt, to make it harder for attackers to
+ * for both pinecoind and pinecoin-qt, to make it harder for attackers to
  * target servers or GUI users specifically.
  */
-const std::string CLIENT_NAME("BitCorn");
+const std::string CLIENT_NAME("PineCoin");
 
 /**
  * Client version number

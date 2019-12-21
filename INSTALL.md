@@ -1,5 +1,5 @@
-Building BitCorn
+Building PineCoin
 =================
 
 See doc/build-*.md for instructions on building the various
-elements of the BitCorn Core reference implementation of BitCorn.
+elements of the PineCoin Core reference implementation of PineCoin.

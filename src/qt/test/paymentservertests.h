@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCORN_QT_TEST_PAYMENTSERVERTESTS_H
-#define BITCORN_QT_TEST_PAYMENTSERVERTESTS_H
+#ifndef PINECOIN_QT_TEST_PAYMENTSERVERTESTS_H
+#define PINECOIN_QT_TEST_PAYMENTSERVERTESTS_H
 
 #include <qt/paymentserver.h>
 
@@ -32,4 +32,4 @@ public:
     SendCoinsRecipient recipient;
 };
 
-#endif // BITCORN_QT_TEST_PAYMENTSERVERTESTS_H
+#endif // PINECOIN_QT_TEST_PAYMENTSERVERTESTS_H

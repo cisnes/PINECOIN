@@ -4,8 +4,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCORN_KEY_H
-#define BITCORN_KEY_H
+#ifndef PINECOIN_KEY_H
+#define PINECOIN_KEY_H
 
 #include <pubkey.h>
 #include <serialize.h>
@@ -192,4 +192,4 @@ void ECC_Stop();
 /** Check that required EC support is available at runtime. */
 bool ECC_InitSanityCheck();
 
-#endif // BITCORN_KEY_H
+#endif // PINECOIN_KEY_H

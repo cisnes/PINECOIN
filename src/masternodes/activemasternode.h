@@ -1,11 +1,11 @@
 // Copyright (c) 2014-2019 The Dash Core developers
 // Copyright (c) 2019 The BitGreen Core developers
-// Copyright (c) 2019 The BitCorn Core developers
+// Copyright (c) 2019 The PineCoin Core developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCORN_MASTERNODES_ACTIVEMASTERNODE_H
-#define BITCORN_MASTERNODES_ACTIVEMASTERNODE_H
+#ifndef PINECOIN_MASTERNODES_ACTIVEMASTERNODE_H
+#define PINECOIN_MASTERNODES_ACTIVEMASTERNODE_H
 
 #include <chainparams.h>
 #include <key.h>
@@ -73,4 +73,4 @@ private:
     bool GetLocalAddress(CService& addrRet);
 };
 
-#endif // BITCORN_MASTERNODES_ACTIVEMASTERNODE_H
+#endif // PINECOIN_MASTERNODES_ACTIVEMASTERNODE_H

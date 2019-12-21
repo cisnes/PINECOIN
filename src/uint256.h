@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCORN_UINT256_H
-#define BITCORN_UINT256_H
+#ifndef PINECOIN_UINT256_H
+#define PINECOIN_UINT256_H
 
 #include <assert.h>
 #include <cstring>
@@ -168,4 +168,4 @@ namespace std {
     };
 }
 
-#endif // BITCORN_UINT256_H
+#endif // PINECOIN_UINT256_H

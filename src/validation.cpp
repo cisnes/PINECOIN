@@ -62,7 +62,7 @@
 #include <boost/thread.hpp>
 
 #if defined(NDEBUG)
-# error "BitCorn cannot be compiled without assertions."
+# error "PineCoin cannot be compiled without assertions."
 #endif
 
 #define MICRO 0.000001
@@ -846,7 +846,7 @@ static bool AcceptToMemoryPoolWorker(const CChainParams& chainparams, CTxMemPool
         // Remove conflicting transactions from the mempool
         for (CTxMemPool::txiter it : allConflicting)
         {
-            LogPrint(BCLog::MEMPOOL, "replacing tx %s with %s for %s CORN additional fees, %d delta bytes\n",
+            LogPrint(BCLog::MEMPOOL, "replacing tx %s with %s for %s PINE additional fees, %d delta bytes\n",
                     it->GetTx().GetHash().ToString(),
                     hash.ToString(),
                     FormatMoney(nModifiedFees - nConflictingFees),
@@ -1753,7 +1753,7 @@ static int64_t nTimeConnect = 0;
 static int64_t nTimeIndex = 0;
 static int64_t nTimeCallbacks = 0;
 static int64_t nTimeTotal = 0;
-static int64_t nTimeBitcornSpecific = 0;
+static int64_t nTimePinecoinSpecific = 0;
 static int64_t nBlocksTotal = 0;
 
 
@@ -2160,7 +2160,7 @@ bool CChainState::ConnectBlock(const CBlock& block, CValidationState& state, CBl
         LogPrintf("%s: spork is off, skipping transaction locking checks\n", __func__);
     }
 
-    // BITCORN: Check Proof-of-Stake, masternode payments and superblocks
+    // PINECOIN: Check Proof-of-Stake, masternode payments and superblocks
 
     // proof-of-stake: keep track of money supply and mint amount.
     CAmount nMoneySupplyPrev = pindex->pprev ? pindex->pprev->nMoneySupply : 0;
@@ -2199,10 +2199,10 @@ bool CChainState::ConnectBlock(const CBlock& block, CValidationState& state, CBl
     int64_t nTime4_3 = GetTimeMicros(); nTimeVerify += nTime4_3 - nTime4_2;
     LogPrint(BCLog::BENCHMARK, "      - ProcessSpecialTxsInBlock: %.2fms [%.2fs]\n", MILLI * (nTime4_3 - nTime4_2), nTimeVerify * MICRO);
 
-    int64_t nTime4_4 = GetTimeMicros(); nTimeBitcornSpecific += nTime4_4 - nTime4_1;
-    LogPrint(BCLog::BENCHMARK, "    - Bitcorn specific: %.2fms [%.2fs]\n", MILLI * (nTime4_4 - nTime4_3), nTimeBitcornSpecific * MICRO);
+    int64_t nTime4_4 = GetTimeMicros(); nTimePinecoinSpecific += nTime4_4 - nTime4_1;
+    LogPrint(BCLog::BENCHMARK, "    - Pinecoin specific: %.2fms [%.2fs]\n", MILLI * (nTime4_4 - nTime4_3), nTimePinecoinSpecific * MICRO);
 
-    // END BITCORN
+    // END PINECOIN
 
     //IMPORTANT NOTE: Nothing before this point should actually store to disk (or even memory)
     if (fJustCheck)

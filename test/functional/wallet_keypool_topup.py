@@ -13,14 +13,14 @@ Two nodes. Node1 is under test. Node0 is providing transactions and generating b
 import os
 import shutil
 
-from test_framework.test_framework import BitCornTestFramework
+from test_framework.test_framework import PineCoinTestFramework
 from test_framework.util import (
     assert_equal,
     connect_nodes_bi,
 )
 
 
-class KeypoolRestoreTest(BitCornTestFramework):
+class KeypoolRestoreTest(PineCoinTestFramework):
     def set_test_params(self):
         self.setup_clean_chain = True
         self.num_nodes = 4

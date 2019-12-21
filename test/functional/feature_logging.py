@@ -6,11 +6,11 @@
 
 import os
 
-from test_framework.test_framework import BitCornTestFramework
+from test_framework.test_framework import PineCoinTestFramework
 from test_framework.test_node import ErrorMatch
 
 
-class LoggingTest(BitCornTestFramework):
+class LoggingTest(PineCoinTestFramework):
     def set_test_params(self):
         self.num_nodes = 1
         self.setup_clean_chain = True

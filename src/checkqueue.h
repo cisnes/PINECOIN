@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCORN_CHECKQUEUE_H
-#define BITCORN_CHECKQUEUE_H
+#ifndef PINECOIN_CHECKQUEUE_H
+#define PINECOIN_CHECKQUEUE_H
 
 #include <sync.h>
 
@@ -211,4 +211,4 @@ public:
     }
 };
 
-#endif // BITCORN_CHECKQUEUE_H
+#endif // PINECOIN_CHECKQUEUE_H

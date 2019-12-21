@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCORN_SCRIPT_KEYORIGIN_H
-#define BITCORN_SCRIPT_KEYORIGIN_H
+#ifndef PINECOIN_SCRIPT_KEYORIGIN_H
+#define PINECOIN_SCRIPT_KEYORIGIN_H
 
 #include <serialize.h>
 #include <streams.h>
@@ -34,4 +34,4 @@ struct KeyOriginInfo
     }
 };
 
-#endif // BITCORN_SCRIPT_KEYORIGIN_H
+#endif // PINECOIN_SCRIPT_KEYORIGIN_H

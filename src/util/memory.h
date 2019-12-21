@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCORN_UTIL_MEMORY_H
-#define BITCORN_UTIL_MEMORY_H
+#ifndef PINECOIN_UTIL_MEMORY_H
+#define PINECOIN_UTIL_MEMORY_H
 
 #include <memory>
 #include <utility>

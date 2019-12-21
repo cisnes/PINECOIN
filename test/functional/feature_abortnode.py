@@ -2,19 +2,19 @@
 # Copyright (c) 2019 The Bitcoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
-"""Test bitcornd aborts if can't disconnect a block.
+"""Test pinecoind aborts if can't disconnect a block.
 
 - Start a single node and generate 3 blocks.
 - Delete the undo data.
 - Mine a fork that requires disconnecting the tip.
-- Verify that bitcornd AbortNode's.
+- Verify that pinecoind AbortNode's.
 """
 
-from test_framework.test_framework import BitCornTestFramework
+from test_framework.test_framework import PineCoinTestFramework
 from test_framework.util import wait_until, get_datadir_path, connect_nodes
 import os
 
-class AbortNodeTest(BitCornTestFramework):
+class AbortNodeTest(PineCoinTestFramework):
 
     def set_test_params(self):
         self.setup_clean_chain = True

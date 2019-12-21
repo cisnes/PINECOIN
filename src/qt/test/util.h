@@ -1,5 +1,5 @@
-#ifndef BITCORN_QT_TEST_UTIL_H
-#define BITCORN_QT_TEST_UTIL_H
+#ifndef PINECOIN_QT_TEST_UTIL_H
+#define PINECOIN_QT_TEST_UTIL_H
 
 #include <QString>
 
@@ -11,4 +11,4 @@
  */
 void ConfirmMessage(QString* text = nullptr, int msec = 0);
 
-#endif // BITCORN_QT_TEST_UTIL_H
+#endif // PINECOIN_QT_TEST_UTIL_H

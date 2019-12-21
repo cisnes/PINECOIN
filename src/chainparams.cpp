@@ -1,7 +1,7 @@
 // Copyright (c) 2010 Satoshi Nakamoto
 // Copyright (c) 2009-2018 The Bitcoin Core developers
 // Copyright (c) 2019 The BitGreen Core developers
-// Copyright (c) 2019 The BitCorn Core developers
+// Copyright (c) 2019 The PineCoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -215,11 +215,11 @@ public:
         assert(genesis.hashMerkleRoot == uint256S("0x2de60c1f5a93e37e028aef8e3cb2afd4dfbfac707624a3c2644b5b5c7d9c1404"));
 
 	// Mainnet Seeds
-        vSeeds.emplace_back("seed1.bitcornproject.com");
-        vSeeds.emplace_back("seed2.bitcornproject.com");
-        vSeeds.emplace_back("seed3.bitcornproject.com");
-        vSeeds.emplace_back("seed4.bitcornproject.com");
-        vSeeds.emplace_back("seed5.bitcornproject.com");
+        vSeeds.emplace_back("seed1.pinecoinproject.com");
+        vSeeds.emplace_back("seed2.pinecoinproject.com");
+        vSeeds.emplace_back("seed3.pinecoinproject.com");
+        vSeeds.emplace_back("seed4.pinecoinproject.com");
+        vSeeds.emplace_back("seed5.pinecoinproject.com");
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 28); // C Prefix P2PKH
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 60); // R Prefix for P2SH

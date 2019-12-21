@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCORN_BENCH_BENCH_H
-#define BITCORN_BENCH_BENCH_H
+#ifndef PINECOIN_BENCH_BENCH_H
+#define PINECOIN_BENCH_BENCH_H
 
 #include <functional>
 #include <limits>
@@ -139,4 +139,4 @@ private:
 #define BENCHMARK(n, num_iters_for_one_second) \
     benchmark::BenchRunner BOOST_PP_CAT(bench_, BOOST_PP_CAT(__LINE__, n))(BOOST_PP_STRINGIZE(n), n, (num_iters_for_one_second));
 
-#endif // BITCORN_BENCH_BENCH_H
+#endif // PINECOIN_BENCH_BENCH_H

@@ -1,33 +1,33 @@
-# /etc/conf.d/bitcornd: config file for /etc/init.d/bitcornd
+# /etc/conf.d/pinecoind: config file for /etc/init.d/pinecoind
 
 # Config file location
-#BITCORND_CONFIGFILE="/etc/bitcorn/bitcorn.conf"
+#PINECOIND_CONFIGFILE="/etc/pinecoin/pinecoin.conf"
 
-# What directory to write pidfile to?  (created and owned by $BITCORND_USER)
-#BITCORND_PIDDIR="/var/run/bitcornd"
+# What directory to write pidfile to?  (created and owned by $PINECOIND_USER)
+#PINECOIND_PIDDIR="/var/run/pinecoind"
 
 # What filename to give the pidfile
-#BITCORND_PIDFILE="${BITCORND_PIDDIR}/bitcornd.pid"
+#PINECOIND_PIDFILE="${PINECOIND_PIDDIR}/pinecoind.pid"
 
-# Where to write bitcornd data (be mindful that the blockchain is large)
-#BITCORND_DATADIR="/var/lib/bitcornd"
+# Where to write pinecoind data (be mindful that the blockchain is large)
+#PINECOIND_DATADIR="/var/lib/pinecoind"
 
-# User and group to own bitcornd process
-#BITCORND_USER="bitcorn"
-#BITCORND_GROUP="bitcorn"
+# User and group to own pinecoind process
+#PINECOIND_USER="pinecoin"
+#PINECOIND_GROUP="pinecoin"
 
-# Path to bitcornd executable
-#BITCORND_BIN="/usr/bin/bitcornd"
+# Path to pinecoind executable
+#PINECOIND_BIN="/usr/bin/pinecoind"
 
-# Nice value to run bitcornd under
-#BITCORND_NICE=0
+# Nice value to run pinecoind under
+#PINECOIND_NICE=0
 
 # Additional options (avoid -conf and -datadir, use flags above)
-#BITCORND_OPTS=""
+#PINECOIND_OPTS=""
 
-# The timeout in seconds OpenRC will wait for bitcornd to terminate
+# The timeout in seconds OpenRC will wait for pinecoind to terminate
 # after a SIGTERM has been raised.
 # Note that this will be mapped as argument to start-stop-daemon's
 # '--retry' option, which means you can specify a retry schedule
 # here. For more information see man 8 start-stop-daemon.
-BITCORND_SIGTERM_TIMEOUT=60
+PINECOIND_SIGTERM_TIMEOUT=60

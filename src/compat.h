@@ -3,11 +3,11 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCORN_COMPAT_H
-#define BITCORN_COMPAT_H
+#ifndef PINECOIN_COMPAT_H
+#define PINECOIN_COMPAT_H
 
 #if defined(HAVE_CONFIG_H)
-#include <config/bitcorn-config.h>
+#include <config/pinecoin-config.h>
 #endif
 
 #ifdef WIN32
@@ -103,4 +103,4 @@ bool static inline IsSelectableSocket(const SOCKET& s) {
 #endif
 }
 
-#endif // BITCORN_COMPAT_H
+#endif // PINECOIN_COMPAT_H

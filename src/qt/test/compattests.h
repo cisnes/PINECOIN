@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCORN_QT_TEST_COMPATTESTS_H
-#define BITCORN_QT_TEST_COMPATTESTS_H
+#ifndef PINECOIN_QT_TEST_COMPATTESTS_H
+#define PINECOIN_QT_TEST_COMPATTESTS_H
 
 #include <QObject>
 #include <QTest>
@@ -16,4 +16,4 @@ private Q_SLOTS:
     void bswapTests();
 };
 
-#endif // BITCORN_QT_TEST_COMPATTESTS_H
+#endif // PINECOIN_QT_TEST_COMPATTESTS_H

@@ -1,10 +1,10 @@
 // Copyright (c) 2012-2019 The Peercoin developers
 // Copyright (c) 2017-2019 The BitGreen Core developers
-// Copyright (c) 2019 The BitCorn Core developers
+// Copyright (c) 2019 The PineCoin Core developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
-#ifndef BITCORN_POS_POS_H
-#define BITCORN_POS_POS_H
+#ifndef PINECOIN_POS_POS_H
+#define PINECOIN_POS_POS_H
 
 #include <uint256.h>
 #include <primitives/transaction.h> // CTransaction(Ref)
@@ -39,4 +39,4 @@ bool CheckStakeModifierCheckpoints(int nHeight, unsigned int nStakeModifierCheck
 // Entropy bit for stake modifier if chosen by modifier
 unsigned int GetStakeEntropyBit(const CBlock& block);
 
-#endif // BITCORN_POS_POS_H
+#endif // PINECOIN_POS_POS_H

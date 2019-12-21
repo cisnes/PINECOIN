@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCORN_POLICY_POLICY_H
-#define BITCORN_POLICY_POLICY_H
+#ifndef PINECOIN_POLICY_POLICY_H
+#define PINECOIN_POLICY_POLICY_H
 
 #include <consensus/consensus.h>
 #include <policy/feerate.h>
@@ -115,4 +115,4 @@ static inline int64_t GetVirtualTransactionInputSize(const CTxIn& tx)
     return GetVirtualTransactionInputSize(tx, 0, 0);
 }
 
-#endif // BITCORN_POLICY_POLICY_H
+#endif // PINECOIN_POLICY_POLICY_H

@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 # Copyright (c) 2018-2019 The Bitcoin Core developers
-# Copyright (c) 2019 The BitCorn Core developers
+# Copyright (c) 2019 The PineCoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
-"""Test bitcorn-wallet."""
+"""Test pinecoin-wallet."""
 
 import hashlib
 import os
@@ -11,12 +11,12 @@ import stat
 import subprocess
 import textwrap
 
-from test_framework.test_framework import BitCornTestFramework
+from test_framework.test_framework import PineCoinTestFramework
 from test_framework.util import assert_equal
 
 BUFFER_SIZE = 16 * 1024
 
-class ToolWalletTest(BitCornTestFramework):
+class ToolWalletTest(PineCoinTestFramework):
     def set_test_params(self):
         self.num_nodes = 1
         self.setup_clean_chain = True
@@ -24,20 +24,20 @@ class ToolWalletTest(BitCornTestFramework):
     def skip_test_if_missing_module(self):
         self.skip_if_no_wallet()
 
-    def bitcorn_wallet_process(self, *args):
-        binary = self.config["environment"]["BUILDDIR"] + '/src/bitcorn-wallet' + self.config["environment"]["EXEEXT"]
+    def pinecoin_wallet_process(self, *args):
+        binary = self.config["environment"]["BUILDDIR"] + '/src/pinecoin-wallet' + self.config["environment"]["EXEEXT"]
         args = ['-datadir={}'.format(self.nodes[0].datadir), '-regtest'] + list(args)
         return subprocess.Popen([binary] + args, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE, universal_newlines=True)
 
     def assert_raises_tool_error(self, error, *args):
-        p = self.bitcorn_wallet_process(*args)
+        p = self.pinecoin_wallet_process(*args)
         stdout, stderr = p.communicate()
         assert_equal(p.poll(), 1)
         assert_equal(stdout, '')
         assert_equal(stderr.strip(), error)
 
     def assert_tool_output(self, output, *args):
-        p = self.bitcorn_wallet_process(*args)
+        p = self.pinecoin_wallet_process(*args)
         stdout, stderr = p.communicate()
         assert_equal(stderr, '')
         assert_equal(stdout, output)
@@ -64,7 +64,7 @@ class ToolWalletTest(BitCornTestFramework):
     def test_invalid_tool_commands_and_args(self):
         self.log.info('Testing that various invalid commands raise with specific error messages')
         self.assert_raises_tool_error('Invalid command: foo', 'foo')
-        # `bitcorn-wallet help` raises an error. Use `bitcorn-wallet -help`.
+        # `pinecoin-wallet help` raises an error. Use `pinecoin-wallet -help`.
         self.assert_raises_tool_error('Invalid command: help', 'help')
         self.assert_raises_tool_error('Error: two methods provided (info and create). Only one method should be provided.', 'info', 'create')
         self.assert_raises_tool_error('Error parsing command line arguments: Invalid parameter -foo', '-foo')

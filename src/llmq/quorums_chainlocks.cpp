@@ -1,6 +1,6 @@
 // Copyright (c) 2019 The Dash Core developers
 // Copyright (c) 2019 The BitGreen Core developers
-// Copyright (c) 2019 The BitCorn Core developers
+// Copyright (c) 2019 The PineCoin Core developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -211,7 +211,7 @@ void CChainLocksHandler::UpdatedBlockTip(const CBlockIndex* pindexNew)
 
 void CChainLocksHandler::CheckActiveState()
 {
-    // TODO: BitCorn - Check if chainlock spork is active
+    // TODO: PineCoin - Check if chainlock spork is active
 
     isEnforced = ChainActive().Tip()->nHeight > Params().GetConsensus().nLLMQActivationHeight;
     isSporkActive = sporkManager.IsSporkActive(SPORK_4_CHAINLOCKS_ENABLED);

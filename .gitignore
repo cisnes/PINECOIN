@@ -2,14 +2,14 @@
 
 *.exe
 *.pdb
-src/bitcorn
-src/bitcornd
-src/bitcorn-cli
-src/bitcorn-tx
-src/bitcorn-wallet
-src/test/test_bitcorn
-src/test/test_bitcorn_fuzzy
-src/qt/test/test_bitcorn-qt
+src/pinecoin
+src/pinecoind
+src/pinecoin-cli
+src/pinecoin-tx
+src/pinecoin-wallet
+src/test/test_pinecoin
+src/test/test_pinecoin_fuzzy
+src/qt/test/test_pinecoin-qt
 
 # autoreconf
 Makefile.in
@@ -32,8 +32,8 @@ config.log
 config.status
 configure
 libtool
-src/config/bitcorn-config.h
-src/config/bitcorn-config.h.in
+src/config/pinecoin-config.h
+src/config/pinecoin-config.h.in
 src/config/stamp-h1
 share/setup.nsi
 share/qt/Info.plist
@@ -46,11 +46,11 @@ src/qt/forms/ui_*.h
 
 src/qt/test/moc*.cpp
 
-src/qt/bitcorn-qt.config
-src/qt/bitcorn-qt.creator
-src/qt/bitcorn-qt.creator.user
-src/qt/bitcorn-qt.files
-src/qt/bitcorn-qt.includes
+src/qt/pinecoin-qt.config
+src/qt/pinecoin-qt.creator
+src/qt/pinecoin-qt.creator.user
+src/qt/pinecoin-qt.files
+src/qt/pinecoin-qt.includes
 
 .deps
 .dirstamp
@@ -86,13 +86,13 @@ src/qt/bitcorn-qt.includes
 # Compilation and Qt preprocessor part
 *.qm
 Makefile
-bitcorn-qt
-BitCorn-Qt.app
+pinecoin-qt
+PineCoin-Qt.app
 background.tiff*
 
 # Unit-tests
 Makefile.test
-bitcorn-qt_test
+pinecoin-qt_test
 
 # Resources cpp
 qrc_*.cpp
@@ -105,7 +105,7 @@ build
 *.gcno
 *.gcda
 /*.info
-test_bitcorn.coverage/
+test_pinecoin.coverage/
 total.coverage/
 coverage_percent.txt
 
@@ -120,7 +120,7 @@ test/cache/*
 
 /doc/doxygen/
 
-libbitcornconsensus.pc
+libpinecoinconsensus.pc
 contrib/devtools/split-debug.sh
 
 # Output from running db4 installation

@@ -63,7 +63,7 @@ bool CheckTransaction(const CTransaction& tx, CValidationState &state, bool fChe
 
     if (tx.IsCoinBase())
     {
-        // TODO: BitCorn - scriptSig size 1 after PoW, 2 on PoW
+        // TODO: PineCoin - scriptSig size 1 after PoW, 2 on PoW
         if (tx.vin[0].scriptSig.size() < 1 || tx.vin[0].scriptSig.size() > 100)
             return state.Invalid(ValidationInvalidReason::CONSENSUS, false, REJECT_INVALID, "bad-cb-length");
     }

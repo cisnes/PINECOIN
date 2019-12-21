@@ -5,8 +5,8 @@
 /**
  * Functionality for communicating with Tor.
  */
-#ifndef BITCORN_TORCONTROL_H
-#define BITCORN_TORCONTROL_H
+#ifndef PINECOIN_TORCONTROL_H
+#define PINECOIN_TORCONTROL_H
 
 #include <scheduler.h>
 
@@ -17,4 +17,4 @@ void StartTorControl();
 void InterruptTorControl();
 void StopTorControl();
 
-#endif /* BITCORN_TORCONTROL_H */
+#endif /* PINECOIN_TORCONTROL_H */

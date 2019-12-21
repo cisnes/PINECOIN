@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCORN_QT_MODALOVERLAY_H
-#define BITCORN_QT_MODALOVERLAY_H
+#ifndef PINECOIN_QT_MODALOVERLAY_H
+#define PINECOIN_QT_MODALOVERLAY_H
 
 #include <QDateTime>
 #include <QWidget>
@@ -48,4 +48,4 @@ private:
     void UpdateHeaderSyncLabel();
 };
 
-#endif // BITCORN_QT_MODALOVERLAY_H
+#endif // PINECOIN_QT_MODALOVERLAY_H

@@ -2,8 +2,8 @@
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCORN_BLS_BATCHVERIFIER_H
-#define BITCORN_BLS_BATCHVERIFIER_H
+#ifndef PINECOIN_BLS_BATCHVERIFIER_H
+#define PINECOIN_BLS_BATCHVERIFIER_H
 
 #include <bls/bls.h>
 
@@ -232,4 +232,4 @@ private:
     }
 };
 
-#endif //BITCORN_BLS_BATCHVERIFIER_H
+#endif //PINECOIN_BLS_BATCHVERIFIER_H

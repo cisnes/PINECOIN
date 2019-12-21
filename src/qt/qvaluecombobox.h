@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCORN_QT_QVALUECOMBOBOX_H
-#define BITCORN_QT_QVALUECOMBOBOX_H
+#ifndef PINECOIN_QT_QVALUECOMBOBOX_H
+#define PINECOIN_QT_QVALUECOMBOBOX_H
 
 #include <QComboBox>
 #include <QVariant>
@@ -34,4 +34,4 @@ private Q_SLOTS:
     void handleSelectionChanged(int idx);
 };
 
-#endif // BITCORN_QT_QVALUECOMBOBOX_H
+#endif // PINECOIN_QT_QVALUECOMBOBOX_H

@@ -3,7 +3,7 @@
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #if defined(HAVE_CONFIG_H)
-#include <config/bitcorn-config.h>
+#include <config/pinecoin-config.h>
 #endif
 
 #include <interfaces/node.h>
@@ -70,8 +70,8 @@ int main(int argc, char *argv[])
 
     // Don't remove this, it's needed to access
     // QApplication:: and QCoreApplication:: in the tests
-    BitCornApplication app(*node, argc, argv);
-    app.setApplicationName("BitCorn-Qt-test");
+    PineCoinApplication app(*node, argc, argv);
+    app.setApplicationName("PineCoin-Qt-test");
 
     SSL_library_init();
 

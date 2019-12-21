@@ -3,7 +3,7 @@
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #if defined(HAVE_CONFIG_H)
-#include <config/bitcorn-config.h>
+#include <config/pinecoin-config.h>
 #endif
 
 #include <qt/walletmodel.h>
@@ -194,7 +194,7 @@ WalletModel::SendCoinsReturn WalletModel::prepareTransaction(WalletModelTransact
         }
         else
 #endif
-        {   // User-entered bitcorn address / amount:
+        {   // User-entered pinecoin address / amount:
             if(!validateAddress(rcp.address))
             {
                 return InvalidAddress;
@@ -281,7 +281,7 @@ WalletModel::SendCoinsReturn WalletModel::sendCoins(WalletModelTransaction &tran
             }
             else
 #endif
-            if (!rcp.message.isEmpty()) // Message from normal bitcorn:URI (bitcorn:123...?message=example)
+            if (!rcp.message.isEmpty()) // Message from normal pinecoin:URI (pinecoin:123...?message=example)
                 vOrderForm.emplace_back("Message", rcp.message.toStdString());
         }
 

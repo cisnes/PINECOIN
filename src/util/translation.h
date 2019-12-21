@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCORN_UTIL_TRANSLATION_H
-#define BITCORN_UTIL_TRANSLATION_H
+#ifndef PINECOIN_UTIL_TRANSLATION_H
+#define PINECOIN_UTIL_TRANSLATION_H
 
 #include <tinyformat.h>
 
@@ -39,4 +39,4 @@ inline bilingual_str _(const char* psz)
     return bilingual_str{psz, G_TRANSLATION_FUN ? (G_TRANSLATION_FUN)(psz) : psz};
 }
 
-#endif // BITCORN_UTIL_TRANSLATION_H
+#endif // PINECOIN_UTIL_TRANSLATION_H

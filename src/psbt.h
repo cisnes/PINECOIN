@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCORN_PSBT_H
-#define BITCORN_PSBT_H
+#ifndef PINECOIN_PSBT_H
+#define PINECOIN_PSBT_H
 
 #include <attributes.h>
 #include <node/transaction.h>
@@ -389,7 +389,7 @@ struct PartiallySignedTransaction
     bool IsNull() const;
 
     /** Merge psbt into this. The two psbts must have the same underlying CTransaction (i.e. the
-      * same actual BitCorn transaction.) Returns true if the merge succeeded, false otherwise. */
+      * same actual PineCoin transaction.) Returns true if the merge succeeded, false otherwise. */
     NODISCARD bool Merge(const PartiallySignedTransaction& psbt);
     bool IsSane() const;
     bool AddInput(const CTxIn& txin, PSBTInput& psbtin);
@@ -603,4 +603,4 @@ NODISCARD bool DecodeBase64PSBT(PartiallySignedTransaction& decoded_psbt, const 
 //! Decode a raw (binary blob) PSBT into a PartiallySignedTransaction
 NODISCARD bool DecodeRawPSBT(PartiallySignedTransaction& decoded_psbt, const std::string& raw_psbt, std::string& error);
 
-#endif // BITCORN_PSBT_H
+#endif // PINECOIN_PSBT_H

@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCORN_BLS_IES_H
-#define BITCORN_BLS_IES_H
+#ifndef PINECOIN_BLS_IES_H
+#define PINECOIN_BLS_IES_H
 
 #include <bls/bls.h>
 #include <streams.h>
@@ -161,4 +161,4 @@ public:
     }
 };
 
-#endif // BITCORN_BLS_IES_H
+#endif // PINECOIN_BLS_IES_H

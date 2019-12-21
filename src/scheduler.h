@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCORN_SCHEDULER_H
-#define BITCORN_SCHEDULER_H
+#ifndef PINECOIN_SCHEDULER_H
+#define PINECOIN_SCHEDULER_H
 
 //
 // NOTE:

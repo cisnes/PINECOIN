@@ -1,7 +1,7 @@
 #include <iostream>
 
-// bitcorn includes.
-#include <..\src\script\bitcornconsensus.h>
+// pinecoin includes.
+#include <..\src\script\pinecoinconsensus.h>
 #include <..\src\primitives\transaction.h>
 #include <..\src\script\script.h>
 #include <..\src\streams.h>
@@ -27,7 +27,7 @@ CMutableTransaction BuildSpendingTransaction(const CScript& scriptSig, const CSc
 
 int main()
 {
-    std::cout << "bitcornconsensus version: " << bitcornconsensus_version() << std::endl;
+    std::cout << "pinecoinconsensus version: " << pinecoinconsensus_version() << std::endl;
 
     CScript pubKeyScript;
     pubKeyScript << OP_1 << OP_0 << OP_1;
@@ -40,8 +40,8 @@ int main()
     CDataStream stream(SER_NETWORK, PROTOCOL_VERSION);
     stream << vanillaSpendTx;
 
-    bitcornconsensus_error err;
-    auto op0Result = bitcornconsensus_verify_script_with_amount(pubKeyScript.data(), pubKeyScript.size(), amount, (const unsigned char*)&stream[0], stream.size(), 0, bitcornconsensus_SCRIPT_FLAGS_VERIFY_ALL, &err);
+    pinecoinconsensus_error err;
+    auto op0Result = pinecoinconsensus_verify_script_with_amount(pubKeyScript.data(), pubKeyScript.size(), amount, (const unsigned char*)&stream[0], stream.size(), 0, pinecoinconsensus_SCRIPT_FLAGS_VERIFY_ALL, &err);
     std::cout << "Op0 result: " << op0Result << ", error code " << err << std::endl;
 
     getchar();

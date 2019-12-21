@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCORN_TEST_FUZZ_FUZZ_H
-#define BITCORN_TEST_FUZZ_FUZZ_H
+#ifndef PINECOIN_TEST_FUZZ_FUZZ_H
+#define PINECOIN_TEST_FUZZ_FUZZ_H
 
 #include <stdint.h>
 #include <vector>
@@ -11,4 +11,4 @@
 
 void test_one_input(std::vector<uint8_t> buffer);
 
-#endif // BITCORN_TEST_FUZZ_FUZZ_H
+#endif // PINECOIN_TEST_FUZZ_FUZZ_H

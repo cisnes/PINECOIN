@@ -10,10 +10,10 @@
 - verify that getchaintips now returns two chain tips.
 """
 
-from test_framework.test_framework import BitCornTestFramework
+from test_framework.test_framework import PineCoinTestFramework
 from test_framework.util import assert_equal
 
-class GetChainTipsTest (BitCornTestFramework):
+class GetChainTipsTest (PineCoinTestFramework):
     def set_test_params(self):
         self.num_nodes = 4
 

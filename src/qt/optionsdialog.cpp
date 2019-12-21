@@ -3,7 +3,7 @@
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #if defined(HAVE_CONFIG_H)
-#include <config/bitcorn-config.h>
+#include <config/pinecoin-config.h>
 #endif
 
 #include <qt/optionsdialog.h>
@@ -73,8 +73,8 @@ OptionsDialog::OptionsDialog(QWidget *parent, bool enableWallet) :
     ui->tabWidget->removeTab(ui->tabWidget->indexOf(ui->tabWindow));
 #if  defined(MAC_OS_X_VERSION_MIN_REQUIRED) && MAC_OS_X_VERSION_MIN_REQUIRED > 101100
     /* hide launch at startup option if compiled against macOS > 10.11 (removed API) */
-    ui->bitcornAtStartup->setVisible(false);
-    ui->verticalLayout_Main->removeWidget(ui->bitcornAtStartup);
+    ui->pinecoinAtStartup->setVisible(false);
+    ui->verticalLayout_Main->removeWidget(ui->pinecoinAtStartup);
     ui->verticalLayout_Main->removeItem(ui->horizontalSpacer_0_Main);
 #endif
 #endif
@@ -87,10 +87,10 @@ OptionsDialog::OptionsDialog(QWidget *parent, bool enableWallet) :
     /* Display elements init */
     QDir translations(":translations");
 
-    ui->bitcornAtStartup->setToolTip(ui->bitcornAtStartup->toolTip().arg(PACKAGE_NAME));
-    ui->bitcornAtStartup->setText(ui->bitcornAtStartup->text().arg(PACKAGE_NAME));
+    ui->pinecoinAtStartup->setToolTip(ui->pinecoinAtStartup->toolTip().arg(PACKAGE_NAME));
+    ui->pinecoinAtStartup->setText(ui->pinecoinAtStartup->text().arg(PACKAGE_NAME));
 
-    ui->openBitCornConfButton->setToolTip(ui->openBitCornConfButton->toolTip().arg(PACKAGE_NAME));
+    ui->openPineCoinConfButton->setToolTip(ui->openPineCoinConfButton->toolTip().arg(PACKAGE_NAME));
 
     ui->lang->setToolTip(ui->lang->toolTip().arg(PACKAGE_NAME));
     ui->lang->addItem(QString("(") + tr("default") + QString(")"), QVariant(""));
@@ -202,7 +202,7 @@ void OptionsDialog::setCurrentTab(OptionsDialog::Tab tab)
 void OptionsDialog::setMapper()
 {
     /* Main */
-    mapper->addMapping(ui->bitcornAtStartup, OptionsModel::StartAtStartup);
+    mapper->addMapping(ui->pinecoinAtStartup, OptionsModel::StartAtStartup);
     mapper->addMapping(ui->threadsScriptVerif, OptionsModel::ThreadsScriptVerif);
     mapper->addMapping(ui->databaseCache, OptionsModel::DatabaseCache);
     mapper->addMapping(ui->prune, OptionsModel::Prune);
@@ -262,7 +262,7 @@ void OptionsDialog::on_resetButton_clicked()
     }
 }
 
-void OptionsDialog::on_openBitCornConfButton_clicked()
+void OptionsDialog::on_openPineCoinConfButton_clicked()
 {
     /* explain the purpose of the config file */
     QMessageBox::information(this, tr("Configuration options"),
@@ -270,7 +270,7 @@ void OptionsDialog::on_openBitCornConfButton_clicked()
            "Additionally, any command-line options will override this configuration file."));
 
     /* show an error if there was some problem opening the file */
-    if (!GUIUtil::openBitCornConf())
+    if (!GUIUtil::openPineCoinConf())
         QMessageBox::critical(this, tr("Error"), tr("The configuration file could not be opened."));
 }
 

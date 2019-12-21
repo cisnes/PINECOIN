@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCORN_LOGGING_H
-#define BITCORN_LOGGING_H
+#ifndef PINECOIN_LOGGING_H
+#define PINECOIN_LOGGING_H
 
 #include <fs.h>
 #include <tinyformat.h>
@@ -174,4 +174,4 @@ static inline void LogPrint(const BCLog::LogFlags& category, const Args&... args
     }
 }
 
-#endif // BITCORN_LOGGING_H
+#endif // PINECOIN_LOGGING_H

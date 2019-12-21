@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCORN_QT_BITCOINUNITS_H
-#define BITCORN_QT_BITCOINUNITS_H
+#ifndef PINECOIN_QT_BITCOINUNITS_H
+#define PINECOIN_QT_BITCOINUNITS_H
 
 #include <amount.h>
 
@@ -41,7 +41,7 @@
 #define THIN_SP_UTF8 REAL_THIN_SP_UTF8
 #define THIN_SP_HTML HTML_HACK_SP
 
-/** BitCorn unit definitions. Encapsulates parsing and formatting
+/** PineCoin unit definitions. Encapsulates parsing and formatting
    and serves as list model for drop-down selection boxes.
 */
 class BitcoinUnits: public QAbstractListModel
@@ -51,13 +51,13 @@ class BitcoinUnits: public QAbstractListModel
 public:
     explicit BitcoinUnits(QObject *parent);
 
-    /** BitCorn units.
+    /** PineCoin units.
      */
     enum Unit
     {
-        CORN,
-        mCORN,
-        uCORN,
+        PINE,
+        mPINE,
+        uPINE,
         SAT
     };
 
@@ -125,6 +125,6 @@ public:
 private:
     QList<BitcoinUnits::Unit> unitlist;
 };
-typedef BitcoinUnits::Unit BitCornUnit;
+typedef BitcoinUnits::Unit PineCoinUnit;
 
-#endif // BITCORN_QT_BITCOINUNITS_H
+#endif // PINECOIN_QT_BITCOINUNITS_H

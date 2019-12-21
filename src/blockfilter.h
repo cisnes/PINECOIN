@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCORN_BLOCKFILTER_H
-#define BITCORN_BLOCKFILTER_H
+#ifndef PINECOIN_BLOCKFILTER_H
+#define PINECOIN_BLOCKFILTER_H
 
 #include <stdint.h>
 #include <string>
@@ -167,4 +167,4 @@ public:
     }
 };
 
-#endif // BITCORN_BLOCKFILTER_H
+#endif // PINECOIN_BLOCKFILTER_H

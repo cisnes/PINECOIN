@@ -2,11 +2,11 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCORN_NETADDRESS_H
-#define BITCORN_NETADDRESS_H
+#ifndef PINECOIN_NETADDRESS_H
+#define PINECOIN_NETADDRESS_H
 
 #if defined(HAVE_CONFIG_H)
-#include <config/bitcorn-config.h>
+#include <config/pinecoin-config.h>
 #endif
 
 #include <compat.h>
@@ -170,4 +170,4 @@ class CService : public CNetAddr
         }
 };
 
-#endif // BITCORN_NETADDRESS_H
+#endif // PINECOIN_NETADDRESS_H

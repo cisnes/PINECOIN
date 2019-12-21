@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCORN_HTTPRPC_H
-#define BITCORN_HTTPRPC_H
+#ifndef PINECOIN_HTTPRPC_H
+#define PINECOIN_HTTPRPC_H
 
 #include <string>
 #include <map>

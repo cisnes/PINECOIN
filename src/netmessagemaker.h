@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCORN_NETMESSAGEMAKER_H
-#define BITCORN_NETMESSAGEMAKER_H
+#ifndef PINECOIN_NETMESSAGEMAKER_H
+#define PINECOIN_NETMESSAGEMAKER_H
 
 #include <net.h>
 #include <serialize.h>
@@ -33,4 +33,4 @@ private:
     const int nVersion;
 };
 
-#endif // BITCORN_NETMESSAGEMAKER_H
+#endif // PINECOIN_NETMESSAGEMAKER_H

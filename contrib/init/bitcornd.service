@@ -1,47 +1,47 @@
 # It is not recommended to modify this file in-place, because it will
 # be overwritten during package upgrades. If you want to add further
 # options or overwrite existing ones then use
-# $ systemctl edit bitcornd.service
+# $ systemctl edit pinecoind.service
 # See "man systemd.service" for details.
 
 # Note that almost all daemon options could be specified in
-# /etc/bitcorn/bitcorn.conf, except for those explicitly specified as arguments
+# /etc/pinecoin/pinecoin.conf, except for those explicitly specified as arguments
 # in ExecStart=
 
 [Unit]
-Description=bitcorn daemon
+Description=pinecoin daemon
 After=network.target
 
 [Service]
-ExecStart=/usr/bin/bitcornd -daemon \
-                            -pid=/run/bitcornd/bitcornd.pid \
-                            -conf=/etc/bitcorn/bitcorn.conf \
-                            -datadir=/var/lib/bitcornd
+ExecStart=/usr/bin/pinecoind -daemon \
+                            -pid=/run/pinecoind/pinecoind.pid \
+                            -conf=/etc/pinecoin/pinecoin.conf \
+                            -datadir=/var/lib/pinecoind
 
 # Process management
 ####################
 
 Type=forking
-PIDFile=/run/bitcornd/bitcornd.pid
+PIDFile=/run/pinecoind/pinecoind.pid
 Restart=on-failure
 
 # Directory creation and permissions
 ####################################
 
-# Run as bitcorn:bitcorn
-User=bitcorn
-Group=bitcorn
+# Run as pinecoin:pinecoin
+User=pinecoin
+Group=pinecoin
 
-# /run/bitcornd
-RuntimeDirectory=bitcornd
+# /run/pinecoind
+RuntimeDirectory=pinecoind
 RuntimeDirectoryMode=0710
 
-# /etc/bitcorn
-ConfigurationDirectory=bitcorn
+# /etc/pinecoin
+ConfigurationDirectory=pinecoin
 ConfigurationDirectoryMode=0710
 
-# /var/lib/bitcornd
-StateDirectory=bitcornd
+# /var/lib/pinecoind
+StateDirectory=pinecoind
 StateDirectoryMode=0710
 
 # Hardening measures

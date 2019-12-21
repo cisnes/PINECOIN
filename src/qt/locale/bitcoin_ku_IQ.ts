@@ -374,7 +374,7 @@
     </message>
     </context>
 <context>
-    <name>bitcorn-core</name>
+    <name>pinecoin-core</name>
     <message>
         <source>Information</source>
         <translation>زانیاری</translation>

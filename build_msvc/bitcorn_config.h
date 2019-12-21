@@ -1,5 +1,5 @@
-#ifndef BITCORN_BITCORN_CONFIG_H
-#define BITCORN_BITCORN_CONFIG_H
+#ifndef PINECOIN_PINECOIN_CONFIG_H
+#define PINECOIN_PINECOIN_CONFIG_H
 
 /* Define if building universal (internal helper macro) */
 /* #undef AC_APPLE_UNIVERSAL_BUILD */
@@ -23,10 +23,10 @@
 #define COPYRIGHT_HOLDERS "The %s developers"
 
 /* Copyright holder(s) */
-#define COPYRIGHT_HOLDERS_FINAL "The BitCorn Core developers"
+#define COPYRIGHT_HOLDERS_FINAL "The PineCoin Core developers"
 
 /* Replacement for %s in copyright holders string */
-#define COPYRIGHT_HOLDERS_SUBSTITUTION "BitCorn Core"
+#define COPYRIGHT_HOLDERS_SUBSTITUTION "PineCoin Core"
 
 /* Copyright year */
 #define COPYRIGHT_YEAR 2019
@@ -340,16 +340,16 @@
 #define LT_OBJDIR ".libs/"
 
 /* Define to the address where bug reports for this package should be sent. */
-#define PACKAGE_BUGREPORT "https://github.com/bitcorn/bitcorn/issues"
+#define PACKAGE_BUGREPORT "https://github.com/pinecoin/pinecoin/issues"
 
 /* Define to the full name of this package. */
-#define PACKAGE_NAME "BitCorn Core"
+#define PACKAGE_NAME "PineCoin Core"
 
 /* Define to the full name and version of this package. */
-#define PACKAGE_STRING "BitCorn Core 0.18.99"
+#define PACKAGE_STRING "PineCoin Core 0.18.99"
 
 /* Define to the one symbol short name of this package. */
-#define PACKAGE_TARNAME "bitcorn"
+#define PACKAGE_TARNAME "pinecoin"
 
 /* Define to the home page for this package. */
 #define PACKAGE_URL "https://bitg.org/"
@@ -431,4 +431,4 @@
 
 #endif // !WINAPI_FAMILY || WINAPI_FAMILY_DESKTOP_APP
 
-#endif //BITCORN_BITCORN_CONFIG_H
+#endif //PINECOIN_PINECOIN_CONFIG_H

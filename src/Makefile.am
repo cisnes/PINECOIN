@@ -26,37 +26,37 @@ BITCOIN_INCLUDES += $(UNIVALUE_CFLAGS)
 
 BLS_LIBS=-lchiabls -lgmp
 
-LIBBITCOIN_SERVER=libbitcorn_server.a
-LIBBITCOIN_COMMON=libbitcorn_common.a
-LIBBITCOIN_CONSENSUS=libbitcorn_consensus.a
-LIBBITCOIN_CLI=libbitcorn_cli.a
-LIBBITCOIN_UTIL=libbitcorn_util.a
-LIBBITCOIN_CRYPTO_BASE=crypto/libbitcorn_crypto_base.a
-LIBBITCOINQT=qt/libbitcornqt.a
+LIBBITCOIN_SERVER=libpinecoin_server.a
+LIBBITCOIN_COMMON=libpinecoin_common.a
+LIBBITCOIN_CONSENSUS=libpinecoin_consensus.a
+LIBBITCOIN_CLI=libpinecoin_cli.a
+LIBBITCOIN_UTIL=libpinecoin_util.a
+LIBBITCOIN_CRYPTO_BASE=crypto/libpinecoin_crypto_base.a
+LIBBITCOINQT=qt/libpinecoinqt.a
 LIBSECP256K1=secp256k1/libsecp256k1.la
 
 if ENABLE_ZMQ
-LIBBITCOIN_ZMQ=libbitcorn_zmq.a
+LIBBITCOIN_ZMQ=libpinecoin_zmq.a
 endif
 if BUILD_BITCOIN_LIBS
-LIBBITCOINCONSENSUS=libbitcornconsensus.la
+LIBBITCOINCONSENSUS=libpinecoinconsensus.la
 endif
 if ENABLE_WALLET
-LIBBITCOIN_WALLET=libbitcorn_wallet.a
-LIBBITCOIN_WALLET_TOOL=libbitcorn_wallet_tool.a
+LIBBITCOIN_WALLET=libpinecoin_wallet.a
+LIBBITCOIN_WALLET_TOOL=libpinecoin_wallet_tool.a
 endif
 
 LIBBITCOIN_CRYPTO= $(LIBBITCOIN_CRYPTO_BASE)
 if ENABLE_SSE41
-LIBBITCOIN_CRYPTO_SSE41 = crypto/libbitcorn_crypto_sse41.a
+LIBBITCOIN_CRYPTO_SSE41 = crypto/libpinecoin_crypto_sse41.a
 LIBBITCOIN_CRYPTO += $(LIBBITCOIN_CRYPTO_SSE41)
 endif
 if ENABLE_AVX2
-LIBBITCOIN_CRYPTO_AVX2 = crypto/libbitcorn_crypto_avx2.a
+LIBBITCOIN_CRYPTO_AVX2 = crypto/libpinecoin_crypto_avx2.a
 LIBBITCOIN_CRYPTO += $(LIBBITCOIN_CRYPTO_AVX2)
 endif
 if ENABLE_SHANI
-LIBBITCOIN_CRYPTO_SHANI = crypto/libbitcorn_crypto_shani.a
+LIBBITCOIN_CRYPTO_SHANI = crypto/libpinecoin_crypto_shani.a
 LIBBITCOIN_CRYPTO += $(LIBBITCOIN_CRYPTO_SHANI)
 endif
 
@@ -84,23 +84,23 @@ TESTS =
 BENCHMARKS =
 
 if BUILD_BITCOIND
-  bin_PROGRAMS += bitcornd
+  bin_PROGRAMS += pinecoind
 endif
 
 if BUILD_BITCOIN_CLI
-  bin_PROGRAMS += bitcorn-cli
+  bin_PROGRAMS += pinecoin-cli
 endif
 if BUILD_BITCOIN_TX
-  bin_PROGRAMS += bitcorn-tx
+  bin_PROGRAMS += pinecoin-tx
 endif
 if ENABLE_WALLET
 if BUILD_BITCOIN_WALLET
-  bin_PROGRAMS += bitcorn-wallet
+  bin_PROGRAMS += pinecoin-wallet
 endif
 endif
 
 .PHONY: FORCE check-symbols check-security
-# bitcorn core #
+# pinecoin core #
 BITCOIN_CORE_H = \
   addrdb.h \
   addrman.h \
@@ -298,15 +298,15 @@ obj/build.h: FORCE
 	@$(MKDIR_P) $(builddir)/obj
 	@$(top_srcdir)/share/genbuild.sh "$(abs_top_builddir)/src/obj/build.h" \
 	  "$(abs_top_srcdir)"
-libbitcorn_util_a-clientversion.$(OBJEXT): obj/build.h
+libpinecoin_util_a-clientversion.$(OBJEXT): obj/build.h
 
-# server: shared between bitcornd and bitcorn-qt
+# server: shared between pinecoind and pinecoin-qt
 # Contains code accessing mempool and chain state that is meant to be separated
 # from wallet and gui code (see node/README.md). Shared code should go in
-# libbitcorn_common or libbitcorn_util libraries, instead.
-libbitcorn_server_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(MINIUPNPC_CPPFLAGS) $(EVENT_CFLAGS) $(EVENT_PTHREADS_CFLAGS)
-libbitcorn_server_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libbitcorn_server_a_SOURCES = \
+# libpinecoin_common or libpinecoin_util libraries, instead.
+libpinecoin_server_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(MINIUPNPC_CPPFLAGS) $(EVENT_CFLAGS) $(EVENT_PTHREADS_CFLAGS)
+libpinecoin_server_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libpinecoin_server_a_SOURCES = \
   addrdb.cpp \
   addrman.cpp \
   banman.cpp \
@@ -397,16 +397,16 @@ libbitcorn_server_a_SOURCES = \
   $(BITCOIN_CORE_H)
 
 if ENABLE_WALLET
-libbitcorn_server_a_SOURCES += wallet/init.cpp
+libpinecoin_server_a_SOURCES += wallet/init.cpp
 endif
 if !ENABLE_WALLET
-libbitcorn_server_a_SOURCES += dummywallet.cpp
+libpinecoin_server_a_SOURCES += dummywallet.cpp
 endif
 
 if ENABLE_ZMQ
-libbitcorn_zmq_a_CPPFLAGS = $(BITCOIN_INCLUDES) $(ZMQ_CFLAGS)
-libbitcorn_zmq_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libbitcorn_zmq_a_SOURCES = \
+libpinecoin_zmq_a_CPPFLAGS = $(BITCOIN_INCLUDES) $(ZMQ_CFLAGS)
+libpinecoin_zmq_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libpinecoin_zmq_a_SOURCES = \
   zmq/zmqabstractnotifier.cpp \
   zmq/zmqnotificationinterface.cpp \
   zmq/zmqpublishnotifier.cpp \
@@ -414,11 +414,11 @@ libbitcorn_zmq_a_SOURCES = \
 endif
 
 
-# wallet: shared between bitcornd and bitcorn-qt, but only linked
+# wallet: shared between pinecoind and pinecoin-qt, but only linked
 # when wallet enabled
-libbitcorn_wallet_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-libbitcorn_wallet_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libbitcorn_wallet_a_SOURCES = \
+libpinecoin_wallet_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+libpinecoin_wallet_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libpinecoin_wallet_a_SOURCES = \
   addrdb.cpp \
   addrman.cpp \
   banman.cpp \
@@ -530,22 +530,22 @@ libbitcorn_wallet_a_SOURCES = \
   $(BITCOIN_CORE_H)
 
 if ENABLE_WALLET
-libbitcorn_wallet_a_SOURCES += wallet/init.cpp
+libpinecoin_wallet_a_SOURCES += wallet/init.cpp
 endif
 if !ENABLE_WALLET
-libbitcorn_wallet_a_SOURCES += dummywallet.cpp
+libpinecoin_wallet_a_SOURCES += dummywallet.cpp
 endif
 
-libbitcorn_wallet_tool_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-libbitcorn_wallet_tool_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libbitcorn_wallet_tool_a_SOURCES = \
+libpinecoin_wallet_tool_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+libpinecoin_wallet_tool_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libpinecoin_wallet_tool_a_SOURCES = \
   wallet/wallettool.cpp \
   $(BITCOIN_CORE_H)
 
 # crypto primitives library
-crypto_libbitcorn_crypto_base_a_CPPFLAGS = $(AM_CPPFLAGS)
-crypto_libbitcorn_crypto_base_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-crypto_libbitcorn_crypto_base_a_SOURCES = \
+crypto_libpinecoin_crypto_base_a_CPPFLAGS = $(AM_CPPFLAGS)
+crypto_libpinecoin_crypto_base_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+crypto_libpinecoin_crypto_base_a_SOURCES = \
   crypto/aes.cpp \
   crypto/aes.h \
   crypto/chacha_poly_aead.h \
@@ -573,31 +573,31 @@ crypto_libbitcorn_crypto_base_a_SOURCES = \
   crypto/siphash.h
 
 if USE_ASM
-crypto_libbitcorn_crypto_base_a_SOURCES += crypto/sha256_sse4.cpp
+crypto_libpinecoin_crypto_base_a_SOURCES += crypto/sha256_sse4.cpp
 endif
 
-crypto_libbitcorn_crypto_sse41_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-crypto_libbitcorn_crypto_sse41_a_CPPFLAGS = $(AM_CPPFLAGS)
-crypto_libbitcorn_crypto_sse41_a_CXXFLAGS += $(SSE41_CXXFLAGS)
-crypto_libbitcorn_crypto_sse41_a_CPPFLAGS += -DENABLE_SSE41
-crypto_libbitcorn_crypto_sse41_a_SOURCES = crypto/sha256_sse41.cpp
+crypto_libpinecoin_crypto_sse41_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+crypto_libpinecoin_crypto_sse41_a_CPPFLAGS = $(AM_CPPFLAGS)
+crypto_libpinecoin_crypto_sse41_a_CXXFLAGS += $(SSE41_CXXFLAGS)
+crypto_libpinecoin_crypto_sse41_a_CPPFLAGS += -DENABLE_SSE41
+crypto_libpinecoin_crypto_sse41_a_SOURCES = crypto/sha256_sse41.cpp
 
-crypto_libbitcorn_crypto_avx2_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-crypto_libbitcorn_crypto_avx2_a_CPPFLAGS = $(AM_CPPFLAGS)
-crypto_libbitcorn_crypto_avx2_a_CXXFLAGS += $(AVX2_CXXFLAGS)
-crypto_libbitcorn_crypto_avx2_a_CPPFLAGS += -DENABLE_AVX2
-crypto_libbitcorn_crypto_avx2_a_SOURCES = crypto/sha256_avx2.cpp
+crypto_libpinecoin_crypto_avx2_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+crypto_libpinecoin_crypto_avx2_a_CPPFLAGS = $(AM_CPPFLAGS)
+crypto_libpinecoin_crypto_avx2_a_CXXFLAGS += $(AVX2_CXXFLAGS)
+crypto_libpinecoin_crypto_avx2_a_CPPFLAGS += -DENABLE_AVX2
+crypto_libpinecoin_crypto_avx2_a_SOURCES = crypto/sha256_avx2.cpp
 
-crypto_libbitcorn_crypto_shani_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-crypto_libbitcorn_crypto_shani_a_CPPFLAGS = $(AM_CPPFLAGS)
-crypto_libbitcorn_crypto_shani_a_CXXFLAGS += $(SHANI_CXXFLAGS)
-crypto_libbitcorn_crypto_shani_a_CPPFLAGS += -DENABLE_SHANI
-crypto_libbitcorn_crypto_shani_a_SOURCES = crypto/sha256_shani.cpp
+crypto_libpinecoin_crypto_shani_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+crypto_libpinecoin_crypto_shani_a_CPPFLAGS = $(AM_CPPFLAGS)
+crypto_libpinecoin_crypto_shani_a_CXXFLAGS += $(SHANI_CXXFLAGS)
+crypto_libpinecoin_crypto_shani_a_CPPFLAGS += -DENABLE_SHANI
+crypto_libpinecoin_crypto_shani_a_SOURCES = crypto/sha256_shani.cpp
 
 # consensus: shared between all executables that validate any consensus rules.
-libbitcorn_consensus_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-libbitcorn_consensus_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libbitcorn_consensus_a_SOURCES = \
+libpinecoin_consensus_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+libpinecoin_consensus_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libpinecoin_consensus_a_SOURCES = \
   amount.h \
   arith_uint256.cpp \
   arith_uint256.h \
@@ -617,7 +617,7 @@ libbitcorn_consensus_a_SOURCES = \
   primitives/transaction.h \
   pubkey.cpp \
   pubkey.h \
-  script/bitcornconsensus.cpp \
+  script/pinecoinconsensus.cpp \
   script/interpreter.cpp \
   script/interpreter.h \
   script/script.cpp \
@@ -633,10 +633,10 @@ libbitcorn_consensus_a_SOURCES = \
   util/strencodings.h \
   version.h
 
-# common: shared between bitcornd, and bitcorn-qt and non-server tools
-libbitcorn_common_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-libbitcorn_common_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libbitcorn_common_a_SOURCES = \
+# common: shared between pinecoind, and pinecoin-qt and non-server tools
+libpinecoin_common_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+libpinecoin_common_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libpinecoin_common_a_SOURCES = \
   base58.cpp \
   bech32.cpp \
   bloom.cpp \
@@ -670,9 +670,9 @@ libbitcorn_common_a_SOURCES = \
 # util: shared between all executables.
 # This library *must* be included to make sure that the glibc
 # backward-compatibility objects and their sanity checks are linked.
-libbitcorn_util_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-libbitcorn_util_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libbitcorn_util_a_SOURCES = \
+libpinecoin_util_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+libpinecoin_util_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libpinecoin_util_a_SOURCES = \
   bls/bls_batchverifier.h \
   bls/bls_ies.cpp \
   bls/bls_ies.h \
@@ -707,33 +707,33 @@ libbitcorn_util_a_SOURCES = \
   $(BITCOIN_CORE_H)
 
 if GLIBC_BACK_COMPAT
-libbitcorn_util_a_SOURCES += compat/glibc_compat.cpp
+libpinecoin_util_a_SOURCES += compat/glibc_compat.cpp
 AM_LDFLAGS += $(COMPAT_LDFLAGS)
 endif
 
-# cli: shared between bitcorn-cli and bitcorn-qt
-libbitcorn_cli_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-libbitcorn_cli_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libbitcorn_cli_a_SOURCES = \
+# cli: shared between pinecoin-cli and pinecoin-qt
+libpinecoin_cli_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+libpinecoin_cli_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libpinecoin_cli_a_SOURCES = \
   rpc/client.cpp \
   $(BITCOIN_CORE_H)
 
-nodist_libbitcorn_util_a_SOURCES = $(srcdir)/obj/build.h
+nodist_libpinecoin_util_a_SOURCES = $(srcdir)/obj/build.h
 #
 
-# bitcornd binary #
-bitcornd_SOURCES = bitcornd.cpp
-bitcornd_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-bitcornd_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-bitcornd_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+# pinecoind binary #
+pinecoind_SOURCES = pinecoind.cpp
+pinecoind_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+pinecoind_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+pinecoind_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-bitcornd_SOURCES += bitcornd-res.rc
+pinecoind_SOURCES += pinecoind-res.rc
 endif
 
 # Libraries below may be listed more than once to resolve circular dependencies (see
 # https://eli.thegreenplace.net/2013/07/09/library-order-in-static-linking#circular-dependency)
-bitcornd_LDADD = \
+pinecoind_LDADD = \
   $(LIBBITCOIN_SERVER) \
   $(LIBBITCOIN_COMMON) \
   $(LIBUNIVALUE) \
@@ -747,38 +747,38 @@ bitcornd_LDADD = \
   $(LIBMEMENV) \
   $(LIBSECP256K1)
 
-bitcornd_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS) $(ZMQ_LIBS) $(BLS_LIBS)
+pinecoind_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS) $(ZMQ_LIBS) $(BLS_LIBS)
 
-# bitcorn-cli binary #
-bitcorn_cli_SOURCES = bitcorn-cli.cpp
-bitcorn_cli_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(EVENT_CFLAGS)
-bitcorn_cli_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-bitcorn_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+# pinecoin-cli binary #
+pinecoin_cli_SOURCES = pinecoin-cli.cpp
+pinecoin_cli_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(EVENT_CFLAGS)
+pinecoin_cli_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+pinecoin_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-bitcorn_cli_SOURCES += bitcorn-cli-res.rc
+pinecoin_cli_SOURCES += pinecoin-cli-res.rc
 endif
 
-bitcorn_cli_LDADD = \
+pinecoin_cli_LDADD = \
   $(LIBBITCOIN_CLI) \
   $(LIBUNIVALUE) \
   $(LIBBITCOIN_UTIL) \
   $(LIBBITCOIN_CRYPTO)
 
-bitcorn_cli_LDADD += $(BOOST_LIBS) $(CRYPTO_LIBS) $(EVENT_LIBS) $(BLS_LIBS)
+pinecoin_cli_LDADD += $(BOOST_LIBS) $(CRYPTO_LIBS) $(EVENT_LIBS) $(BLS_LIBS)
 #
 
-# bitcorn-tx binary #
-bitcorn_tx_SOURCES = bitcorn-tx.cpp
-bitcorn_tx_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-bitcorn_tx_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-bitcorn_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+# pinecoin-tx binary #
+pinecoin_tx_SOURCES = pinecoin-tx.cpp
+pinecoin_tx_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+pinecoin_tx_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+pinecoin_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-bitcorn_tx_SOURCES += bitcorn-tx-res.rc
+pinecoin_tx_SOURCES += pinecoin-tx-res.rc
 endif
 
-bitcorn_tx_LDADD = \
+pinecoin_tx_LDADD = \
   $(LIBUNIVALUE) \
   $(LIBBITCOIN_COMMON) \
   $(LIBBITCOIN_UTIL) \
@@ -786,20 +786,20 @@ bitcorn_tx_LDADD = \
   $(LIBBITCOIN_CRYPTO) \
   $(LIBSECP256K1)
 
-bitcorn_tx_LDADD += $(BOOST_LIBS) $(CRYPTO_LIBS) $(BLS_LIBS)
+pinecoin_tx_LDADD += $(BOOST_LIBS) $(CRYPTO_LIBS) $(BLS_LIBS)
 #
 
-# bitcorn-wallet binary #
-bitcorn_wallet_SOURCES = bitcorn-wallet.cpp
-bitcorn_wallet_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-bitcorn_wallet_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-bitcorn_wallet_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+# pinecoin-wallet binary #
+pinecoin_wallet_SOURCES = pinecoin-wallet.cpp
+pinecoin_wallet_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+pinecoin_wallet_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+pinecoin_wallet_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-bitcorn_wallet_SOURCES += bitcorn-wallet-res.rc
+pinecoin_wallet_SOURCES += pinecoin-wallet-res.rc
 endif
 
-bitcorn_wallet_LDADD = \
+pinecoin_wallet_LDADD = \
   $(LIBBITCOIN_WALLET_TOOL) \
   $(LIBBITCOIN_WALLET) \
   $(LIBBITCOIN_COMMON) \
@@ -813,22 +813,22 @@ bitcorn_wallet_LDADD = \
   $(LIBSECP256K1) \
   $(LIBUNIVALUE)
 
-bitcorn_wallet_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(CRYPTO_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS) $(MINIUPNPC_LIBS) $(ZMQ_LIBS) $(BLS_LIBS)
+pinecoin_wallet_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(CRYPTO_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS) $(MINIUPNPC_LIBS) $(ZMQ_LIBS) $(BLS_LIBS)
 #
 
-# bitcornconsensus library #
+# pinecoinconsensus library #
 if BUILD_BITCOIN_LIBS
-include_HEADERS = script/bitcornconsensus.h
-libbitcornconsensus_la_SOURCES = support/cleanse.cpp $(crypto_libbitcorn_crypto_base_a_SOURCES) $(libbitcorn_consensus_a_SOURCES)
+include_HEADERS = script/pinecoinconsensus.h
+libpinecoinconsensus_la_SOURCES = support/cleanse.cpp $(crypto_libpinecoin_crypto_base_a_SOURCES) $(libpinecoin_consensus_a_SOURCES)
 
 if GLIBC_BACK_COMPAT
-  libbitcornconsensus_la_SOURCES += compat/glibc_compat.cpp
+  libpinecoinconsensus_la_SOURCES += compat/glibc_compat.cpp
 endif
 
-libbitcornconsensus_la_LDFLAGS = $(AM_LDFLAGS) -no-undefined $(RELDFLAGS)
-libbitcornconsensus_la_LIBADD = $(LIBSECP256K1) $(BLS_LIBS)
-libbitcornconsensus_la_CPPFLAGS = $(AM_CPPFLAGS) -I$(builddir)/obj -I$(srcdir)/secp256k1/include -DBUILD_BITCOIN_INTERNAL
-libbitcornconsensus_la_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libpinecoinconsensus_la_LDFLAGS = $(AM_LDFLAGS) -no-undefined $(RELDFLAGS)
+libpinecoinconsensus_la_LIBADD = $(LIBSECP256K1) $(BLS_LIBS)
+libpinecoinconsensus_la_CPPFLAGS = $(AM_CPPFLAGS) -I$(builddir)/obj -I$(srcdir)/secp256k1/include -DBUILD_BITCOIN_INTERNAL
+libpinecoinconsensus_la_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 
 endif
 #
@@ -863,12 +863,12 @@ EXTRA_DIST = $(CTAES_DIST)
 EXTRA_DIST += $(IMMER_DIST)
 
 
-config/bitcorn-config.h: config/stamp-h1
+config/pinecoin-config.h: config/stamp-h1
 	@$(MAKE) -C $(top_builddir) $(subdir)/$(@)
-config/stamp-h1: $(top_srcdir)/$(subdir)/config/bitcorn-config.h.in $(top_builddir)/config.status
+config/stamp-h1: $(top_srcdir)/$(subdir)/config/pinecoin-config.h.in $(top_builddir)/config.status
 	$(AM_V_at)$(MAKE) -C $(top_builddir) $(subdir)/$(@)
-$(top_srcdir)/$(subdir)/config/bitcorn-config.h.in:  $(am__configure_deps)
-	$(AM_V_at)$(MAKE) -C $(top_srcdir) $(subdir)/config/bitcorn-config.h.in
+$(top_srcdir)/$(subdir)/config/pinecoin-config.h.in:  $(am__configure_deps)
+	$(AM_V_at)$(MAKE) -C $(top_srcdir) $(subdir)/config/pinecoin-config.h.in
 
 clean-local:
 	-$(MAKE) -C secp256k1 clean

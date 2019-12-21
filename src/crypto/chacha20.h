@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCORN_CRYPTO_CHACHA20_H
-#define BITCORN_CRYPTO_CHACHA20_H
+#ifndef PINECOIN_CRYPTO_CHACHA20_H
+#define PINECOIN_CRYPTO_CHACHA20_H
 
 #include <stdint.h>
 #include <stdlib.h>
@@ -31,4 +31,4 @@ public:
     void Crypt(const unsigned char* input, unsigned char* output, size_t bytes);
 };
 
-#endif // BITCORN_CRYPTO_CHACHA20_H
+#endif // PINECOIN_CRYPTO_CHACHA20_H
