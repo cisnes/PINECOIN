@@ -250,10 +250,7 @@ public:
         nMinSporkKeys = 1;
 
         checkpointData = {
-            {
-                {   1, uint256S("0x00000b5a11041ff0258b5e2e0b8d9b1e9158b54dfa9e8752afc80985ca5df831")},
-                {  69, uint256S("0x000005db56cc4d9beb04ed6bcb0bcf7704616ccb7a0e2eb637d6f0b919155312")}
-            }};
+            {}};
 
         chainTxData = ChainTxData{
             // Data from rpc: getchaintxstats <nblock> <blockhash>
