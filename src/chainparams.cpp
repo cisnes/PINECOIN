@@ -200,10 +200,10 @@ public:
          * The characters are rarely used upper ASCII, not valid as UTF-8, and produce
          * a large 32-bit integer with any alignment.
          */
-        pchMessageStart[0] = 0x23;
-        pchMessageStart[1] = 0x06;
-        pchMessageStart[2] = 0x18;
-        pchMessageStart[3] = 0x20;
+        pchMessageStart[0] = 0xc2;
+        pchMessageStart[1] = 0xd2;
+        pchMessageStart[2] = 0xee;
+        pchMessageStart[3] = 0xff;
         nDefaultPort = 42420;
         nPruneAfterHeight = 100000;
         m_assumed_blockchain_size = 1;
@@ -324,10 +324,10 @@ public:
         consensus.nInstantSendConfirmationsRequired = 2;
         consensus.nInstantSendKeepLock = 6;
 
-        pchMessageStart[0] = 0x43;
-        pchMessageStart[1] = 0x76;
-        pchMessageStart[2] = 0x65;
-        pchMessageStart[3] = 0x4b;
+        pchMessageStart[0] = 0xe5;
+        pchMessageStart[1] = 0xd6;
+        pchMessageStart[2] = 0xe4;
+        pchMessageStart[3] = 0xf4;
         nDefaultPort = 42024;
         nPruneAfterHeight = 1000;
         m_assumed_blockchain_size = 1;
@@ -440,10 +440,10 @@ public:
         consensus.nInstantSendConfirmationsRequired = 2;
         consensus.nInstantSendKeepLock = 6;
 
-        pchMessageStart[0] = 0xf2;
-        pchMessageStart[1] = 0x90;
-        pchMessageStart[2] = 0xb5;
-        pchMessageStart[3] = 0x78;
+        pchMessageStart[0] = 0xa7;
+        pchMessageStart[1] = 0x9e;
+        pchMessageStart[2] = 0xe0;
+        pchMessageStart[3] = 0x8f;
         nDefaultPort = 29333;
         nPruneAfterHeight = 1000;
         m_assumed_blockchain_size = 0;
