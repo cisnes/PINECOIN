@@ -690,7 +690,7 @@ fs::path GetDefaultDataDir()
     // Unix: ~/.pinecoin
 #ifdef WIN32
     // Windows
-    return GetSpecialFolderPath(CSIDL_APPDATA) / "PineCoin2";
+    return GetSpecialFolderPath(CSIDL_APPDATA) / "PineCoin";
 #else
     fs::path pathRet;
     char* pszHome = getenv("HOME");
@@ -700,10 +700,10 @@ fs::path GetDefaultDataDir()
         pathRet = fs::path(pszHome);
 #ifdef MAC_OSX
     // Mac
-    return pathRet / "Library/Application Support/PineCoin2";
+    return pathRet / "Library/Application Support/PineCoin";
 #else
     // Unix
-    return pathRet / ".pinecoin2";
+    return pathRet / ".pinecoin";
 #endif
 #endif
 }
